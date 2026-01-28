@@ -10,7 +10,7 @@ public class MessageContainer : MonoBehaviour, IPointerClickHandler
     { 
         if (m_phoneManager.HasAlreadyClickedDp)
         { 
-            m_phoneManager.CloseMenu();
+            m_phoneManager.CloseDropdownMenu();
         }
     }
 }
