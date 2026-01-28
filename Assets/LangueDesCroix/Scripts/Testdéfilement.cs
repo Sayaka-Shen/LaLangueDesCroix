@@ -10,10 +10,13 @@ public class Testdéfilement : MonoBehaviour
     public RectTransform ScrollviewTransform;
     public RectTransform messageBtnTransform;
     public RectTransform questionChoiceTransform;
+    public RectTransform BgBubble;
     //public RectTransform galerieNoteTransform;
 
     public GameObject a;
     public GameObject b;
+    public GameObject c;
+    public GameObject d;
 
     [Header("Spawn Positions Y")] // variable qui sert à changer la position des élément UI dans l'inspecteur
     public float messageYPos;
@@ -22,22 +25,19 @@ public class Testdéfilement : MonoBehaviour
     public float galerieNoteYPos;
 
     [Header("Despawn Positions Y")] // variable qui permet de les remettre à leur place d'origine (on fais comme on peut)
-    //public float messageYPosb;
-    //public float questionYPosb;
-    //public float scrollViewPosYb;
-    //public float galerieNoteYPosb;
-
     public float currentmessagePosY;
     public float currentquestionPosY;
     public float currentscrollViewPosY;
     public float currentgalerieNotePosY;
+
+    public float bubbleStart;
+    public float bubbleEnd;
 
     void Start()
     {
         currentscrollViewPosY = ScrollviewTransform.anchoredPosition.y;
         currentmessagePosY = messageBtnTransform.anchoredPosition.y;
         currentquestionPosY = questionChoiceTransform.anchoredPosition.y;
-        //currentgalerieNotePosY = galerieNoteTransform.anchoredPosition.y;
 
         a.SetActive(false);
         b.SetActive(false);
@@ -64,7 +64,6 @@ public class Testdéfilement : MonoBehaviour
         messageBtnTransform.DOAnchorPos(new Vector2(0, messageYPos), 0.5f);
         b.SetActive(true);
         a.SetActive(false);
-        //galerieNoteTransform.DOAnchorPos(new Vector2(0, galerieNoteYPos), 0.5f);
     }
 
     // Fonction à appeler dans un bouton pour faire disparaître et défiler les menus
@@ -76,4 +75,26 @@ public class Testdéfilement : MonoBehaviour
         a.SetActive(false);
         b.SetActive(false);
     }
+
+    public void spawnbubblenote()
+    {
+        BgBubble.DOScale(new Vector3(1, 1, 0), 0.5f);
+        c.SetActive(true);
+        d.SetActive(false);
+    }
+
+    public void spawnbubbleGalerie()
+    {
+        BgBubble.DOScale(new Vector3(1, 1, 0), 0.5f);
+        d.SetActive(true);
+        c.SetActive(false);
+    }
+
+    public void spawnbubleMessage()
+    {
+        BgBubble.DOScale(new Vector3(0, 0, 0), 0.5f);
+        c.SetActive(false);
+        d.SetActive(false);
+    }
+
 }
