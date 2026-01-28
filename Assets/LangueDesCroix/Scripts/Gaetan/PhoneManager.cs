@@ -1,6 +1,16 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
+
+public enum AppState
+{
+    Message = 0, 
+    Gallery = 1, 
+    Notes = 2,
+}
 
 public class PhoneManager : MonoBehaviour
 {
@@ -10,11 +20,26 @@ public class PhoneManager : MonoBehaviour
     [SerializeField] private RectTransform m_footerContainer;
     [SerializeField] private RectTransform m_messageContainer;
     [SerializeField] private int m_dropdownMenuFactor = 100;
-    [SerializeField] private GameObject m_choiceSubContainer;
-    [SerializeField] private GameObject m_appSubContainer;
     public bool HasAlreadyClickedDp { get; private set; }
     
-    public void OpenDropDownMenu(bool isAppBtn = false)
+    [Header("Other Apps")]
+    [SerializeField] private GameObject m_panelMessage;
+    [SerializeField] private GameObject m_panelNotes;
+    [SerializeField] private GameObject m_panelGallery;
+    private AppState m_currentState = AppState.Message;
+    private Dictionary<AppState, GameObject> m_getPanelFromAppState;
+
+    public void Start()
+    {
+        m_getPanelFromAppState = new Dictionary<AppState, GameObject>()
+        {
+            { AppState.Message, m_panelMessage },
+            { AppState.Gallery, m_panelGallery },
+            { AppState.Notes, m_panelNotes },
+        };
+    }
+
+    public void OpenDropDownMenu()
     {
         if (!HasAlreadyClickedDp)
         {
@@ -32,20 +57,9 @@ public class PhoneManager : MonoBehaviour
             messageContainerCurrentPos.y += m_dropdownMenuFactor;
             m_messageContainer.DOAnchorPos(messageContainerCurrentPos, .5f); 
         }
-        
-        if (isAppBtn)
-        {
-            m_appSubContainer.SetActive(true);
-            m_choiceSubContainer.SetActive(false);
-        }
-        else
-        {
-            m_choiceSubContainer.SetActive(true);
-            m_appSubContainer.SetActive(false);
-        }
     }
 
-    public void CloseMenu()
+    public void CloseDropdownMenu()
     {
         HasAlreadyClickedDp = false;
         
@@ -60,8 +74,24 @@ public class PhoneManager : MonoBehaviour
         Vector2 messageContainerCurrentPos = m_messageContainer.anchoredPosition;
         messageContainerCurrentPos.y -= m_dropdownMenuFactor;
         m_messageContainer.DOAnchorPos(messageContainerCurrentPos, .5f);
-            
-        m_choiceSubContainer.SetActive(false);
-        m_appSubContainer.SetActive(false);
+    }
+
+    public void OpenPhoneApplication(int appState)
+    {
+        if (m_currentState == (AppState)appState) return;
+        
+        m_getPanelFromAppState[m_currentState].transform.DOScale(new Vector3(0, 0, 0), 0.5f);
+        StartCoroutine(WaitBeforeHidingPanel(m_currentState));
+        
+        m_currentState = (AppState)appState;
+        
+        m_getPanelFromAppState[m_currentState].SetActive(true);
+        m_getPanelFromAppState[m_currentState].transform.DOScale(new Vector3(1, 1, 1), 0.5f);
+    }
+
+    IEnumerator WaitBeforeHidingPanel(AppState appState)
+    {
+        yield return new WaitForSeconds(0.2f);
+        m_getPanelFromAppState[appState].SetActive(false);
     }
 }
