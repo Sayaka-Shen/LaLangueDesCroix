@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEditor.Experimental.GraphView;
+using UnityEditor.Search;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -11,8 +12,11 @@ public class DSNode : Node
 
     public string DialogueName;
     public Espeaker Speaker { get; set; }
-    public bubleType BubleType { get; set; }
-    public HumeurSpeaker Humeur { get; set; }
+    //public bubleType BubleType { get; set; }
+    //public HumeurSpeaker Humeur { get; set; }
+
+    public Image TraductionImage { get; set; }
+
     public DSNodeSaveData Saves { get; set; }
     public string Text { get; set; }
 
@@ -62,125 +66,128 @@ public class DSNode : Node
     
     // LA FONCTION LA PLUS IMPORTANTE QUI DESSINE LE NODE // ICI EN BASE.DRAW() DEPUIS LES NODES UNDERCLASS PERMETTENT DE CUSTOMISER LEUR APPARENCE // PAS OBLIGATOIRE D'EN HERITEER //
     public virtual void Draw(Color colorNode)
-{
-    // --- HEADER CUSTOMISATION --- //
-    
-    var header = new VisualElement();
-    header.style.flexDirection = FlexDirection.Row;
-    header.style.alignItems = Align.Center;
-    header.style.paddingTop = 4;
-    header.style.paddingBottom = 4;
-    header.style.paddingLeft = 6;
-    header.style.paddingRight = 6;
-    header.AddToClassList("ds-node__header");
-
-    var colorStripe = new VisualElement();
-    colorStripe.style.width = 6;
-    colorStripe.style.height = 34;
-    colorStripe.style.marginRight = 8;
-    colorStripe.style.backgroundColor = new StyleColor(new Color(0.12f, 0.6f, 0.8f)); // turquoise
-    colorStripe.style.borderTopLeftRadius = 6;
-    colorStripe.style.borderBottomLeftRadius = 6;
-    header.Add(colorStripe);
-
-    // PETITE ICON PRCQ ON EST FANCY //
-    
-    var icon = new VisualElement();
-    icon.style.width = 28;
-    icon.style.height = 28;
-    icon.style.marginRight = 8;
-    
-    icon.style.borderBottomLeftRadius = 4;
-    icon.style.borderBottomRightRadius = 4;
-    icon.style.borderTopLeftRadius = 4;
-    icon.style.borderTopRightRadius = 4;
- 
-    icon.style.backgroundColor = new StyleColor(colorNode);
-    icon.style.unityBackgroundScaleMode = ScaleMode.ScaleAndCrop;
-    header.Add(icon);
-
-    // DIALOGUE NAME TEXT FIELD //
-    
-    _dialogeNameTextField = DSElementUtility.CreateTextField(DialogueName, null, (ChangeEvent<string> evt) =>
     {
-        var target = (TextField)evt.target;
-        string newValue = evt.newValue;
-        string oldValue = DialogueName;
+        // --- HEADER CUSTOMISATION --- //
+        var header = new VisualElement();
+        header.style.flexDirection = FlexDirection.Row;
+        header.style.alignItems = Align.Center;
+        header.style.paddingTop = 4;
+        header.style.paddingBottom = 4;
+        header.style.paddingLeft = 6;
+        header.style.paddingRight = 6;
+        header.AddToClassList("ds-node__header");
+
+        var colorStripe = new VisualElement();
+        colorStripe.style.width = 6;
+        colorStripe.style.height = 34;
+        colorStripe.style.marginRight = 8;
+        colorStripe.style.backgroundColor = new StyleColor(new Color(0.12f, 0.6f, 0.8f)); // turquoise
+        colorStripe.style.borderTopLeftRadius = 6;
+        colorStripe.style.borderBottomLeftRadius = 6;
+        header.Add(colorStripe);
+
+        // PETITE ICON PRCQ ON EST FANCY //
+        var icon = new VisualElement();
+        icon.style.width = 28;
+        icon.style.height = 28;
+        icon.style.marginRight = 8;
+    
+        icon.style.borderBottomLeftRadius = 4;
+        icon.style.borderBottomRightRadius = 4;
+        icon.style.borderTopLeftRadius = 4;
+        icon.style.borderTopRightRadius = 4;
+ 
+        icon.style.backgroundColor = new StyleColor(colorNode);
+        icon.style.unityBackgroundScaleMode = ScaleMode.ScaleAndCrop;
+        header.Add(icon);
+
+
+        // DIALOGUE NAME TEXT FIELD //
+
+        _dialogeNameTextField = DSElementUtility.CreateTextField(DialogueName, null, (ChangeEvent<string> evt) =>
+        {
+            var target = (TextField)evt.target;
+            string newValue = evt.newValue;
+            string oldValue = DialogueName;
         
-        newValue = newValue.RemoveWhitespaces().RemoveSpecialCharacters();
-        bool Empty = string.IsNullOrEmpty(newValue);
+            newValue = newValue.RemoveWhitespaces().RemoveSpecialCharacters();
+            bool Empty = string.IsNullOrEmpty(newValue);
 
-        if (Empty)
-        {
-            target.value = oldValue;
-            Debug.LogWarning("LE NOM DU NODE NE PEUT PAS ETRE VIDE !");
-            return;
-        }
+            if (Empty)
+            {
+                target.value = oldValue;
+                Debug.LogWarning("LE NOM DU NODE NE PEUT PAS ETRE VIDE !");
+                return;
+            }
         
-        if(graphView.GetUnGroupedNodesNames().Contains(newValue.ToLower()))
-        {
-            target.value = oldValue; // Revert to the old name
-            Debug.LogWarning($"Y'A DEJA UN NODE QUI S'APPELLE COMME {oldValue} DANS LE GRAPHE, ON TE REMET {oldValue} ! (stp)");
-            return;
-        }
-        if (Group == null)
-        {
-            // ON RETIRE LE UNGROUPNODE DE LA LISTE // ON MET DIALOGUENAME A JOUR ENTRE LES DEUX CAR LA FONCTION GRAPHWIEW A BESOIN DU OLD NAME !!!!! // ON REAJOUTE LE NODE AU GROUPE //
-            graphView.RemoveUngroupedNode(this);
-            DialogueName = newValue;
+            if(graphView.GetUnGroupedNodesNames().Contains(newValue.ToLower()))
+            {
+                target.value = oldValue; // Revert to the old name
+                Debug.LogWarning($"Y'A DEJA UN NODE QUI S'APPELLE COMME {oldValue} DANS LE GRAPHE, ON TE REMET {oldValue} ! (stp)");
+                return;
+            }
+            if (Group == null)
+            {
+                // ON RETIRE LE UNGROUPNODE DE LA LISTE // ON MET DIALOGUENAME A JOUR ENTRE LES DEUX CAR LA FONCTION GRAPHWIEW A BESOIN DU OLD NAME !!!!! // ON REAJOUTE LE NODE AU GROUPE //
+                graphView.RemoveUngroupedNode(this);
+                DialogueName = newValue;
             
-            graphView.AddUngroupedNode(this);
-        }
-        else
-        {
-            var currentGroup = Group;
-            // ON RETIRE LE NODE GROUPE // ON MET DIALOGUENAME A JOUR ENTRE LES DEUX CAR LA FONCTION GRAPHWIEW A BESOIN DU OLD NAME !!!!! // ON REAJOUTE LE NODE AU GROUPE //
-            graphView.RemoveGroupedNode(this, currentGroup);
-            DialogueName = newValue;
+                graphView.AddUngroupedNode(this);
+            }
+            else
+            {
+                var currentGroup = Group;
+                // ON RETIRE LE NODE GROUPE // ON MET DIALOGUENAME A JOUR ENTRE LES DEUX CAR LA FONCTION GRAPHWIEW A BESOIN DU OLD NAME !!!!! // ON REAJOUTE LE NODE AU GROUPE //
+                graphView.RemoveGroupedNode(this, currentGroup);
+                DialogueName = newValue;
             
-            graphView.AddGroupedNode(this, currentGroup);
-        }
+                graphView.AddGroupedNode(this, currentGroup);
+            }
 
-        target.value = newValue;
-    });
+            target.value = newValue;
+        });
 
-    _dialogeNameTextField.AddToClassList("ds-node__text-field");
-    _dialogeNameTextField.style.flexGrow = 1;
-    _dialogeNameTextField.style.height = 28;
-    _dialogeNameTextField.style.marginRight = 4;
-    _dialogeNameTextField.style.unityTextAlign = TextAnchor.MiddleLeft;
-    header.Add(_dialogeNameTextField);
+
+        _dialogeNameTextField.AddToClassList("ds-node__text-field");
+        _dialogeNameTextField.style.flexGrow = 1;
+        _dialogeNameTextField.style.height = 28;
+        _dialogeNameTextField.style.marginRight = 4;
+        _dialogeNameTextField.style.unityTextAlign = TextAnchor.MiddleLeft;
+        header.Add(_dialogeNameTextField);
+
+        
+        // UNCOMMENT LE CODE CI DESSOUS POUR AJOUTER UN PETIT SUBTITLE EN HAUT A DROITE DU NODE //
+
+        // var subtitle = new Label(DialogueType.ToString());
+        // subtitle.AddToClassList("ds-node__subtitle");
+        // subtitle.style.unityFontStyleAndWeight = FontStyle.Bold;
+        // subtitle.style.fontSize = 10;
+        // subtitle.style.unityTextAlign = TextAnchor.MiddleCenter;
+        // subtitle.style.minWidth = 54;
+        // subtitle.style.marginLeft = 6;
+        // header.Add(subtitle);
+
+        // TITLE CONTAINER //
+
+        titleContainer.Clear();
+        titleContainer.Add(header);
+
+        // INPUT CONTAINER //
     
-    // UNCOMMENT LE CODE CI DESSOUS POUR AJOUTER UN PETIT SUBTITLE EN HAUT A DROITE DU NODE //
-
-    // var subtitle = new Label(DialogueType.ToString());
-    // subtitle.AddToClassList("ds-node__subtitle");
-    // subtitle.style.unityFontStyleAndWeight = FontStyle.Bold;
-    // subtitle.style.fontSize = 10;
-    // subtitle.style.unityTextAlign = TextAnchor.MiddleCenter;
-    // subtitle.style.minWidth = 54;
-    // subtitle.style.marginLeft = 6;
-    // header.Add(subtitle);
+        inputContainer.Clear();
     
-    // TITLE CONTAINER //
-
-    titleContainer.Clear();
-    titleContainer.Add(header);
-
-    // INPUT CONTAINER //
+        // EXTENSION CONTAINER //
     
-    inputContainer.Clear();
-    
-    // EXTENSION CONTAINER //
-    
-    extensionContainer.Clear();
+        extensionContainer.Clear();
 
-    // STYLISATION DES CONTENEURS //
-    mainContainer.AddToClassList("ds-node__main-container");
-    extensionContainer.AddToClassList("ds-node__extension-container");
 
-    RefreshExpandedState();
-}
+        // STYLISATION DES CONTENEURS //
+        mainContainer.AddToClassList("ds-node__main-container");
+        extensionContainer.AddToClassList("ds-node__extension-container");
+
+        RefreshExpandedState();
+    }
+
 
     // CREE LE DROPDOWN POUR CHOISIR LA KEY DU DIALOGUE // UTILE POUR LES CHOIX DE TEXTES LOCALIZER //
     public VisualElement CreateFoldoutDialogueKeyDropDown()
@@ -321,12 +328,8 @@ public class DSNode : Node
         }
     }
     
-    public void SetHumeur(HumeurSpeaker humeur)
-    {
-        Humeur = humeur;
-    }
-    
-
-
-
+    //public void SetHumeur(HumeurSpeaker humeur)
+    //{
+    //    Humeur = humeur;
+    //}
 }

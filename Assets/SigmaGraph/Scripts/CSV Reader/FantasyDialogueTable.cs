@@ -223,7 +223,7 @@ public class LocalManager
         }
         catch
         {
-            
+
             try
             {
                 var entry = FantasyDialogueTable.Find_idLng(key);
@@ -231,7 +231,7 @@ public class LocalManager
             }
             catch
             {
-                
+
                 return $"Key: {key}";
             }
         }

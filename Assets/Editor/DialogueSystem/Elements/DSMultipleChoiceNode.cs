@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using UnityEditor.Experimental.GraphView;
 using UnityEditor.UIElements;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.UIElements;
-
 
 
 public class DSMultipleChoiceNode : DSNode
@@ -118,20 +118,20 @@ public class DSMultipleChoiceNode : DSNode
         compactRow.style.marginBottom = 2;
 
         var speakerField = new EnumField(Speaker) { tooltip = "Character" };
-        var humeurField  = new EnumField(Humeur)  { tooltip = "Mood" };
-        var uiField      = new EnumField(BubleType) { tooltip = "Bubble UI" };
+        //var humeurField  = new EnumField(Humeur)  { tooltip = "Mood" };
+        //var uiField      = new EnumField(BubleType) { tooltip = "Bubble UI" };
 
-        var speakerWrap = CreateCompactLabeledEnum("Char", speakerField, 54);
-        var humeurWrap  = CreateCompactLabeledEnum("Mood", humeurField, 48);
-        var uiWrap      = CreateCompactLabeledEnum("UI", uiField, 44);
+        var speakerWrap = CreateCompactLabeledEnum("Character ", speakerField, 54);
+        //var humeurWrap  = CreateCompactLabeledEnum("Mood", humeurField, 48);
+        //var uiWrap      = CreateCompactLabeledEnum("UI", uiField, 44);
 
         speakerField.RegisterValueChangedCallback(evt => SetSpeaker((Espeaker)evt.newValue));
-        humeurField.RegisterValueChangedCallback(evt => SetHumeur((HumeurSpeaker)evt.newValue));
-        uiField.RegisterValueChangedCallback(evt => BubleType = (bubleType)evt.newValue);
+        //humeurField.RegisterValueChangedCallback(evt => SetHumeur((HumeurSpeaker)evt.newValue));
+        //uiField.RegisterValueChangedCallback(evt => BubleType = (bubleType)evt.newValue);
 
         compactRow.Add(speakerWrap);
-        compactRow.Add(humeurWrap);
-        compactRow.Add(uiWrap);
+        //compactRow.Add(humeurWrap);
+        //compactRow.Add(uiWrap);
 
         titleContainer.Add(compactRow);
 
@@ -142,19 +142,30 @@ public class DSMultipleChoiceNode : DSNode
             CreateSingleChoicePortNew("New Choice");
         });
 
+        Label tradImageLabel = new Label("Traduction Image");
+        tradImageLabel.AddToClassList("ds-node__traductionLabel");
+
+        // Trad Image Container
+        ObjectField traductionImgField = new ObjectField();
+        traductionImgField.AddToClassList("ds-node__traductionField");
+        traductionImgField.style.flexGrow = 1;
+        traductionImgField.style.height = 28;
+        traductionImgField.style.marginRight = 4;
+        traductionImgField.style.unityTextAlign = TextAnchor.MiddleLeft;
+
         _changeNodeType = DSElementUtility.CreateButton("Switch node Type", () => { SwitchNodeType(); });
 
+        mainContainer.Add(tradImageLabel);
+        mainContainer.Add(traductionImgField);
         mainContainer.Add(_changeNodeType);
         mainContainer.Add(_addChoiceButton);
 
         _changeNodeType.AddToClassList("ds-node__buttonSingle");
         _addChoiceButton.AddToClassList("ds-node__button");
-        
-        
+
         extensionContainer.Add(CreateFoldoutDialogueKeyDropDown());
 
         // OUTPUT CONTAINER //
-
         foreach (DSChoiceSaveData choice in Saves.ChoicesInNode)
         {
             CreateSingleChoicePortForExisting(choice, choice.GetDropDownKeyChoice());
@@ -176,8 +187,8 @@ public class DSMultipleChoiceNode : DSNode
         {
             CreateSingleChoicePortNew("");
         }
-        SetNodeTypeLabel();
 
+        SetNodeTypeLabel();
         RefreshExpandedState();
     }
 
@@ -213,11 +224,13 @@ public class DSMultipleChoiceNode : DSNode
     private bool IsAncestor(VisualElement possibleAncestor, VisualElement element)
     {
         var p = element;
+
         while (p != null)
         {
             if (p == possibleAncestor) return true;
             p = p.parent;
         }
+
         return false;
     }
     

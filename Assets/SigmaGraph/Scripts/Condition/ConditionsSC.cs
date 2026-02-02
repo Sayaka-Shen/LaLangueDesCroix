@@ -7,7 +7,6 @@ public class ConditionsSC : ScriptableObject
     public int conditionValue;
 }
 
-
 public enum Items
 {
     Key,

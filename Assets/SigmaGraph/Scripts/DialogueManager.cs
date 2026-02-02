@@ -9,13 +9,13 @@ public enum language
     FR,
     EN,
 }
-public enum bubleType
-{
-    NORMAL,
-    THINK,
-    SHOUT,
-}
 
+//public enum bubleType
+//{
+//    NORMAL,
+//    THINK,
+//    SHOUT,
+//}
 
 public class DialogueManager : MonoBehaviour
 {
@@ -28,11 +28,12 @@ public class DialogueManager : MonoBehaviour
     private language _previewLanguage;
 
     [Header("UI Elements")]
-    
-    private Dictionary<bubleType, dialogueContainer> _bubleContainers = new Dictionary<bubleType, dialogueContainer>();
-    [SerializeField] private List<dialogueContainer> _bubleContainerList = new List<dialogueContainer>();
+    [SerializeField] private DialogueContainer m_dialogueContainer;
+    //private Dictionary<bubleType, DialogueContainer> _bubleContainers = new Dictionary<bubleType, DialogueContainer>();
+    //[SerializeField] private List<DialogueContainer> _bubleContainerList = new List<DialogueContainer>();
 
-    [Header("Choice Button UI")] public Button ChoiceButtonPrefab;
+    [Header("Choice Button UI")]
+    public Button ChoiceButtonPrefab;
     public Transform ChoiceButtonContainer;
 
     public Speakers SpeakersScriptable;
@@ -43,8 +44,8 @@ public class DialogueManager : MonoBehaviour
     
     private bool _isWaitingForChoice = false;
     
-    private dialogueContainer _currentDialogueContainer;
-    private dialogueContainer _oldDialogueContainer;
+    private DialogueContainer m_currentDialogueContainer;
+    private DialogueContainer _oldDialogueContainer;
 
     [Button]
     public void LoadCsv()
@@ -83,9 +84,9 @@ public class DialogueManager : MonoBehaviour
     {
         // ON FAIT CA EN BRUT PRCQ NSM PAS LE TEMPS // Courage pour le projet UNITY MOBILE je vous aime tous <3 //
         
-        _bubleContainers.Add(bubleType.NORMAL, _bubleContainerList[0]);
-        _bubleContainers.Add(bubleType.THINK, _bubleContainerList[1]);
-        _bubleContainers.Add(bubleType.SHOUT, _bubleContainerList[2]);
+        //_bubleContainers.Add(bubleType.NORMAL, _bubleContainerList[0]);
+        //_bubleContainers.Add(bubleType.THINK, _bubleContainerList[1]);
+        //_bubleContainers.Add(bubleType.SHOUT, _bubleContainerList[2]);
     }
 
     private void Start()
@@ -163,6 +164,7 @@ public class DialogueManager : MonoBehaviour
             EndDialogue();
             return;
         }
+
         UpdateDialogueFromNode(nextNode);
     }
     
@@ -197,6 +199,7 @@ public class DialogueManager : MonoBehaviour
                 hasMetConditions = false;
                 break;
             }
+
             hasMetConditions = true;
         }
 
@@ -238,16 +241,17 @@ public class DialogueManager : MonoBehaviour
                 break;
         }
 
-        if (_bubleContainers.TryGetValue(_currentNode.GetBubleType(), out var container))
-        {
-            _currentDialogueContainer = container;
-        }
-        else
-        {
-            return;
-        }
+        //if (_bubleContainers.TryGetValue(_currentNode.GetBubleType(), out var container))
+        //{
+        //    _currentDialogueContainer = container;
+        //}
+        //else
+        //{
+        //    return;
+        //}
 
-        if (_currentDialogueContainer == null)
+        m_currentDialogueContainer = m_dialogueContainer;
+        if (m_currentDialogueContainer == null)
         {
             Debug.Log("Current Dialogue Container is null.");
             return;
@@ -255,11 +259,13 @@ public class DialogueManager : MonoBehaviour
         
         if(_oldDialogueContainer != null)
         {
-            _oldDialogueContainer.HideContainer();
+            //_oldDialogueContainer.HideContainer();
         }
-        _oldDialogueContainer = _currentDialogueContainer;
+
+        _oldDialogueContainer = m_currentDialogueContainer;
 
         ChangeSpeaker(_currentNode.Speaker);
+
         if(_currentSpeaker == null)
         {
             Debug.Log("Current Speaker is null.");
@@ -267,9 +273,7 @@ public class DialogueManager : MonoBehaviour
         }
         
         string targetDialogue = FantasyDialogueTable.LocalManager.FindDialogue(_currentNode.GetDropDownKeyDialogue(), Enum.GetName(typeof(language), languageSetting));
-        _currentDialogueContainer.InitializeDialogueContainer(targetDialogue, _currentSpeaker.Name, _currentSpeaker.GetSpriteForHumeur(_currentNode.GetHumeur()));
-
-
+        m_currentDialogueContainer.InitializeDialogueContainer(targetDialogue, _currentSpeaker.Name /*_currentNode.TraductionImage.sprite*/);
     }
 
     private void CreateButtonsChoice()
@@ -280,10 +284,11 @@ public class DialogueManager : MonoBehaviour
             foreach (DSChoiceSaveData choice in _currentNode.ChoicesInNode)
             {
                 Button choiceButton = Instantiate(ChoiceButtonPrefab, ChoiceButtonContainer);
-                buttonChoiceController buttonController = choiceButton.GetComponent<buttonChoiceController>();
+                ButtonChoiceController buttonController = choiceButton.GetComponent<ButtonChoiceController>();
                 if (buttonController != null)
                 {
                     bool fillCondition = true;
+
                     foreach (var condition in choice.Conditions)
                     {
                         fillCondition = DoesFillCondtions(condition);
@@ -292,6 +297,7 @@ public class DialogueManager : MonoBehaviour
                             break;
                         }
                     }
+
                     string textButton = FantasyDialogueTable.LocalManager.FindDialogue(choice.GetDropDownKeyChoice(), Enum.GetName(typeof(language), languageSetting));
                     buttonController.InitializeButtonChoiceController(fillCondition, textButton);
                 }
@@ -317,7 +323,7 @@ public class DialogueManager : MonoBehaviour
 
     private void EndDialogue()
     {
-        _currentDialogueContainer.HideContainer();
+        //_currentDialogueContainer.HideContainer();
         _currentNode = null;
 
         foreach (Transform child in ChoiceButtonContainer)
@@ -337,8 +343,6 @@ public class DialogueManager : MonoBehaviour
         }
     }
     
-
-
     private void SetNewSpeaker(SpeakerInfo speaker)
     {
         _currentSpeaker = speaker;

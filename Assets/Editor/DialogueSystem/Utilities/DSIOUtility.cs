@@ -60,11 +60,10 @@ public static class DSIOUtility
             createdDialogues = new Dictionary<string, DSDialogueSO>();
 
             CreateDefaultFolders();
-
             GetElementsFromGraphView();
 
             // Load or create asset
-            DSGraphSaveDataSO graphData = CreateAsset<DSGraphSaveDataSO>("Assets/Editor/DialogueSystem/Graphs", $"{graphFileName}Graph");
+            DSGraphSaveDataSO graphData = CreateAsset<DSGraphSaveDataSO>("Assets/Editor/DialogueSystem/Graphs/", $"{graphFileName}Graph");
 
             // Ensure asset lists are cleared before we repopulate them
             if (graphData.Nodes == null) graphData.Nodes = new List<DSNodeSaveData>();
@@ -191,15 +190,15 @@ public static class DSIOUtility
                 GroupID = node.Group?.ID,
                 DialogueType = node.DialogueType,
                 Position = node.GetPosition().position,
+                isMultipleChoice = node.Saves.isMultipleChoice,
                 OnlyOneConditionNeeded = node.Saves.OnlyOneConditionNeeded,
             };
             
-            nodeData.SetBubleType(node.BubleType);
+            //nodeData.SetBubleType(node.BubleType);
             nodeData.SaveDropDownKeyDialogue(node.Saves.GetDropDownKeyDialogue());
             nodeData.SaveSpeaker(node.Speaker);
-            nodeData.SaveHumeur(node.Humeur);
+            nodeData.SaveImage(node.TraductionImage);
             nodeData.SetChoices(choices);
-            
 
             graphData.Nodes.Add(nodeData);
         }
@@ -233,8 +232,8 @@ public static class DSIOUtility
 
 
             node.Saves.OnlyOneConditionNeeded = node.OnlyOneConditionNeeded;
-            node.Saves.SaveHumeur(node.Humeur);
-            node.Saves.SetBubleType(node.BubleType);
+            //node.Saves.SaveHumeur(node.Humeur);
+            //node.Saves.SetBubleType(node.BubleType);
             createdDialogues.Add(node.ID, dialogue);
 
             SaveAsset(dialogue);
@@ -377,9 +376,9 @@ public static class DSIOUtility
                 node.Saves.SaveDropDownKeyDialogue( nodeData.GetDropDownKeyDialogue());
                 node.Saves.SetChoices(choices);
                 node.Saves.isMultipleChoice = nodeData.isMultipleChoice;
-                node.BubleType = nodeData.GetBubleType();
+                //node.BubleType = nodeData.GetBubleType();
                 node.SetSpeaker(nodeData.Speaker);
-                node.SetHumeur(nodeData.GetHumeur());
+                //node.SetHumeur(nodeData.GetHumeur());
                 
                 node.Saves.OnlyOneConditionNeeded = nodeData.OnlyOneConditionNeeded;
                 node.Draw(new Color());

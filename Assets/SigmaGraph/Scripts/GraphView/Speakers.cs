@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using System; 
 
 [CreateAssetMenu(fileName = "Speakers", menuName = "Scriptable Objects/Speakers")]
 public class Speakers : ScriptableObject
@@ -7,9 +8,9 @@ public class Speakers : ScriptableObject
     public List<SpeakerInfo> speakers;
 }
 
-[System.Serializable]
+[Serializable]
 public enum Espeaker
 {
-    Brant,
-    Juliana
+    Toi,
+    Gaelle
 }
