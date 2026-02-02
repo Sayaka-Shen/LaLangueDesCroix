@@ -11,7 +11,6 @@ public class Testdéfilement : MonoBehaviour
     public RectTransform messageBtnTransform;
     public RectTransform questionChoiceTransform;
     public RectTransform BgBubble;
-    //public RectTransform galerieNoteTransform;
 
     public GameObject a;
     public GameObject b;
@@ -102,5 +101,6 @@ public class Testdéfilement : MonoBehaviour
         c.SetActive(false);
         d.SetActive(false);
     }
+
 
 }
