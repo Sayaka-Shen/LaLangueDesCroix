@@ -1,8 +1,7 @@
-
-    public enum DSDialogueType
-    {
-        MultipleChoice,
-        Start,
-        End,
-        Branch,
-    }
+public enum DSDialogueType
+{
+    MultipleChoice,
+    Start,
+    End,
+    Branch,
+}

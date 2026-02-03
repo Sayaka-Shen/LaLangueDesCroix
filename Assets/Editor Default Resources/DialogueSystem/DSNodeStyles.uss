@@ -166,3 +166,17 @@ TextField
 .ds-node__conditions-container {
 	padding-bottom: 4px;
 }
+
+.ds-node__traductionLabel
+{
+	margin-top: 5px;
+	margin-left: 16px;
+	margin-bottom: 5px;
+}
+
+.ds-node__traductionField
+{
+	margin-left: 16px;
+	margin-right: 16px;
+	margin-bottom: 10px;
+}

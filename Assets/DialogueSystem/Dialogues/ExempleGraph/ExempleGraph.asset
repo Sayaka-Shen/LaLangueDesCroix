@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caaa76378291a144d849f29230be0a5a, type: 3}
+  m_Name: ExempleGraph
+  m_EditorClassIdentifier: Assembly-CSharp::DSDialogueContainerSO
+  <FileName>k__BackingField: ExempleGraph
+  <DialogueGroups>k__BackingField:
+    list:
+    - Key: {fileID: 11400000, guid: 81cecaafad06d6a4a807824c0272dd28, type: 2}
+      Value:
+      - {fileID: 11400000, guid: 8ffef8b3b8156ea47b0909b07553187a, type: 2}
+      - {fileID: 11400000, guid: 89cf2513234fbfb4a853d0a72762830f, type: 2}
+      - {fileID: 11400000, guid: d2ad864eafce2204588ab7b3bfb0f7e5, type: 2}
+      - {fileID: 11400000, guid: ad628439acff869438bc7957ac4b4d8b, type: 2}
+      - {fileID: 11400000, guid: eedb0727dfc2c2044a1f7711fa936733, type: 2}
+      - {fileID: 11400000, guid: 8c561c08cb244954cb4f584b1635c1ee, type: 2}
+      - {fileID: 11400000, guid: 5c198301c813cc1439a3fdb6ec169e46, type: 2}
+      - {fileID: 11400000, guid: fe58280ba0267d140a3ba06afd8f3ed7, type: 2}
+  <UngroupedDialogues>k__BackingField: []

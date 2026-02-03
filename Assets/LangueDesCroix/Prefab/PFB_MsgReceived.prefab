@@ -244,6 +244,7 @@ GameObject:
   - component: {fileID: 6903150109557680873}
   - component: {fileID: 2349442606954915275}
   - component: {fileID: 6886219596312463365}
+  - component: {fileID: 6136679791656392942}
   m_Layer: 5
   m_Name: PFB_MsgReceived
   m_TagString: Untagged
@@ -312,3 +313,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.ContentSizeFitter
   m_HorizontalFit: 0
   m_VerticalFit: 2
+--- !u!114 &6136679791656392942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6384116288706170604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cce02c28503edb43b98e6e7d70ddaa8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Message
+  m_messageContent: {fileID: 8907826733420499285}

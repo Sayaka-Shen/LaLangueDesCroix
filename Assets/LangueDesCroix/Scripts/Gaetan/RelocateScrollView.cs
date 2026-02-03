@@ -1,10 +1,11 @@
-using Unity.Android.Gradle.Manifest;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class RelocateScrollView : MonoBehaviour
 {
     private RectTransform m_rectTransform;
+    private GameObject[] m_scrollChildren;
     
     private void Start()
     {
