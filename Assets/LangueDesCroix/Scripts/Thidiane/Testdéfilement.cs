@@ -11,7 +11,6 @@ public class Testdéfilement : MonoBehaviour
     public RectTransform messageBtnTransform;
     public RectTransform questionChoiceTransform;
     public RectTransform BgBubble;
-    //public RectTransform galerieNoteTransform;
 
     public GameObject a;
     public GameObject b;
@@ -35,6 +34,8 @@ public class Testdéfilement : MonoBehaviour
 
     void Start()
     {
+        AudioManager.instance.PlayMusic("Thème");
+
         currentscrollViewPosY = ScrollviewTransform.anchoredPosition.y;
         currentmessagePosY = messageBtnTransform.anchoredPosition.y;
         currentquestionPosY = questionChoiceTransform.anchoredPosition.y;
@@ -78,6 +79,7 @@ public class Testdéfilement : MonoBehaviour
 
     public void spawnbubblenote()
     {
+        AudioManager.instance.PlaySFX("App");
         BgBubble.DOScale(new Vector3(1, 1, 0), 0.5f);
         c.SetActive(true);
         d.SetActive(false);
@@ -85,6 +87,7 @@ public class Testdéfilement : MonoBehaviour
 
     public void spawnbubbleGalerie()
     {
+        AudioManager.instance.PlaySFX("App");
         BgBubble.DOScale(new Vector3(1, 1, 0), 0.5f);
         d.SetActive(true);
         c.SetActive(false);
@@ -92,9 +95,12 @@ public class Testdéfilement : MonoBehaviour
 
     public void spawnbubleMessage()
     {
+        AudioManager.instance.PlaySFX("App");
+        BgBubble.DOPivotX(BgBubble.pivot.x, 0.5f);
         BgBubble.DOScale(new Vector3(0, 0, 0), 0.5f);
         c.SetActive(false);
         d.SetActive(false);
     }
+
 
 }

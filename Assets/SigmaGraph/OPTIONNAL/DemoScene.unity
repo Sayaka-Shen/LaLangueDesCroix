@@ -849,7 +849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   dialogueText: {fileID: 61481419}
   speakerNameText: {fileID: 151663469}
-  characterImage: {fileID: 1344519845}
+  traductionImage: {fileID: 0}
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1197,7 +1197,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   dialogueText: {fileID: 1018300811}
   speakerNameText: {fileID: 1286377629}
-  characterImage: {fileID: 76406360}
+  traductionImage: {fileID: 0}
 --- !u!1 &802996174
 GameObject:
   m_ObjectHideFlags: 0
@@ -1915,10 +1915,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
   runtimeGraph: {fileID: 11400000, guid: 1701772bc219c754a94ceac17c762741, type: 2}
   languageSetting: 0
-  _bubleContainerList:
-  - {fileID: 545183475}
-  - {fileID: 1997860482}
-  - {fileID: 741456759}
   ChoiceButtonPrefab: {fileID: 2450449145640451282, guid: 33e1f0b39949b554d88cca2bf0a29d93, type: 3}
   ChoiceButtonContainer: {fileID: 1927992912}
   SpeakersScriptable: {fileID: 11400000, guid: 82e282dbd1d6b8c4d845bae0b97efb89, type: 2}
@@ -2233,7 +2229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   dialogueText: {fileID: 734437831}
   speakerNameText: {fileID: 1071835463}
-  characterImage: {fileID: 675314225}
+  traductionImage: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
