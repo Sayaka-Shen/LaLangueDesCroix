@@ -170,6 +170,7 @@ public static class DSIOUtility
 
                     continue;
                 }
+
                 ungroupedNodeNames.Add(node.DialogueName);
             }
             
@@ -190,6 +191,7 @@ public static class DSIOUtility
                 GroupID = node.Group?.ID,
                 DialogueType = node.DialogueType,
                 Position = node.GetPosition().position,
+                TraductionImage = node.TraductionImage,
                 isMultipleChoice = node.Saves.isMultipleChoice,
                 OnlyOneConditionNeeded = node.Saves.OnlyOneConditionNeeded,
             };
@@ -197,7 +199,7 @@ public static class DSIOUtility
             //nodeData.SetBubleType(node.BubleType);
             nodeData.SaveDropDownKeyDialogue(node.Saves.GetDropDownKeyDialogue());
             nodeData.SaveSpeaker(node.Speaker);
-            nodeData.SaveImage(node.TraductionImage);
+            //nodeData.SaveTraductionImage(node.TraductionImage);
             nodeData.SetChoices(choices);
 
             graphData.Nodes.Add(nodeData);
@@ -227,14 +229,17 @@ public static class DSIOUtility
                 ConvertNodeChoicesToDialogueChoices(node.Saves.ChoicesInNode),
                 node.DialogueType,
                 node.IsStartingNode(),
-                node.Speaker
+                node.Speaker,
+                node.TraductionImage
             );
 
 
             node.Saves.OnlyOneConditionNeeded = node.OnlyOneConditionNeeded;
+            //node.Saves.SaveTraductionImage(node.TraductionImage);
+            createdDialogues.Add(node.ID, dialogue);
             //node.Saves.SaveHumeur(node.Humeur);
             //node.Saves.SetBubleType(node.BubleType);
-            createdDialogues.Add(node.ID, dialogue);
+
 
             SaveAsset(dialogue);
         }
@@ -250,6 +255,7 @@ public static class DSIOUtility
                     // copiers d'autres champs si DSDialogueChoiceData en a (ex : Text, Condition infos)
                     // NextDialogue left null for now — will be set in UpdateDialoguesChoicesConnections
                 };
+
                 dialogueChoices.Add(choiceData);
             }
 
@@ -378,6 +384,7 @@ public static class DSIOUtility
                 node.Saves.isMultipleChoice = nodeData.isMultipleChoice;
                 //node.BubleType = nodeData.GetBubleType();
                 node.SetSpeaker(nodeData.Speaker);
+                node.SetTraductionImage(nodeData.TraductionImage);
                 //node.SetHumeur(nodeData.GetHumeur());
                 
                 node.Saves.OnlyOneConditionNeeded = nodeData.OnlyOneConditionNeeded;

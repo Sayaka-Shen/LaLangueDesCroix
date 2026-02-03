@@ -106,9 +106,9 @@ public class DSGraphView : GraphView
         this.AddManipulator(new RectangleSelector());
 
         this.AddManipulator(CreateNodeContextualMenu("Dialogue Node", DSDialogueType.MultipleChoice));
-        this.AddManipulator(CreateNodeContextualMenu("Start Node",DSDialogueType.Start));
-        this.AddManipulator(CreateNodeContextualMenu("End Node",DSDialogueType.End));
-        this.AddManipulator(CreateNodeContextualMenu("Branch Node",DSDialogueType.Branch));
+        this.AddManipulator(CreateNodeContextualMenu("Start Node", DSDialogueType.Start));
+        this.AddManipulator(CreateNodeContextualMenu("End Node", DSDialogueType.End));
+        this.AddManipulator(CreateNodeContextualMenu("Branch Node", DSDialogueType.Branch));
  
         this.AddManipulator(CreateGroupContextualMenu());
     }

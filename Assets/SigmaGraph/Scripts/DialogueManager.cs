@@ -28,7 +28,7 @@ public class DialogueManager : MonoBehaviour
     private language _previewLanguage;
 
     [Header("UI Elements")]
-    [SerializeField] private DialogueContainer m_dialogueContainer;
+    [SerializeField] private dialogueContainer m_dialogueContainer;
     //private Dictionary<bubleType, DialogueContainer> _bubleContainers = new Dictionary<bubleType, DialogueContainer>();
     //[SerializeField] private List<DialogueContainer> _bubleContainerList = new List<DialogueContainer>();
 
@@ -44,8 +44,8 @@ public class DialogueManager : MonoBehaviour
     
     private bool _isWaitingForChoice = false;
     
-    private DialogueContainer m_currentDialogueContainer;
-    private DialogueContainer _oldDialogueContainer;
+    private dialogueContainer m_currentDialogueContainer;
+    private dialogueContainer _oldDialogueContainer;
 
     [Button]
     public void LoadCsv()
@@ -273,7 +273,7 @@ public class DialogueManager : MonoBehaviour
         }
         
         string targetDialogue = FantasyDialogueTable.LocalManager.FindDialogue(_currentNode.GetDropDownKeyDialogue(), Enum.GetName(typeof(language), languageSetting));
-        m_currentDialogueContainer.InitializeDialogueContainer(targetDialogue, _currentSpeaker.Name /*_currentNode.TraductionImage.sprite*/);
+        m_currentDialogueContainer.InitializeDialogueContainer(targetDialogue, _currentSpeaker.speakEnum /*_currentNode.TraductionImage.sprite*/);
     }
 
     private void CreateButtonsChoice()

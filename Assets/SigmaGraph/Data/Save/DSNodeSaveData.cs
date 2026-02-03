@@ -2,7 +2,8 @@ using System;
 using System.Collections.Generic;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
-using UnityEngine.Serialization;
+using UnityEngine.Rendering;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 
@@ -13,11 +14,11 @@ public class DSNodeSaveData
     [field: SerializeField] public string Name { get; set; }
     [field: SerializeField] public Espeaker Speaker { get; set; }
 
-    [field: SerializeField] public Image TraductionImage { get; set; }
+    [field: SerializeField] public Sprite TraductionImage { get; set; }
 
     //[field: SerializeField] public bubleType BubleType;
-    
-    
+
+
     //public void SetBubleType(bubleType bubleType)
     //{
     //    BubleType = bubleType;
@@ -37,20 +38,20 @@ public class DSNodeSaveData
     //    Humeur = humeur;
     //}
 
-    public void SaveSpeaker(Espeaker speaker)
-    {
-        Speaker = speaker;
-    }
-    
     //public void SaveHumeur(HumeurSpeaker humeur)
     //{
     //    Humeur = humeur;
     //}
 
-    public void SaveImage(Image image)
+    public void SaveSpeaker(Espeaker speaker)
     {
-        TraductionImage = image;
+        Speaker = speaker;
     }
+
+    //public void SaveTraductionImage(UnityEngine.UI.Image image)
+    //{
+    //    TraductionImage = image;
+    //}
 
     public bool isMultipleChoice = false;
 
