@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class RelocateScrollView : MonoBehaviour
 {
     private RectTransform m_rectTransform;
-    private GameObject[] m_scrollChildren;
     
     private void Start()
     {

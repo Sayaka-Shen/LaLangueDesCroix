@@ -2367,8 +2367,9 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4ae2d48a2afeb76418da0fe74ebdbbc5, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DialogueContainer
-  m_messagePrefab: {fileID: 6384116288706170604, guid: 7b038a04dd85b2a46bd28a0ab2b061e6, type: 3}
+  m_EditorClassIdentifier: Assembly-CSharp::dialogueContainer
+  m_receiverPrefab: {fileID: 7377864829776364412, guid: e71fd20c64682fb4da4b1a746bd9f53c, type: 3}
+  m_senderPrefab: {fileID: 2339474256016226702, guid: 5450b8c3d0e59af42827dfe68dbf872b, type: 3}
 --- !u!1 &1453853477
 GameObject:
   m_ObjectHideFlags: 0
