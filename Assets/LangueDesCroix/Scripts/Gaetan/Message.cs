@@ -1,25 +1,31 @@
 using TMPro;
 using UnityEngine;
 
+
+public enum MessageOwner
+{
+    Sender, 
+    Receiver
+}
+
 public class Message : MonoBehaviour
 {
     [Header("Message Properties")]
     [SerializeField] private TextMeshProUGUI m_messageContent;
+    [SerializeField] private MessageOwner m_messageOwner;
 
     public void SetMessageText(string msg)
     {
         m_messageContent.text = msg;
     }
-    
-    void LateUpdate()
+
+    public string GetMessageText()
     {
-        //Get rect transforms
-        RectTransform parent = transform.parent.GetComponent<RectTransform>();;
-        RectTransform rt = this.GetComponent<RectTransform>();
-        if (!parent || !rt) return;
-        
-        //We want the message to take only 70% of the width
-        float targetWidth = parent.rect.width * 0.7f;
-        rt.sizeDelta = new Vector2(targetWidth, rt.sizeDelta.y);
+        return m_messageContent.text;
+    }
+
+    public MessageOwner GetMessageOwner()
+    {
+        return m_messageOwner;
     }
 }
