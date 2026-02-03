@@ -5,11 +5,12 @@ using UnityEngine;
 public class PlayerData
 {
     
-    public int messagesSent;
+    public GameObject[] MessageArray;
+    
 
     public PlayerData (Player player)
     {
-        messagesSent = player.messagesSents;
+        MessageArray = player.GetChildGameObjects();
     }
 
 }
