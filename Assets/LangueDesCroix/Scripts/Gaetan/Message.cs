@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 
 public enum MessageOwner
@@ -12,7 +13,19 @@ public class Message : MonoBehaviour
 {
     [Header("Message Properties")]
     [SerializeField] private TextMeshProUGUI m_messageContent;
-    [SerializeField] private MessageOwner m_messageOwner;
+    [SerializeField] private Image m_messageImage;
+    [SerializeField] private GameObject m_messageBG;
+
+    public void SetMessageText(string msg)
+    {
+        m_messageContent.text = msg;
+    }
+
+    public void SetImage(Sprite sprite)
+    {
+        m_messageBG.SetActive(false);
+        m_messageImage.sprite = sprite;
+    }
     
     void LateUpdate()
     {

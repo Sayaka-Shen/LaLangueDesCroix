@@ -156,6 +156,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Message
   m_messageContent: {fileID: 38078792746779155}
+  m_messageImage: {fileID: 30836405577048226}
 --- !u!1 &8899072498982498420
 GameObject:
   m_ObjectHideFlags: 0
@@ -306,7 +307,7 @@ GameObject:
   - component: {fileID: 30836405577048226}
   - component: {fileID: 1080143168199079370}
   m_Layer: 5
-  m_Name: IMG_MsgReceived
+  m_Name: BG_Msg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
