@@ -113,28 +113,13 @@ MonoBehaviour:
     _dropDownKeyDialogue: 
     <OnlyOneConditionNeeded>k__BackingField: 0
     <ChoicesInNode>k__BackingField:
-    - NodeID: 43c1a3ef-97f2-4174-8301-6f7694528429
+    - NodeID: bca7670f-fd62-4fb5-a881-ca01b226943b
       _dropDownKeyChoice: 
       <Conditions>k__BackingField: []
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
     <Position>k__BackingField: {x: -1028.8, y: 108}
-  - <ID>k__BackingField: 43c1a3ef-97f2-4174-8301-6f7694528429
-    <Name>k__BackingField: DialogueName_6
-    <Speaker>k__BackingField: 1
-    <TraductionImage>k__BackingField: {fileID: 779523859372869476, guid: 75a103d9661e0de438f3385fffaf88ae, type: 3}
-    isMultipleChoice: 0
-    _dropDownKeyDialogue: 
-    <OnlyOneConditionNeeded>k__BackingField: 0
-    <ChoicesInNode>k__BackingField:
-    - NodeID: 71e01e43-3f4a-4263-842d-c911bd9e162a
-      _dropDownKeyChoice: 
-      <Conditions>k__BackingField: []
-      _directionPort: 0
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: -750.39996, y: 84}
   - <ID>k__BackingField: a43c3297-6caa-4e4b-8b4d-e4489885c801
     <Name>k__BackingField: DialogueName_2
     <Speaker>k__BackingField: 1
@@ -154,6 +139,21 @@ MonoBehaviour:
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: 456.80002, y: 84}
+  - <ID>k__BackingField: bca7670f-fd62-4fb5-a881-ca01b226943b
+    <Name>k__BackingField: DialogueName_7
+    <Speaker>k__BackingField: 1
+    <TraductionImage>k__BackingField: {fileID: 779523859372869476, guid: 75a103d9661e0de438f3385fffaf88ae, type: 3}
+    isMultipleChoice: 0
+    _dropDownKeyDialogue: 
+    <OnlyOneConditionNeeded>k__BackingField: 0
+    <ChoicesInNode>k__BackingField:
+    - NodeID: 71e01e43-3f4a-4263-842d-c911bd9e162a
+      _dropDownKeyChoice: 
+      <Conditions>k__BackingField: []
+      _directionPort: 0
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: -771.2, y: 97.6}
   <OldGroupNames>k__BackingField: []
   <OldUngroupedNodeNames>k__BackingField:
   - DialogueName_4
@@ -163,7 +163,7 @@ MonoBehaviour:
   - DialogueName_1
   - DialogueName
   - START
-  - DialogueName_6
   - DialogueName_2
+  - DialogueName_7
   <OldGroupedNodeNames>k__BackingField:
     list: []

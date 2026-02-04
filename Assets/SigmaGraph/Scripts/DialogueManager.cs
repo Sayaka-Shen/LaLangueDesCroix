@@ -48,6 +48,8 @@ public class DialogueManager : MonoBehaviour
     [Header("Phone Manager")]
     [SerializeField] private PhoneManager m_phoneManager;
 
+    [Header("Relocate Scroll Grid")]
+    [SerializeField] private RelocateScrollView m_relocateScrollView;
 
     [Header("Message Timer")]
     [SerializeField] private float m_maxTimer = 1.5f;
