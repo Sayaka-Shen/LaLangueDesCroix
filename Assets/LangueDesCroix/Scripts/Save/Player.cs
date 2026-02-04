@@ -18,7 +18,6 @@ public class Player : MonoBehaviour
         if (File.Exists(path))
         {
             LoadPlayer();
-
         }
     }
 
@@ -81,7 +80,7 @@ public class Player : MonoBehaviour
                     break;
             }
 
-            Message msg = messageObject.GetComponent<Message>();
+            Message msg = messageObject.GetComponentInChildren<Message>();
             if (msg != null)
             {
                 msg.SetMessageText(data.MessageTextArray[i]);
