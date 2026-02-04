@@ -21,6 +21,7 @@ public class dialogueContainer : MonoBehaviour
         //childContainer.gameObject.SetActive(true);
 
         m_messageInstance = Instantiate(speakers == Espeaker.Toi ? m_receiverPrefab : m_senderPrefab, this.transform);
+
         if(m_messageInstance == null)
         {
             Debug.Log("Le message prefab n'existe pas.");
