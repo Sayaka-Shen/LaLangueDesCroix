@@ -22,6 +22,14 @@ public class PhoneManager : MonoBehaviour
     [SerializeField] private RectTransform m_messageContainer;
     [SerializeField] private int m_dropdownMenuFactor = 100;
     [SerializeField] private GameObject m_scrollContainer;
+    public GameObject ScrollContainer 
+    { 
+        get
+        {
+            return m_scrollContainer;
+        }
+    }
+
     public bool HasAlreadyClickedDp { get; private set; }
     private float m_messageContainerStartPos;
     
@@ -58,7 +66,7 @@ public class PhoneManager : MonoBehaviour
             dropDownFootCurrentPos.y += m_dropdownMenuFactor;
             m_footerContainer.DOAnchorPos(dropDownFootCurrentPos, .5f);
 
-            if (m_scrollContainer.transform.childCount > 2 && m_messageContainer.anchoredPosition.y == m_messageContainerStartPos)
+            if (ScrollContainer.transform.childCount > 2 && m_messageContainer.anchoredPosition.y == m_messageContainerStartPos)
             {
                 Vector2 messageContainerCurrentPos = m_messageContainer.anchoredPosition;
                 messageContainerCurrentPos.y += m_dropdownMenuFactor;
@@ -79,7 +87,7 @@ public class PhoneManager : MonoBehaviour
         dropDownFootCurrentPos.y -= m_dropdownMenuFactor;
         m_footerContainer.DOAnchorPos(dropDownFootCurrentPos, .5f);
 
-        if (m_scrollContainer.transform.childCount > 2 && m_messageContainer.anchoredPosition.y != m_messageContainerStartPos)
+        if (ScrollContainer.transform.childCount > 2 && m_messageContainer.anchoredPosition.y != m_messageContainerStartPos)
         {
             Vector2 messageContainerCurrentPos = m_messageContainer.anchoredPosition;
             messageContainerCurrentPos.y -= m_dropdownMenuFactor;
