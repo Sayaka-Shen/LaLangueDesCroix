@@ -1,7 +1,9 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+#if UNITY_EDITOR
 using static UnityEditor.Rendering.MaterialUpgrader;
+#endif
 
 public class dialogueContainer : MonoBehaviour
 {
