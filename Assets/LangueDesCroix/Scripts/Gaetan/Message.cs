@@ -15,6 +15,7 @@ public class Message : MonoBehaviour
     [SerializeField] private TextMeshProUGUI m_messageContent;
     [SerializeField] private Image m_messageImage;
     [SerializeField] private GameObject m_messageBG;
+    [SerializeField] private MessageOwner m_messageOwner;
 
     public void SetMessageText(string msg)
     {
@@ -37,11 +38,6 @@ public class Message : MonoBehaviour
         //We want the message to take only 70% of the width
         float targetWidth = parent.rect.width * 0.7f;
         rt.sizeDelta = new Vector2(targetWidth, rt.sizeDelta.y);
-    }
-    
-    public void SetMessageText(string msg)
-    {
-        m_messageContent.text = msg;
     }
 
     public string GetMessageText()
