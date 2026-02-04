@@ -22,9 +22,7 @@ public class DialogueManager : MonoBehaviour
     public DSGraphSaveDataSO runtimeGraph;
     
     [Header("PLAYER SETTINGS")]
-    
     [SerializeField] private language languageSetting = language.FR;
-
     private language _previewLanguage;
 
     [Header("UI Elements")]
@@ -45,7 +43,16 @@ public class DialogueManager : MonoBehaviour
     private bool _isWaitingForChoice = false;
     
     private dialogueContainer m_currentDialogueContainer;
-    private dialogueContainer _oldDialogueContainer;
+    //private dialogueContainer _oldDialogueContainer;
+
+    [Header("Phone Manager")]
+    [SerializeField] private PhoneManager m_phoneManager;
+
+
+    [Header("Message Timer")]
+    [SerializeField] private float m_maxTimer = 1.5f;
+    private float m_timer;
+    private bool m_isWaitingForMessage;
 
     [Button]
     public void LoadCsv()
@@ -124,9 +131,21 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
-        // ON CLICK //
-        if (Input.GetMouseButtonDown(0) && !_isWaitingForChoice)
+        if (!_isWaitingForChoice)
         {
+            m_timer += Time.deltaTime;
+        }
+
+        if (m_timer >= m_maxTimer)
+        {
+            m_isWaitingForMessage = true;
+        }
+
+        if (m_isWaitingForMessage && !_isWaitingForChoice)
+        {
+            m_isWaitingForMessage = false;
+            m_timer = 0; 
+
             TryToUpdateNextDialogueFromNextNode();
         }
     }
@@ -257,12 +276,12 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         
-        if(_oldDialogueContainer != null)
-        {
-            //_oldDialogueContainer.HideContainer();
-        }
+        //if(_oldDialogueContainer != null)
+        //{
+        //    //_oldDialogueContainer.HideContainer();
+        //}
 
-        _oldDialogueContainer = m_currentDialogueContainer;
+        //_oldDialogueContainer = m_currentDialogueContainer;
 
         ChangeSpeaker(_currentNode.Speaker);
 
@@ -306,6 +325,8 @@ public class DialogueManager : MonoBehaviour
                 {
                     _isWaitingForChoice = false;
                     UpdateDialogueFromNode(GetNextNode(choice.NodeID));
+                    m_phoneManager.CloseDropdownMenu();
+
                     foreach (Transform child in ChoiceButtonContainer)
                     {
                         if (child == null) continue;
