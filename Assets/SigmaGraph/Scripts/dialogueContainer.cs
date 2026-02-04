@@ -14,7 +14,7 @@ public class dialogueContainer : MonoBehaviour
     //[SerializeField] private TextMeshProUGUI speakerNameText;
     //[SerializeField] private Image traductionImage;
 
-    public void InitializeDialogueContainer(string dialogue, Espeaker speakers /* Sprite traductionImg */)
+    public void InitializeDialogueContainer(string dialogue, Sprite tradImg, Espeaker speakers /* Sprite traductionImg */)
     {
         //var childContainer = transform.GetChild(0);
         //if (childContainer == null) return;
@@ -31,7 +31,17 @@ public class dialogueContainer : MonoBehaviour
         Message message = m_messageInstance.GetComponentInChildren<Message>();
         if (message != null)
         {
-            message.SetMessageText(dialogue);
+            if (tradImg != null)
+            {
+                message.SetImage(tradImg);
+            }
+            else
+            {
+                if (dialogue != "")
+                {
+                    message.SetMessageText(dialogue);
+                }
+            }
         }
         else
         {

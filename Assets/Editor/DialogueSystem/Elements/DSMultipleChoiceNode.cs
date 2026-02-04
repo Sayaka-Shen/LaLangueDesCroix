@@ -146,12 +146,24 @@ public class DSMultipleChoiceNode : DSNode
         tradImageLabel.AddToClassList("ds-node__traductionLabel");
 
         // Trad Image Container
-        ObjectField traductionImgField = new ObjectField();
+        ObjectField traductionImgField = new ObjectField()
+        {
+            objectType = typeof(Sprite),
+            allowSceneObjects = false,
+            value = TraductionImage
+        };
         traductionImgField.AddToClassList("ds-node__traductionField");
         traductionImgField.style.flexGrow = 1;
         traductionImgField.style.height = 28;
         traductionImgField.style.marginRight = 4;
         traductionImgField.style.unityTextAlign = TextAnchor.MiddleLeft;
+
+        traductionImgField.RegisterValueChangedCallback(evt =>
+        {
+            Sprite newSprite = evt.newValue as Sprite;
+            SetTraductionImage(newSprite);
+            Saves.SaveTraductionImage(newSprite);
+        });
 
         _changeNodeType = DSElementUtility.CreateButton("Switch node Type", () => { SwitchNodeType(); });
 

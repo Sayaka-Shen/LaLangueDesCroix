@@ -48,10 +48,10 @@ public class DSNodeSaveData
         Speaker = speaker;
     }
 
-    //public void SaveTraductionImage(UnityEngine.UI.Image image)
-    //{
-    //    TraductionImage = image;
-    //}
+    public void SaveTraductionImage(Sprite sprite)
+    {
+        TraductionImage = sprite;
+    }
 
     public bool isMultipleChoice = false;
 

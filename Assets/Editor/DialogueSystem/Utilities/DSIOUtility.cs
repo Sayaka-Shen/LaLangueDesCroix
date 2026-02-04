@@ -167,7 +167,6 @@ public static class DSIOUtility
                 if (node.Group != null)
                 {
                     groupedNodeNames.AddItem(node.Group.title, node.DialogueName);
-
                     continue;
                 }
 
@@ -175,7 +174,6 @@ public static class DSIOUtility
             }
             
             UpdateDialoguesChoicesConnections();
-
             UpdateOldGroupedNodes(groupedNodeNames, graphData);
             UpdateOldUngroupedNodes(ungroupedNodeNames, graphData);
         }
