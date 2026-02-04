@@ -4,6 +4,7 @@ using System.Linq;
 using UnityEditor.Experimental.GraphView;
 using UnityEditor.Search;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.UIElements;
 
 public class DSNode : Node
@@ -15,7 +16,7 @@ public class DSNode : Node
     //public bubleType BubleType { get; set; }
     //public HumeurSpeaker Humeur { get; set; }
 
-    public Image TraductionImage { get; set; }
+    public Sprite TraductionImage { get; set; }
 
     public DSNodeSaveData Saves { get; set; }
     public string Text { get; set; }
@@ -332,4 +333,9 @@ public class DSNode : Node
     //{
     //    Humeur = humeur;
     //}
+
+    public void SetTraductionImage(Sprite newImg)
+    {
+        TraductionImage = newImg;
+    }
 }
