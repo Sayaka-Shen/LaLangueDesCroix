@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,9 +13,7 @@ public class dialogueContainer : MonoBehaviour
     [SerializeField] private GameObject m_senderPrefab;
     private RelocateScrollView m_relocateScrollView;
     private GameObject m_messageInstance;
-
-    [Header("Phone")]
-    [SerializeField] private PhoneManager m_phoneManager;
+    private RectTransform m_scrollContainerTransform;
 
     //[SerializeField] private TextMeshProUGUI dialogueText;
     //[SerializeField] private TextMeshProUGUI speakerNameText;
@@ -22,6 +21,7 @@ public class dialogueContainer : MonoBehaviour
 
     private void Start()
     {
+        m_scrollContainerTransform = GetComponent<RectTransform>();
         m_relocateScrollView = GetComponent<RelocateScrollView>();
     }
 
@@ -32,11 +32,6 @@ public class dialogueContainer : MonoBehaviour
         //childContainer.gameObject.SetActive(true);
 
         m_messageInstance = Instantiate(speakers == Espeaker.Toi ? m_receiverPrefab : m_senderPrefab, this.transform);
-
-        if (m_phoneManager.ScrollContainer.transform.childCount > 4)
-        {
-            m_relocateScrollView.UpdateScrollView();
-        }
 
         if (m_messageInstance == null)
         {
@@ -53,7 +48,7 @@ public class dialogueContainer : MonoBehaviour
             }
             else
             {
-                if (dialogue != "")
+                if (!string.IsNullOrEmpty(dialogue))
                 {
                     message.SetMessageText(dialogue);
                 }
@@ -64,11 +59,23 @@ public class dialogueContainer : MonoBehaviour
             Debug.Log("Il n'y a pas de composant Message.");
         }
 
+        StartCoroutine(ScrollNextFrame());
+
         //traductionImage.sprite = traductionImg;
         //dialogueText.SetText(dialogue);
         //speakerNameText.SetText(speakerName);
     }
-    
+
+    private IEnumerator ScrollNextFrame()
+    {
+        yield return new WaitForSeconds(.1f);
+
+        if (m_scrollContainerTransform.sizeDelta.y > 0)
+        {
+            m_relocateScrollView.UpdateScrollView();
+        }
+    }
+
     //public void HideContainer()
     //{
     //    var childContainer = transform.GetChild(0);
