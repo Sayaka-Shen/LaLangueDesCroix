@@ -690,8 +690,6 @@ MonoBehaviour:
   noteTarget: {fileID: 316746379}
   messageTarget: {fileID: 292104583}
   taskTarget: {fileID: 1662084138}
-  WidthExpanded: 0
-  WidthCollapsed: 0
 --- !u!1 &571079754
 GameObject:
   m_ObjectHideFlags: 0

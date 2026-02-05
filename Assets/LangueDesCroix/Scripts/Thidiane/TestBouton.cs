@@ -12,6 +12,11 @@ public class TestBouton : MonoBehaviour
     [SerializeField] private RectTransform noteTarget;
     [SerializeField] private RectTransform messageTarget;
     [SerializeField] private RectTransform taskTarget;
+
+    [SerializeField] private float WidthExpanded;
+    [SerializeField] private float WidthCollapsed;
+
+
     void Start()
     {
         note.SetActive(false);
