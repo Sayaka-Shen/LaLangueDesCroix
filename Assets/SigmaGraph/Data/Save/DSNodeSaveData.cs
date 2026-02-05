@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+#if UNITY_EDITOR
 using UnityEditor.Experimental.GraphView;
+#endif
 using UnityEngine;
 using UnityEngine.Rendering;
 using UnityEngine.UI;
@@ -48,15 +50,17 @@ public class DSNodeSaveData
         Speaker = speaker;
     }
 
-    //public void SaveTraductionImage(UnityEngine.UI.Image image)
-    //{
-    //    TraductionImage = image;
-    //}
+    public void SaveTraductionImage(Sprite sprite)
+    {
+        TraductionImage = sprite;
+    }
 
     public bool isMultipleChoice = false;
 
+    #if UNITY_EDITOR
     public Dictionary<Port, List<VisualElement>> ConditionsMapElement = new Dictionary<Port, List<VisualElement>>();
     public Dictionary<Port, List<ConditionsSC>> ConditionsMapSc = new Dictionary<Port, List<ConditionsSC>>();
+    #endif
 
     public string _dropDownKeyDialogue;
 

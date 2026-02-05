@@ -10,9 +10,8 @@ public class PlayerData
 
     public PlayerData (Player player)
     {
-        MessageOwnerArray = player.GetAllMessages().Item2;
         MessageTextArray = player.GetAllMessages().Item1;
-
+        MessageOwnerArray = player.GetAllMessages().Item2;
     }
 
 }

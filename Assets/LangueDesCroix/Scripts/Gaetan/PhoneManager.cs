@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
@@ -20,7 +21,17 @@ public class PhoneManager : MonoBehaviour
     [SerializeField] private RectTransform m_footerContainer;
     [SerializeField] private RectTransform m_messageContainer;
     [SerializeField] private int m_dropdownMenuFactor = 100;
+    [SerializeField] private GameObject m_scrollContainer;
+    public GameObject ScrollContainer 
+    { 
+        get
+        {
+            return m_scrollContainer;
+        }
+    }
+
     public bool HasAlreadyClickedDp { get; private set; }
+    private float m_messageContainerStartPos;
     
     [Header("Other Apps")]
     [SerializeField] private GameObject m_panelMessage;
@@ -31,6 +42,8 @@ public class PhoneManager : MonoBehaviour
 
     public void Start()
     {
+        m_messageContainerStartPos = m_messageContainer.anchoredPosition.y;
+
         m_getPanelFromAppState = new Dictionary<AppState, GameObject>()
         {
             { AppState.Message, m_panelMessage },
@@ -52,10 +65,13 @@ public class PhoneManager : MonoBehaviour
             Vector2 dropDownFootCurrentPos = m_footerContainer.anchoredPosition;
             dropDownFootCurrentPos.y += m_dropdownMenuFactor;
             m_footerContainer.DOAnchorPos(dropDownFootCurrentPos, .5f);
-    
-            Vector2 messageContainerCurrentPos = m_messageContainer.anchoredPosition;
-            messageContainerCurrentPos.y += m_dropdownMenuFactor;
-            m_messageContainer.DOAnchorPos(messageContainerCurrentPos, .5f); 
+
+            if (ScrollContainer.transform.childCount > 2 && m_messageContainer.anchoredPosition.y == m_messageContainerStartPos)
+            {
+                Vector2 messageContainerCurrentPos = m_messageContainer.anchoredPosition;
+                messageContainerCurrentPos.y += m_dropdownMenuFactor;
+                m_messageContainer.DOAnchorPos(messageContainerCurrentPos, .5f);
+            }
         }
     }
 
@@ -70,10 +86,13 @@ public class PhoneManager : MonoBehaviour
         Vector2 dropDownFootCurrentPos = m_footerContainer.anchoredPosition;
         dropDownFootCurrentPos.y -= m_dropdownMenuFactor;
         m_footerContainer.DOAnchorPos(dropDownFootCurrentPos, .5f);
-            
-        Vector2 messageContainerCurrentPos = m_messageContainer.anchoredPosition;
-        messageContainerCurrentPos.y -= m_dropdownMenuFactor;
-        m_messageContainer.DOAnchorPos(messageContainerCurrentPos, .5f);
+
+        if (ScrollContainer.transform.childCount > 2 && m_messageContainer.anchoredPosition.y != m_messageContainerStartPos)
+        {
+            Vector2 messageContainerCurrentPos = m_messageContainer.anchoredPosition;
+            messageContainerCurrentPos.y -= m_dropdownMenuFactor;
+            m_messageContainer.DOAnchorPos(messageContainerCurrentPos, .5f);
+        }
     }
 
     public void OpenPhoneApplication(int appState)

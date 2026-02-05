@@ -2370,6 +2370,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::dialogueContainer
   m_receiverPrefab: {fileID: 7377864829776364412, guid: e71fd20c64682fb4da4b1a746bd9f53c, type: 3}
   m_senderPrefab: {fileID: 2339474256016226702, guid: 5450b8c3d0e59af42827dfe68dbf872b, type: 3}
+  m_phoneManager: {fileID: 1924664963}
 --- !u!1 &1453853477
 GameObject:
   m_ObjectHideFlags: 0
@@ -3732,6 +3733,7 @@ MonoBehaviour:
   m_footerContainer: {fileID: 1228866853}
   m_messageContainer: {fileID: 733603438}
   m_dropdownMenuFactor: 800
+  m_scrollContainer: {fileID: 1401300793}
   m_panelMessage: {fileID: 503651071}
   m_panelNotes: {fileID: 476634565}
   m_panelGallery: {fileID: 456227104}
@@ -3753,6 +3755,9 @@ MonoBehaviour:
   ChoiceButtonPrefab: {fileID: 644035911041683243, guid: d5276b4136edc4c40ad059c904087cdf, type: 3}
   ChoiceButtonContainer: {fileID: 943002275}
   SpeakersScriptable: {fileID: 11400000, guid: 82e282dbd1d6b8c4d845bae0b97efb89, type: 2}
+  m_phoneManager: {fileID: 1924664963}
+  m_relocateScrollView: {fileID: 1401300797}
+  m_maxTimer: 2
 --- !u!1 &1930152577
 GameObject:
   m_ObjectHideFlags: 0
