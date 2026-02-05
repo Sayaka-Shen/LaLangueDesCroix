@@ -1,7 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
-using UnityEditor.Rendering;
 using Unity.VisualScripting;
 
 public class TestBouton : MonoBehaviour
