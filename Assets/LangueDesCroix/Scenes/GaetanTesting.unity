@@ -877,19 +877,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 477116906}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1924664963}
-        m_TargetAssemblyTypeName: PhoneManager, Assembly-CSharp
-        m_MethodName: OpenDropDownMenu
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &477116906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2370,7 +2358,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::dialogueContainer
   m_receiverPrefab: {fileID: 7377864829776364412, guid: e71fd20c64682fb4da4b1a746bd9f53c, type: 3}
   m_senderPrefab: {fileID: 2339474256016226702, guid: 5450b8c3d0e59af42827dfe68dbf872b, type: 3}
-  m_phoneManager: {fileID: 1924664963}
+  m_imgPrefab: {fileID: 6860300695199978353, guid: 05844f89f3aa4d34daf332c5276509db, type: 3}
 --- !u!1 &1453853477
 GameObject:
   m_ObjectHideFlags: 0
@@ -3756,8 +3744,7 @@ MonoBehaviour:
   ChoiceButtonContainer: {fileID: 943002275}
   SpeakersScriptable: {fileID: 11400000, guid: 82e282dbd1d6b8c4d845bae0b97efb89, type: 2}
   m_phoneManager: {fileID: 1924664963}
-  m_relocateScrollView: {fileID: 1401300797}
-  m_maxTimer: 2
+  m_maxTimer: 1.5
 --- !u!1 &1930152577
 GameObject:
   m_ObjectHideFlags: 0

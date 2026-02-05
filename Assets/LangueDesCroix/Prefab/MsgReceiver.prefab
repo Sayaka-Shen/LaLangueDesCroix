@@ -327,8 +327,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Message
   m_messageContent: {fileID: 8143739563397866370}
-  m_messageImage: {fileID: 6068828080700122477}
-  m_messageBG: {fileID: 2322733991966564552}
   m_messageOwner: 1
 --- !u!1 &4186598248920638778
 GameObject:
