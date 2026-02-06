@@ -1,35 +1,48 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 
-public enum MessageOwner
+public enum MessageType
 {
     Sender, 
-    Receiver
+    Receiver,
+    Image
 }
 
 public class Message : MonoBehaviour
 {
     [Header("Message Properties")]
     [SerializeField] private TextMeshProUGUI m_messageContent;
-    [SerializeField] private MessageOwner m_messageOwner;
+    [SerializeField] private MessageType mMessageType;
 
     public void SetMessageText(string msg)
     {
         m_messageContent.text = msg;
     }
 
-    void LateUpdate()
+    public void Start()
     {
+        StartCoroutine(Initialize());
+    }
+
+    IEnumerator Initialize()
+    {
+        yield return new WaitForEndOfFrame();
+        
         //Get rect transforms
         RectTransform parent = transform.parent.GetComponent<RectTransform>();;
         RectTransform rt = this.GetComponent<RectTransform>();
-        if (!parent || !rt) return;
+        if (!parent || !rt) yield break;
         
         //We want the message to take only 70% of the width
         float targetWidth = parent.rect.width * 0.7f;
         rt.sizeDelta = new Vector2(targetWidth, rt.sizeDelta.y);
+    }
+    void LateUpdate()
+    {
+        
     }
 
     public string GetMessageText()
@@ -37,8 +50,8 @@ public class Message : MonoBehaviour
         return m_messageContent.text;
     }
 
-    public MessageOwner GetMessageOwner()
+    public MessageType GetMessageOwner()
     {
-        return m_messageOwner;
+        return mMessageType;
     }
 }
