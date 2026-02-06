@@ -383,245 +383,245 @@ public class DSMultipleChoiceNode : DSNode
         choiceData.Conditions.Add(conditionSc);
     }
     
-private (Port, DropdownField) CreateSingleChoicePortForExisting(DSChoiceSaveData choiceData, string dropDownKey = "")
-{
-    Port choicePort = this.CreatePort();
-    choicePort.userData = choiceData;
-
-    DropdownField choiceDropdown = null;
-    if (Saves.isMultipleChoice)
+    private (Port, DropdownField) CreateSingleChoicePortForExisting(DSChoiceSaveData choiceData, string dropDownKey = "")
     {
-        choiceDropdown = DSElementUtility.CreateDropdownArea("Choice KEY");
-        FillCsvDropdown(choiceDropdown);
-        choiceDropdown.RegisterValueChangedCallback(callback => { OnDropDownChoiceTranslate(choicePort, choiceDropdown, choiceData); });
+        Port choicePort = this.CreatePort();
+        choicePort.userData = choiceData;
 
-        if (!string.IsNullOrEmpty(dropDownKey))
-            choiceDropdown.value = dropDownKey;
-
-        choicePort.Add(choiceDropdown);
-    }
-    else
-    {
-        Label choiceLabel = new Label("Continue");
-        choicePort.Add(choiceLabel);
-    }
-
-    if (Saves.isMultipleChoice && Saves.ChoicesInNode.Count > 2)
-    {
-        Button deleteChoiceButton = DSElementUtility.CreateButton("X", () =>
+        DropdownField choiceDropdown = null;
+        if (Saves.isMultipleChoice)
         {
-            if (choicePort.connected)
-            {
-                graphView.DeleteElements(choicePort.connections);
-            }
-            if (Saves.ConditionsMapElement != null && Saves.ConditionsMapElement.TryGetValue(choicePort, out List<VisualElement> condElem))
-            {
-                ClearConditions(condElem);
-                Saves.ConditionsMapElement.Remove(choicePort);
-            }
-            
-            _choicePortsTextField.TryGetValue(choicePort, out TextField textField);
-            if (textField != null)
-            {
-                textField.RemoveFromHierarchy();
-            }
-            int idx = _choicePorts.IndexOf(choicePort);
-            if (idx >= 0 && idx < Saves.ChoicesInNode.Count)
-            {
-                Saves.ChoicesInNode.RemoveAt(idx);
-            }
-            _choicePorts.Remove(choicePort);
-            _choicePortsTextField.Remove(choicePort);
+            choiceDropdown = DSElementUtility.CreateDropdownArea("Choice KEY");
+            FillCsvDropdown(choiceDropdown);
+            choiceDropdown.RegisterValueChangedCallback(callback => { OnDropDownChoiceTranslate(choicePort, choiceDropdown, choiceData); });
 
-            graphView.RemoveElement(choicePort);
-        });
-        
-        deleteChoiceButton.AddToClassList("ds-node__buttonDelete");
-        choicePort.Add(deleteChoiceButton);
-    }
+            if (!string.IsNullOrEmpty(dropDownKey))
+                choiceDropdown.value = dropDownKey;
 
-    if (Saves.isMultipleChoice)
-    {
-        Button conditionsButton = DSElementUtility.CreateButton("Add Conditions", () => { AddConditionsBelowPort(choicePort, CreateConditions(choicePort)); });
-        conditionsButton.AddToClassList("ds-node__button");
-        choicePort.Add(conditionsButton);
-    }
-
-    outputContainer.Add(choicePort);
-
-    _choicePorts.Add(choicePort);
-
-    if (Saves.isMultipleChoice)
-    {
-        var label = CreateLabelChoiceTranslate();
-        label.AddToClassList("ds-node__label-translate");
-        
-        AddConditionsBelowPort(choicePort, label, false);
-        _choicePortsTextField[choicePort] = label;
-
-        if (!string.IsNullOrEmpty(dropDownKey))
-        {
-            OnDropDownChoiceTranslate(choicePort, choiceDropdown, choiceData);
+            choicePort.Add(choiceDropdown);
         }
-    }
-
-    choicePort.MarkDirtyRepaint();
-    RefreshExpandedState();
-    MarkDirtyRepaint();
-
-    return (choicePort, choiceDropdown);
-}
-
-
-private void CreateSingleChoicePortNew(string dropDownKey = "")
-{
-    DSChoiceSaveData newChoice = new DSChoiceSaveData();
-    newChoice.SaveDropDownKeyChoice(dropDownKey);
-
-    Saves.ChoicesInNode.Add(newChoice);
-
-    CreateSingleChoicePortForExisting(newChoice, dropDownKey);
-}
-
-private int FindChildIndexContainingPort(VisualElement container, Port choicePort)
-{
-    var children = container.Children().ToList();
-    for (int i = 0; i < children.Count; i++)
-    {
-        if (children[i] == choicePort || IsAncestor(children[i], choicePort))
-            return i;
-    }
-    return -1;
-}
-
-private int FindLabelIndexForPort(VisualElement container, int portIndex)
-{
-    var children = container.Children().ToList();
-    for (int i = portIndex + 1; i < children.Count; i++)
-    {
-        var child = children[i];
-        if (FindPortInElement(child) != null)
-            return -1;
-
-        if (child.ClassListContains("ds-node__label-translate"))
-            return i;
-    }
-    return -1;
-}
-
-private Port FindPortInElement(VisualElement elem)
-{
-    if (elem == null) return null;
-    if (elem is Port directPort) return directPort;
-
-    foreach (var child in elem.Children())
-    {
-        var found = FindPortInElement(child);
-        if (found != null) return found;
-    }
-    return null;
-}
-
-void AddConditionsBelowPort(Port choicePort, VisualElement elementToAdd, bool canBeDeleted = true)
-{
-    if (choicePort == null || elementToAdd == null) return;
-
-    VisualElement container = FindContainerForPort(choicePort);
-    if (container == null)
-    {
-        var fallback = extensionContainer ?? mainContainer ?? (VisualElement)this;
-        fallback.Add(elementToAdd);
-        elementToAdd.MarkDirtyRepaint();
-        return;
-    }
-
-    int portIndex = FindChildIndexContainingPort(container, choicePort);
-    if (portIndex < 0)
-    {
-        container.Add(elementToAdd);
-        elementToAdd.MarkDirtyRepaint();
-        return;
-    }
-
-    int labelIndexForThisPort = FindLabelIndexForPort(container, portIndex);
-
-    int insertIndex;
-    if (labelIndexForThisPort >= 0)
-    {
-        insertIndex = labelIndexForThisPort + 1;
-    }
-    else
-    {
-        insertIndex = portIndex + 1;
-    }
-
-    container.Insert(insertIndex, elementToAdd);
-
-    bool isLabel = elementToAdd.ClassListContains("ds-node__label-translate");
-    if (!isLabel)
-    {
-        elementToAdd.AddToClassList("ds-node__conditions-container");
-
-        if (Saves.ConditionsMapElement == null)
-            Saves.ConditionsMapElement = new Dictionary<Port, List<VisualElement>>();
-
-        if (!Saves.ConditionsMapElement.ContainsKey(choicePort))
-            Saves.ConditionsMapElement[choicePort] = new List<VisualElement>();
-
-        Saves.ConditionsMapElement[choicePort].Add(elementToAdd);
-
-        if (canBeDeleted)
-        {
-            Button butClearCondition = DSElementUtility.CreateButton("X", () =>
-            {
-                ClearCondition(choicePort, elementToAdd);
-            });
-            butClearCondition.AddToClassList("ds-node__buttonDeleteCondition");
-            elementToAdd.Add(butClearCondition);
-        }
-    }
-    else
-    {
-        if (!_choicePortsTextField.ContainsKey(choicePort))
-            _choicePortsTextField.Add(choicePort, (TextField)elementToAdd);
         else
-            _choicePortsTextField[choicePort] = (TextField)elementToAdd;
+        {
+            Label choiceLabel = new Label("Continue");
+            choicePort.Add(choiceLabel);
+        }
+
+        if (Saves.isMultipleChoice && Saves.ChoicesInNode.Count > 2)
+        {
+            Button deleteChoiceButton = DSElementUtility.CreateButton("X", () =>
+            {
+                if (choicePort.connected)
+                {
+                    graphView.DeleteElements(choicePort.connections);
+                }
+                if (Saves.ConditionsMapElement != null && Saves.ConditionsMapElement.TryGetValue(choicePort, out List<VisualElement> condElem))
+                {
+                    ClearConditions(condElem);
+                    Saves.ConditionsMapElement.Remove(choicePort);
+                }
+            
+                _choicePortsTextField.TryGetValue(choicePort, out TextField textField);
+                if (textField != null)
+                {
+                    textField.RemoveFromHierarchy();
+                }
+                int idx = _choicePorts.IndexOf(choicePort);
+                if (idx >= 0 && idx < Saves.ChoicesInNode.Count)
+                {
+                    Saves.ChoicesInNode.RemoveAt(idx);
+                }
+                _choicePorts.Remove(choicePort);
+                _choicePortsTextField.Remove(choicePort);
+
+                graphView.RemoveElement(choicePort);
+            });
+        
+            deleteChoiceButton.AddToClassList("ds-node__buttonDelete");
+            choicePort.Add(deleteChoiceButton);
+        }
+
+        if (Saves.isMultipleChoice)
+        {
+            Button conditionsButton = DSElementUtility.CreateButton("Add Conditions", () => { AddConditionsBelowPort(choicePort, CreateConditions(choicePort)); });
+            conditionsButton.AddToClassList("ds-node__button");
+            choicePort.Add(conditionsButton);
+        }
+
+        outputContainer.Add(choicePort);
+
+        _choicePorts.Add(choicePort);
+
+        if (Saves.isMultipleChoice)
+        {
+            var label = CreateLabelChoiceTranslate();
+            label.AddToClassList("ds-node__label-translate");
+        
+            AddConditionsBelowPort(choicePort, label, false);
+            _choicePortsTextField[choicePort] = label;
+
+            if (!string.IsNullOrEmpty(dropDownKey))
+            {
+                OnDropDownChoiceTranslate(choicePort, choiceDropdown, choiceData);
+            }
+        }
+
+        choicePort.MarkDirtyRepaint();
+        RefreshExpandedState();
+        MarkDirtyRepaint();
+
+        return (choicePort, choiceDropdown);
     }
+
+
+    private void CreateSingleChoicePortNew(string dropDownKey = "")
+    {
+        DSChoiceSaveData newChoice = new DSChoiceSaveData();
+        newChoice.SaveDropDownKeyChoice(dropDownKey);
+
+        Saves.ChoicesInNode.Add(newChoice);
+
+        CreateSingleChoicePortForExisting(newChoice, dropDownKey);
+    }
+
+    private int FindChildIndexContainingPort(VisualElement container, Port choicePort)
+    {
+        var children = container.Children().ToList();
+        for (int i = 0; i < children.Count; i++)
+        {
+            if (children[i] == choicePort || IsAncestor(children[i], choicePort))
+                return i;
+        }
+        return -1;
+    }
+
+    private int FindLabelIndexForPort(VisualElement container, int portIndex)
+    {
+        var children = container.Children().ToList();
+        for (int i = portIndex + 1; i < children.Count; i++)
+        {
+            var child = children[i];
+            if (FindPortInElement(child) != null)
+                return -1;
+
+            if (child.ClassListContains("ds-node__label-translate"))
+                return i;
+        }
+        return -1;
+    }
+
+    private Port FindPortInElement(VisualElement elem)
+    {
+        if (elem == null) return null;
+        if (elem is Port directPort) return directPort;
+
+        foreach (var child in elem.Children())
+        {
+            var found = FindPortInElement(child);
+            if (found != null) return found;
+        }
+        return null;
+    }
+
+    void AddConditionsBelowPort(Port choicePort, VisualElement elementToAdd, bool canBeDeleted = true)
+    {
+        if (choicePort == null || elementToAdd == null) return;
+
+        VisualElement container = FindContainerForPort(choicePort);
+        if (container == null)
+        {
+            var fallback = extensionContainer ?? mainContainer ?? (VisualElement)this;
+            fallback.Add(elementToAdd);
+            elementToAdd.MarkDirtyRepaint();
+            return;
+        }
+
+        int portIndex = FindChildIndexContainingPort(container, choicePort);
+        if (portIndex < 0)
+        {
+            container.Add(elementToAdd);
+            elementToAdd.MarkDirtyRepaint();
+            return;
+        }
+
+        int labelIndexForThisPort = FindLabelIndexForPort(container, portIndex);
+
+        int insertIndex;
+        if (labelIndexForThisPort >= 0)
+        {
+            insertIndex = labelIndexForThisPort + 1;
+        }
+        else
+        {
+            insertIndex = portIndex + 1;
+        }
+
+        container.Insert(insertIndex, elementToAdd);
+
+        bool isLabel = elementToAdd.ClassListContains("ds-node__label-translate");
+        if (!isLabel)
+        {
+            elementToAdd.AddToClassList("ds-node__conditions-container");
+
+            if (Saves.ConditionsMapElement == null)
+                Saves.ConditionsMapElement = new Dictionary<Port, List<VisualElement>>();
+
+            if (!Saves.ConditionsMapElement.ContainsKey(choicePort))
+                Saves.ConditionsMapElement[choicePort] = new List<VisualElement>();
+
+            Saves.ConditionsMapElement[choicePort].Add(elementToAdd);
+
+            if (canBeDeleted)
+            {
+                Button butClearCondition = DSElementUtility.CreateButton("X", () =>
+                {
+                    ClearCondition(choicePort, elementToAdd);
+                });
+                butClearCondition.AddToClassList("ds-node__buttonDeleteCondition");
+                elementToAdd.Add(butClearCondition);
+            }
+        }
+        else
+        {
+            if (!_choicePortsTextField.ContainsKey(choicePort))
+                _choicePortsTextField.Add(choicePort, (TextField)elementToAdd);
+            else
+                _choicePortsTextField[choicePort] = (TextField)elementToAdd;
+        }
     
     
-    elementToAdd.MarkDirtyRepaint();
-    RefreshExpandedState();
-    MarkDirtyRepaint();
-}
+        elementToAdd.MarkDirtyRepaint();
+        RefreshExpandedState();
+        MarkDirtyRepaint();
+    }
 
-private VisualElement CreateCompactLabeledEnum(string shortLabel, EnumField enumField, int labelWidth = 56)
-{
-    var wrap = new VisualElement();
-    wrap.style.flexDirection = FlexDirection.Row;
-    wrap.style.alignItems = Align.Center;
-    wrap.style.marginRight = 6;
-    wrap.style.height = 22;
+    private VisualElement CreateCompactLabeledEnum(string shortLabel, EnumField enumField, int labelWidth = 56)
+    {
+        var wrap = new VisualElement();
+        wrap.style.flexDirection = FlexDirection.Row;
+        wrap.style.alignItems = Align.Center;
+        wrap.style.marginRight = 6;
+        wrap.style.height = 22;
 
-    // short label
-    var lbl = new Label(shortLabel);
-    lbl.style.unityFontStyleAndWeight = FontStyle.Bold;
-    lbl.style.fontSize = 10;
-    lbl.style.marginRight = 4;
-    lbl.style.minWidth = labelWidth;
-    lbl.style.maxWidth = labelWidth;
-    lbl.style.unityTextAlign = TextAnchor.MiddleLeft;
-    wrap.Add(lbl);
+        // short label
+        var lbl = new Label(shortLabel);
+        lbl.style.unityFontStyleAndWeight = FontStyle.Bold;
+        lbl.style.fontSize = 10;
+        lbl.style.marginRight = 4;
+        lbl.style.minWidth = labelWidth;
+        lbl.style.maxWidth = labelWidth;
+        lbl.style.unityTextAlign = TextAnchor.MiddleLeft;
+        wrap.Add(lbl);
 
-    // compact enum (hide default label and tighten spacing)
-    enumField.label = null; // remove the built-in label
-    enumField.style.minWidth = 90;
-    enumField.style.maxWidth = 140;
-    enumField.style.marginLeft = 0;
-    enumField.style.marginRight = 0;
+        // compact enum (hide default label and tighten spacing)
+        enumField.label = null; // remove the built-in label
+        enumField.style.minWidth = 90;
+        enumField.style.maxWidth = 140;
+        enumField.style.marginLeft = 0;
+        enumField.style.marginRight = 0;
 
-    wrap.Add(enumField);
-    return wrap;
-}
+        wrap.Add(enumField);
+        return wrap;
+    }
 
 }
 

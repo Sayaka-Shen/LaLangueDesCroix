@@ -150,10 +150,6 @@ public class DialogueManager : MonoBehaviour
             TryToUpdateNextDialogueFromNextNode();
         }
 
-        if(_isWaitingForChoice)
-        {
-            m_phoneManager.OpenDropDownMenu();
-        }
     }
 
     // MET A JOUR LE DIALOGUE EN FONCTION DU NODE SUIVANT //
@@ -306,6 +302,8 @@ public class DialogueManager : MonoBehaviour
         if (_currentNode.ChoicesInNode.Count > 1)
         {
             _isWaitingForChoice = true;
+            StartCoroutine(WaitBeforeOpeningDropdown());
+
             foreach (DSChoiceSaveData choice in _currentNode.ChoicesInNode)
             {
                 Button choiceButton = Instantiate(ChoiceButtonPrefab, ChoiceButtonContainer);
@@ -373,6 +371,12 @@ public class DialogueManager : MonoBehaviour
     private void SetNewSpeaker(SpeakerInfo speaker)
     {
         _currentSpeaker = speaker;
+    }
+
+    private IEnumerator WaitBeforeOpeningDropdown()
+    {
+        yield return new WaitForSeconds(.2f);
+        m_phoneManager.OpenDropDownMenu();
     }
 
     private DSNodeSaveData GetNodeStart()
