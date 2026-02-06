@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using NaughtyAttributes;
+using System.Collections;
 
 public enum language
 {
@@ -48,13 +49,11 @@ public class DialogueManager : MonoBehaviour
     [Header("Phone Manager")]
     [SerializeField] private PhoneManager m_phoneManager;
 
-    [Header("Relocate Scroll Grid")]
-    [SerializeField] private RelocateScrollView m_relocateScrollView;
-
     [Header("Message Timer")]
     [SerializeField] private float m_maxTimer = 1.5f;
     private float m_timer;
     private bool m_isWaitingForMessage;
+
 
     [Button]
     public void LoadCsv()
@@ -150,8 +149,13 @@ public class DialogueManager : MonoBehaviour
 
             TryToUpdateNextDialogueFromNextNode();
         }
+
+        if(_isWaitingForChoice)
+        {
+            m_phoneManager.OpenDropDownMenu();
+        }
     }
-    
+
     // MET A JOUR LE DIALOGUE EN FONCTION DU NODE SUIVANT //
     private void TryToUpdateNextDialogueFromNextNode()
     {

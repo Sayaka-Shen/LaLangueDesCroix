@@ -1,6 +1,8 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+
 #if UNITY_EDITOR
 using static UnityEditor.Rendering.MaterialUpgrader;
 #endif
@@ -10,11 +12,11 @@ public class dialogueContainer : MonoBehaviour
     [Header("Message")]
     [SerializeField] private GameObject m_receiverPrefab;
     [SerializeField] private GameObject m_senderPrefab;
+    [SerializeField] private GameObject m_imgPrefab;
     private RelocateScrollView m_relocateScrollView;
     private GameObject m_messageInstance;
-
-    [Header("Phone")]
-    [SerializeField] private PhoneManager m_phoneManager;
+    private GameObject m_messageImgInstance;
+    private RectTransform m_scrollContainerTransform;
 
     //[SerializeField] private TextMeshProUGUI dialogueText;
     //[SerializeField] private TextMeshProUGUI speakerNameText;
@@ -22,6 +24,7 @@ public class dialogueContainer : MonoBehaviour
 
     private void Start()
     {
+        m_scrollContainerTransform = GetComponent<RectTransform>();
         m_relocateScrollView = GetComponent<RelocateScrollView>();
     }
 
@@ -31,44 +34,72 @@ public class dialogueContainer : MonoBehaviour
         //if (childContainer == null) return;
         //childContainer.gameObject.SetActive(true);
 
-        m_messageInstance = Instantiate(speakers == Espeaker.Toi ? m_receiverPrefab : m_senderPrefab, this.transform);
-
-        if (m_phoneManager.ScrollContainer.transform.childCount > 4)
+        // CHECK ONLY FOR IMAGE TO SPAWN MESSAGE IMAGE PREFAB
+        if (string.IsNullOrEmpty(dialogue) && tradImg != null)
         {
-            m_relocateScrollView.UpdateScrollView();
-        }
+            m_messageImgInstance = Instantiate(m_imgPrefab, this.transform);
 
-        if (m_messageInstance == null)
-        {
-            Debug.Log("Le message prefab n'existe pas.");
-            return;
-        }
-
-        Message message = m_messageInstance.GetComponentInChildren<Message>();
-        if (message != null)
-        {
-            if (tradImg != null)
+            if (m_messageImgInstance == null)
             {
-                message.SetImage(tradImg);
+               Debug.Log("Le message image prefab n'existe pas.");
+            }
+
+            MessageImage messageImg = m_messageImgInstance.GetComponentInChildren<MessageImage>();
+            if (messageImg != null)
+            {
+                messageImg.SetSpriteImg(tradImg);
             }
             else
             {
-                if (dialogue != "")
+                Debug.Log("Il n'y a pas de composant MessageImage.");
+            }
+
+            StartCoroutine(ScrollNextFrame());
+        }
+        // CHECK ONLY FOR TEXT TO SPAWN THE MESSAGE PREFAB
+        else
+        {
+            m_messageInstance = Instantiate(speakers == Espeaker.Toi ? m_receiverPrefab : m_senderPrefab, this.transform);
+            
+            if (m_messageInstance == null)
+            {
+                Debug.Log("Le message prefab n'existe pas.");
+                return;
+            }
+
+
+            Message message = m_messageInstance.GetComponentInChildren<Message>();
+            if (message != null)
+            {
+                if (!string.IsNullOrEmpty(dialogue))
                 {
                     message.SetMessageText(dialogue);
                 }
             }
+            else
+            {
+                Debug.Log("Il n'y a pas de composant Message.");
+            }
+
+            StartCoroutine(ScrollNextFrame());
         }
-        else
-        {
-            Debug.Log("Il n'y a pas de composant Message.");
-        }
+
 
         //traductionImage.sprite = traductionImg;
         //dialogueText.SetText(dialogue);
         //speakerNameText.SetText(speakerName);
     }
-    
+
+    private IEnumerator ScrollNextFrame()
+    {
+        yield return new WaitForSeconds(.1f);
+
+        if (m_scrollContainerTransform.sizeDelta.y > 0)
+        {
+            m_relocateScrollView.UpdateScrollView();
+        }
+    }
+
     //public void HideContainer()
     //{
     //    var childContainer = transform.GetChild(0);

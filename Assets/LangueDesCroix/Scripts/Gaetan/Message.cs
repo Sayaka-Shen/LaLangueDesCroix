@@ -13,8 +13,6 @@ public class Message : MonoBehaviour
 {
     [Header("Message Properties")]
     [SerializeField] private TextMeshProUGUI m_messageContent;
-    [SerializeField] private Image m_messageImage;
-    [SerializeField] private GameObject m_messageBG;
     [SerializeField] private MessageOwner m_messageOwner;
 
     public void SetMessageText(string msg)
@@ -22,12 +20,6 @@ public class Message : MonoBehaviour
         m_messageContent.text = msg;
     }
 
-    public void SetImage(Sprite sprite)
-    {
-        m_messageBG.SetActive(false);
-        m_messageImage.sprite = sprite;
-    }
-    
     void LateUpdate()
     {
         //Get rect transforms

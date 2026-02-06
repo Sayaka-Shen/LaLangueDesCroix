@@ -32,6 +32,7 @@ public class PhoneManager : MonoBehaviour
 
     public bool HasAlreadyClickedDp { get; private set; }
     private float m_messageContainerStartPos;
+    private RectTransform m_scrollContRectTransform;
     
     [Header("Other Apps")]
     [SerializeField] private GameObject m_panelMessage;
@@ -42,6 +43,7 @@ public class PhoneManager : MonoBehaviour
 
     public void Start()
     {
+        m_scrollContRectTransform = m_scrollContainer.GetComponent<RectTransform>();
         m_messageContainerStartPos = m_messageContainer.anchoredPosition.y;
 
         m_getPanelFromAppState = new Dictionary<AppState, GameObject>()
@@ -66,7 +68,7 @@ public class PhoneManager : MonoBehaviour
             dropDownFootCurrentPos.y += m_dropdownMenuFactor;
             m_footerContainer.DOAnchorPos(dropDownFootCurrentPos, .5f);
 
-            if (ScrollContainer.transform.childCount > 2 && m_messageContainer.anchoredPosition.y == m_messageContainerStartPos)
+            if (m_scrollContRectTransform.sizeDelta.y > 0 && m_messageContainer.anchoredPosition.y == m_messageContainerStartPos)
             {
                 Vector2 messageContainerCurrentPos = m_messageContainer.anchoredPosition;
                 messageContainerCurrentPos.y += m_dropdownMenuFactor;
@@ -87,7 +89,7 @@ public class PhoneManager : MonoBehaviour
         dropDownFootCurrentPos.y -= m_dropdownMenuFactor;
         m_footerContainer.DOAnchorPos(dropDownFootCurrentPos, .5f);
 
-        if (ScrollContainer.transform.childCount > 2 && m_messageContainer.anchoredPosition.y != m_messageContainerStartPos)
+        if (m_scrollContRectTransform.sizeDelta.y > 0 && m_messageContainer.anchoredPosition.y != m_messageContainerStartPos)
         {
             Vector2 messageContainerCurrentPos = m_messageContainer.anchoredPosition;
             messageContainerCurrentPos.y -= m_dropdownMenuFactor;
