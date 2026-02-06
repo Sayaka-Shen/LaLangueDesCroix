@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 
 
-public enum MessageType
+public enum MessagesType
 {
     Sender, 
     Receiver,
@@ -15,7 +15,7 @@ public class Message : MonoBehaviour
 {
     [Header("Message Properties")]
     [SerializeField] private TextMeshProUGUI m_messageContent;
-    [SerializeField] private MessageType mMessageType;
+    [SerializeField] private MessagesType mMessageType;
 
     public void SetMessageText(string msg)
     {
@@ -50,7 +50,7 @@ public class Message : MonoBehaviour
         return m_messageContent.text;
     }
 
-    public MessageType GetMessageOwner()
+    public MessagesType GetMessageOwner()
     {
         return mMessageType;
     }
