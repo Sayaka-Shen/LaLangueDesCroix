@@ -33,7 +33,7 @@ public class Player : MonoBehaviour
         CreateMessages(data);
     }
 
-    public (String[], MessageOwner[]) GetAllMessages()
+    public (String[], MessagesType[]) GetAllMessages()
     {
         GameObject[] childObjects = new GameObject[MessageContain.transform.childCount];
 
@@ -44,7 +44,7 @@ public class Player : MonoBehaviour
         }
         String[] messageTexts = new String[childObjects.Length];
 
-        MessageOwner[] messageOwners = new MessageOwner[childObjects.Length];
+        MessagesType[] messageOwners = new MessagesType[childObjects.Length];
 
         for(int i = 0; i < childObjects.Length; i++)
         {
@@ -69,10 +69,10 @@ public class Player : MonoBehaviour
             switch
                 (data.MessageOwnerArray[i])
             {
-                case MessageOwner.Sender:
+                case MessagesType.Sender:
                     messageObject = Instantiate(MessageSender, MessageContain.transform);
                     break;
-                case MessageOwner.Receiver:
+                case MessagesType.Receiver:
                     messageObject = Instantiate(MessageReceiver, MessageContain.transform);
                     break;
                 default:

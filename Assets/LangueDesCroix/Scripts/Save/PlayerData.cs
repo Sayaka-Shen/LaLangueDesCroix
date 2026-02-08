@@ -5,7 +5,7 @@ using UnityEngine;
 [System.Serializable]
 public class PlayerData
 {
-    public MessageOwner[] MessageOwnerArray;
+    public MessagesType[] MessageOwnerArray;
     public String[] MessageTextArray;
 
     public PlayerData (Player player)
