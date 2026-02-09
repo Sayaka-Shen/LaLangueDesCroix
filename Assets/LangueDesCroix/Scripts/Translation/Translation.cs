@@ -133,6 +133,7 @@ public class Translation : MonoBehaviour
             Debug.Log("wordOne trouvé");
             origin.infos.foundWordOne = true;
             inptWordOne.interactable = false;
+            CheckBothValidated();
         }
         else
         {
@@ -151,6 +152,7 @@ public class Translation : MonoBehaviour
             Debug.Log("wordTwo trouvé");
             origin.infos.foundWordTwo = true;
             inptWordTwo.interactable = false;
+            CheckBothValidated();
         }
         else
         {
@@ -159,6 +161,17 @@ public class Translation : MonoBehaviour
             inptWordTwo.text = "";
             StartCoroutine(ChangeInputTextColor(inptWordTwo));
         }
+    }
+
+    public void CheckBothValidated()
+    {
+        if (origin.infos.foundWordOne && origin.infos.foundWordTwo)
+        {
+            origin.infos.parentMessage.transform.parent.GetChild(
+                origin.infos.parentMessage.transform.GetSiblingIndex() - origin.infos.messageIndexToReplace)
+                .GetComponentInChildren<Message>().SetMessageText(origin.infos.messageDecrypted);
+        }
+        
     }
     
     public void QuitTranslation()

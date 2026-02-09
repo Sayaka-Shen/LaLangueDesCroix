@@ -38,7 +38,7 @@ public class dialogueContainer : MonoBehaviour
         //childContainer.gameObject.SetActive(true);
 
         // CHECK ONLY FOR IMAGE TO SPAWN MESSAGE IMAGE PREFAB
-        if (string.IsNullOrEmpty(dialogue) && tradImg != null)
+        if (tradImg != null)
         {
             m_messageImgInstance = Instantiate(m_imgPrefab, this.transform);
 
@@ -58,6 +58,9 @@ public class dialogueContainer : MonoBehaviour
 
                 if (firstScript != null && secondScript != null)
                 {
+                    firstScript.InitializeTwo(m_messageImgInstance, dialogue);
+                    secondScript.InitializeTwo(m_messageImgInstance, dialogue);
+                    
                     firstScript.twin = secondScript;
                     secondScript.twin = firstScript;
                 }
