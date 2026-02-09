@@ -2064,6 +2064,13 @@ MonoBehaviour:
   ThirdImage: {fileID: 0}
   FourthImage: {fileID: 0}
   FifthImage: {fileID: 0}
+  SixthImage: {fileID: 0}
+  FirstImagePrefab: {fileID: 5624443108993794548, guid: fdd79bfad6cd98d4584f65921f607531, type: 3}
+  SecondImagePrefab: {fileID: 0}
+  ThirdImagePrefab: {fileID: 0}
+  FourthImagePrefab: {fileID: 0}
+  FifthImagePrefab: {fileID: 0}
+  SixthImagePrefab: {fileID: 0}
 --- !u!4 &950561128
 Transform:
   m_ObjectHideFlags: 0
@@ -2410,7 +2417,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::dialogueContainer
   m_receiverPrefab: {fileID: 7377864829776364412, guid: e71fd20c64682fb4da4b1a746bd9f53c, type: 3}
   m_senderPrefab: {fileID: 2339474256016226702, guid: 5450b8c3d0e59af42827dfe68dbf872b, type: 3}
-  m_imgPrefab: {fileID: 6860300695199978353, guid: 05844f89f3aa4d34daf332c5276509db, type: 3}
+  m_imgPrefab: {fileID: 768453190989892908, guid: 7a964f41f97eead4d85d6a121f00f079, type: 3}
 --- !u!1 &1453853477
 GameObject:
   m_ObjectHideFlags: 0

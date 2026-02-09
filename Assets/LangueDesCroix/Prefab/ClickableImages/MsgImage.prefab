@@ -154,4 +154,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Message
   m_messageContent: {fileID: 0}
-  mMessageType: 0
+  mMessageType: 2
