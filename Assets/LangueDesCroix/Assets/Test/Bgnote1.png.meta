@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: bc3ce98bd02d2e645b0d82e10e13283f
+guid: b31a1f3f6ff1cc34aad9f14b42db47d2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -2413806693520163455
-    second: Circle
+      213: 2147346233224377173
+    second: Bgnote1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,12 +51,12 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 256
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteTessellationDetail: 0
+  spriteTessellationDetail: -1
   textureType: 8
   textureShape: 1
   singleChannelComponent: 0
@@ -68,7 +68,7 @@ TextureImporter:
   ignorePngGamma: 0
   applyGammaDecoding: 0
   swizzle: 50462976
-  cookieLightType: 1
+  cookieLightType: 0
   platformSettings:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
@@ -126,96 +126,32 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Circle
+      name: Bgnote1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 256
+        width: 1080
+        height: 1920
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 50, y: 50, z: 50, w: 50}
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
-      outline:
-      - - {x: 33, y: 128}
-        - {x: -33, y: 128}
-        - {x: -95, y: 95}
-        - {x: -128, y: 33}
-        - {x: -128, y: -33}
-        - {x: -95, y: -95}
-        - {x: -33, y: -128}
-        - {x: 33, y: -128}
-        - {x: 95, y: -95}
-        - {x: 128, y: -33}
-        - {x: 128, y: 33}
-        - {x: 95, y: 95}
-      physicsShape:
-      - - {x: 0, y: 128}
-        - {x: -39, y: 121}
-        - {x: -75, y: 103}
-        - {x: -103, y: 75}
-        - {x: -121, y: 39}
-        - {x: -128, y: 0}
-        - {x: -121, y: -39}
-        - {x: -103, y: -75}
-        - {x: -75, y: -103}
-        - {x: -39, y: -121}
-        - {x: 0, y: -128}
-        - {x: 39, y: -121}
-        - {x: 75, y: -103}
-        - {x: 103, y: -75}
-        - {x: 121, y: -39}
-        - {x: 128, y: 0}
-        - {x: 121, y: 39}
-        - {x: 103, y: 75}
-        - {x: 75, y: 103}
-        - {x: 39, y: 121}
-      tessellationDetail: 0
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
       bones: []
-      spriteID: 18d3544e99f608ed0800000000000000
-      internalID: -2413806693520163455
+      spriteID: 553bc11a508eccd10800000000000000
+      internalID: 2147346233224377173
       vertices: []
       indices: 
       edges: []
       weights: []
-    outline:
-    - - {x: 33, y: 128}
-      - {x: -33, y: 128}
-      - {x: -95, y: 95}
-      - {x: -128, y: 33}
-      - {x: -128, y: -33}
-      - {x: -95, y: -95}
-      - {x: -33, y: -128}
-      - {x: 33, y: -128}
-      - {x: 95, y: -95}
-      - {x: 128, y: -33}
-      - {x: 128, y: 33}
-      - {x: 95, y: 95}
+    outline: []
     customData: 
-    physicsShape:
-    - - {x: 0, y: 128}
-      - {x: -39, y: 121}
-      - {x: -75, y: 103}
-      - {x: -103, y: 75}
-      - {x: -121, y: 39}
-      - {x: -128, y: 0}
-      - {x: -121, y: -39}
-      - {x: -103, y: -75}
-      - {x: -75, y: -103}
-      - {x: -39, y: -121}
-      - {x: 0, y: -128}
-      - {x: 39, y: -121}
-      - {x: 75, y: -103}
-      - {x: 103, y: -75}
-      - {x: 121, y: -39}
-      - {x: 128, y: 0}
-      - {x: 121, y: 39}
-      - {x: 103, y: 75}
-      - {x: 75, y: 103}
-      - {x: 39, y: 121}
+    physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -225,7 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Circle: -2413806693520163455
+      Bgnote1_0: 2147346233224377173
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
