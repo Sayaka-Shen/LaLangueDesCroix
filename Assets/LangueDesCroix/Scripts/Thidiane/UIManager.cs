@@ -16,19 +16,28 @@ public class UIManager : MonoBehaviour
         switch (type)
         {
             case TypeBouton.Message:
-                _bgMessage.SetActive(true);
-                _bgNote.SetActive(false);
-                _bgGalerie.SetActive(false);
+                _bgGalerie.transform.SetSiblingIndex(0);
+                _bgMessage.transform.SetSiblingIndex(2);
+                _bgNote.transform.SetSiblingIndex(1);
+                //_bgMessage.SetActive(true);
+                //_bgNote.SetActive(false);
+                //_bgGalerie.SetActive(false);
                 break;
             case TypeBouton.Note:
-                _bgMessage.SetActive(false);
-                _bgNote.SetActive(true);
-                _bgGalerie.SetActive(false);
+                _bgGalerie.transform.SetSiblingIndex(0);
+                _bgMessage.transform.SetSiblingIndex(1);
+                _bgNote.transform.SetSiblingIndex(2);
+                //_bgMessage.SetActive(false);
+                //_bgNote.SetActive(true);
+                //_bgGalerie.SetActive(false);
                 break;
             case TypeBouton.Galerie:
-                _bgMessage.SetActive(false);
-                _bgNote.SetActive(false);
-                _bgGalerie.SetActive(true);
+                _bgGalerie.transform.SetSiblingIndex(2);
+                _bgMessage.transform.SetSiblingIndex(1);
+                _bgNote.transform.SetSiblingIndex(0);
+                //_bgMessage.SetActive(false);
+                //_bgNote.SetActive(false);
+                //_bgGalerie.SetActive(true);
                 break;
         }
     }
