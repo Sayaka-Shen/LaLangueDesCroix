@@ -156,6 +156,7 @@ public class Translation : MonoBehaviour
     
     public void QuitTranslation()
     {
+        origin.fillTwinInfos();
         Destroy(gameObject);
     }
 

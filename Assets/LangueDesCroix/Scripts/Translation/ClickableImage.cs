@@ -1,7 +1,8 @@
 using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using UnityEngine.UI;
+using UnityEngine.UIElements;
+using Image = UnityEngine.UI.Image;
 
 [System.Serializable]
 public struct ImageInfos
@@ -26,6 +27,7 @@ public class ClickableImage : MonoBehaviour, IPointerClickHandler
 {
     public ClickableImage twinScript;
     public ImageInfos infos;
+    public ClickableImage twin;
     
     public void Initialize(ImageInfos infos)
     {
@@ -43,6 +45,14 @@ public class ClickableImage : MonoBehaviour, IPointerClickHandler
         if(newGO.TryGetComponent<Translation>(out Translation translation))
         {
             translation.Initialize(this);
+        }
+    }
+
+    public void fillTwinInfos()
+    {
+        if (twin != null)
+        {
+            twin.infos = this.infos;
         }
     }
 }

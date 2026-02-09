@@ -9,6 +9,9 @@ using static UnityEditor.Rendering.MaterialUpgrader;
 
 public class dialogueContainer : MonoBehaviour
 {
+    [Header("Gallery")]
+    [SerializeField] private GameObject m_galleryContainer;
+    
     [Header("Message")]
     [SerializeField] private GameObject m_receiverPrefab;
     [SerializeField] private GameObject m_senderPrefab;
@@ -44,15 +47,24 @@ public class dialogueContainer : MonoBehaviour
                Debug.Log("Le message image prefab n'existe pas.");
             }
 
-            MessageImage messageImg = m_messageImgInstance.GetComponentInChildren<MessageImage>();
-            if (messageImg != null)
+            GameObject m_ImgPrefabInstance = PrefabsManager.Instance.GetPrefabBasedOnSprite(tradImg);
+            if (m_ImgPrefabInstance != null)
             {
-                messageImg.SetSpriteImg(tradImg);
+                GameObject prefabOne = Instantiate(m_ImgPrefabInstance ,m_messageImgInstance.transform.GetChild(0).transform);
+                GameObject prefabTwo = Instantiate(m_ImgPrefabInstance ,m_galleryContainer.transform);
+                
+                ClickableImage firstScript = prefabOne.GetComponent<ClickableImage>();
+                ClickableImage secondScript = prefabTwo.GetComponent<ClickableImage>();
+
+                if (firstScript != null && secondScript != null)
+                {
+                    firstScript.twin = secondScript;
+                    secondScript.twin = firstScript;
+                }
             }
-            else
-            {
-                Debug.Log("Il n'y a pas de composant MessageImage.");
-            }
+            
+            
+            //Instantiate le deuxieme clickabe image dans la gallery puis relier les 2 scripts entre eux
 
             StartCoroutine(ScrollNextFrame());
         }
