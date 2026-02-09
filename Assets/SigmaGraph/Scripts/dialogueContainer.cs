@@ -74,7 +74,7 @@ public class dialogueContainer : MonoBehaviour
         // CHECK ONLY FOR TEXT TO SPAWN THE MESSAGE PREFAB
         else
         {
-            m_messageInstance = Instantiate(speakers == Espeaker.Toi ? m_receiverPrefab : m_senderPrefab, this.transform);
+            m_messageInstance = Instantiate(speakers == Espeaker.Joueur ? m_receiverPrefab : m_senderPrefab, this.transform);
             
             if (m_messageInstance == null)
             {
