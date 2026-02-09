@@ -7,16 +7,25 @@ using Image = UnityEngine.UI.Image;
 [System.Serializable]
 public struct ImageInfos
 {
+    [Header("Sprites")]
     [SerializeField] public IMAGES image;
     [SerializeField] public SYMBOLS symbolOne;
     [SerializeField] public SYMBOLS symbolTwo;
-    [SerializeField] public String wordOne;
-    [SerializeField] public String wordTwo;
+    
+    [Header("Mots [FR/ENG]")]
+    [SerializeField] public String[] wordsOne;
+    [SerializeField] public String[] wordsTwo;
+    
+    [Header("Indices Mot 1")]
     [SerializeField] public int[] indexRevealWordOne;
     [SerializeField] public int[] attemptsRevealWordOne;
+    
+    [Header("Indices Mot 2")]
     [SerializeField] public int[] indexRevealWordTwo;
     [SerializeField] public int[] attemptsRevealWordTwo;
     
+    [HideInInspector] public String wordOne;
+    [HideInInspector] public String wordTwo;
     [HideInInspector] public bool foundWordOne;
     [HideInInspector] public bool foundWordTwo;
     [HideInInspector] public int attemptsWordOne;
@@ -25,10 +34,30 @@ public struct ImageInfos
 
 public class ClickableImage : MonoBehaviour, IPointerClickHandler
 {
-    public ClickableImage twinScript;
     public ImageInfos infos;
-    public ClickableImage twin;
-    
+    [HideInInspector] public ClickableImage twin;
+
+    public void Awake()
+    {
+        infos.wordOne = infos.wordsOne[0];
+        infos.wordTwo = infos.wordsTwo[0];
+        
+        switch (TranslationManager.Instance.GetActualLanguage())
+        {
+            case LANGUAGE.French:
+                infos.wordOne = infos.wordsOne[0];
+                infos.wordTwo = infos.wordsTwo[0];
+                break;
+            case LANGUAGE.English:
+                infos.wordOne = infos.wordsOne[1];
+                infos.wordTwo = infos.wordsTwo[1];
+                break;
+            default :
+                infos.wordOne = infos.wordsOne[0];
+                infos.wordTwo = infos.wordsTwo[0];
+                break;
+        }
+    }
     public void Initialize(ImageInfos infos)
     {
         this.infos = infos;
@@ -36,7 +65,6 @@ public class ClickableImage : MonoBehaviour, IPointerClickHandler
         {
             img.sprite = PrefabsManager.Instance.GetImage(infos.image);
         }
-        
     }
     
     public void OnPointerClick(PointerEventData pointerEventData)
