@@ -88,18 +88,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d16cc7d1a4810b44fbb6fa1ed33ad6c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableImage
-  twinScript: {fileID: 0}
   infos:
     image: 0
     symbolOne: 0
     symbolTwo: 1
-    wordOne: PERDU
-    wordTwo: VOIR
+    wordsOne:
+    - PERDU
+    - LOST
+    wordsTwo:
+    - VOIR
+    - SEE
     indexRevealWordOne: 00000000
     attemptsRevealWordOne: 00000000
     indexRevealWordTwo: 01000000
     attemptsRevealWordTwo: 02000000
+    wordOne: PERDU
+    wordTwo: VOIR
     foundWordOne: 0
     foundWordTwo: 0
     attemptsWordOne: 0
     attemptsWordTwo: 0
+  twin: {fileID: 0}

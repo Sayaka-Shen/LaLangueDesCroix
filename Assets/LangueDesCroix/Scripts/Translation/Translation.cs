@@ -79,8 +79,11 @@ public class Translation : MonoBehaviour
             {
                 var sb1 = new StringBuilder(placeholderWordOne.text);
                 var sb2 = new StringBuilder(origin.infos.wordOne);
-                sb1[origin.infos.indexRevealWordOne[i]] = sb2[origin.infos.indexRevealWordOne[i]];
-                placeholderWordOne.text =  sb1.ToString();
+                if (origin.infos.indexRevealWordOne[i] >= 0 & origin.infos.indexRevealWordOne[i] < origin.infos.wordOne.Length)
+                {
+                    sb1[origin.infos.indexRevealWordOne[i]] = sb2[origin.infos.indexRevealWordOne[i]];
+                    placeholderWordOne.text =  sb1.ToString();
+                }
             }
         }
     }
@@ -93,8 +96,12 @@ public class Translation : MonoBehaviour
             {
                 var sb1 = new StringBuilder(placeholderWordTwo.text);
                 var sb2 = new StringBuilder(origin.infos.wordTwo);
-                sb1[origin.infos.indexRevealWordTwo[i]] = sb2[origin.infos.indexRevealWordTwo[i]];
-                placeholderWordTwo.text =  sb1.ToString();
+                if (origin.infos.indexRevealWordTwo[i] >= 0 & origin.infos.indexRevealWordTwo[i] < origin.infos.wordTwo.Length)
+                {
+                    sb1[origin.infos.indexRevealWordTwo[i]] = sb2[origin.infos.indexRevealWordTwo[i]];
+                    placeholderWordTwo.text =  sb1.ToString();
+                }
+                
             }
         }
     }
