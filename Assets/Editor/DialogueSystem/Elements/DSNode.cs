@@ -103,7 +103,7 @@ public class DSNode : Node
         header.Add(icon);
 
 
-        // DIALOGUE NAME TEXT FIELD //
+        // DIALOGUE NAME TEXT FIELD 
 
         _dialogeNameTextField = DSElementUtility.CreateTextField(DialogueName, null, (ChangeEvent<string> evt) =>
         {
