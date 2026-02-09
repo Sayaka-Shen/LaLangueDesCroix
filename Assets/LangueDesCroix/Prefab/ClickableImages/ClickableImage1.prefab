@@ -102,10 +102,13 @@ MonoBehaviour:
     attemptsRevealWordOne: 00000000
     indexRevealWordTwo: 01000000
     attemptsRevealWordTwo: 02000000
+    messageIndexToReplace: 1
     wordOne: PERDU
     wordTwo: VOIR
     foundWordOne: 0
     foundWordTwo: 0
     attemptsWordOne: 0
     attemptsWordTwo: 0
+    parentMessage: {fileID: 0}
+    messageDecrypted: 
   twin: {fileID: 0}

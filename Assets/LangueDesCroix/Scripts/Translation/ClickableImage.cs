@@ -23,6 +23,9 @@ public struct ImageInfos
     [Header("Indices Mot 2")]
     [SerializeField] public int[] indexRevealWordTwo;
     [SerializeField] public int[] attemptsRevealWordTwo;
+
+    [Header("Dialog Infos")] [SerializeField]
+    public int messageIndexToReplace;
     
     [HideInInspector] public String wordOne;
     [HideInInspector] public String wordTwo;
@@ -30,6 +33,8 @@ public struct ImageInfos
     [HideInInspector] public bool foundWordTwo;
     [HideInInspector] public int attemptsWordOne;
     [HideInInspector] public int attemptsWordTwo;
+    [HideInInspector] public GameObject parentMessage;
+    [HideInInspector] public String messageDecrypted;
 }
 
 public class ClickableImage : MonoBehaviour, IPointerClickHandler
@@ -65,6 +70,12 @@ public class ClickableImage : MonoBehaviour, IPointerClickHandler
         {
             img.sprite = PrefabsManager.Instance.GetImage(infos.image);
         }
+    }
+
+    public void InitializeTwo(GameObject parentMessage, String  messageDecrypted )
+    {
+        this.infos.parentMessage = parentMessage;
+        this.infos.messageDecrypted = messageDecrypted;
     }
     
     public void OnPointerClick(PointerEventData pointerEventData)

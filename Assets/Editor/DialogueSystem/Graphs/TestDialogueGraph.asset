@@ -29,7 +29,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 1498.3999, y: 252}
+    <Position>k__BackingField: {x: 1498.4, y: 252}
   - <ID>k__BackingField: 3c51a393-05ba-4e5a-81b3-fe371749afed
     <Name>k__BackingField: DialogueName_3
     <Speaker>k__BackingField: 0
@@ -44,56 +44,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 1482.3999, y: -68.8}
-  - <ID>k__BackingField: 71e01e43-3f4a-4263-842d-c911bd9e162a
-    <Name>k__BackingField: DialogueName
-    <Speaker>k__BackingField: 1
-    <TraductionImage>k__BackingField: {fileID: 0}
-    isMultipleChoice: 0
-    _dropDownKeyDialogue: Gaelle_D1
-    <OnlyOneConditionNeeded>k__BackingField: 0
-    <ChoicesInNode>k__BackingField:
-    - NodeID: a43c3297-6caa-4e4b-8b4d-e4489885c801
-      _dropDownKeyChoice: Continue
-      <Conditions>k__BackingField: []
-      _directionPort: 0
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: -182.40001, y: 84}
-  - <ID>k__BackingField: d506e5d1-270c-432a-b7bc-9210bc4c5905
-    <Name>k__BackingField: START
-    <Speaker>k__BackingField: 0
-    <TraductionImage>k__BackingField: {fileID: 0}
-    isMultipleChoice: 0
-    _dropDownKeyDialogue: 
-    <OnlyOneConditionNeeded>k__BackingField: 0
-    <ChoicesInNode>k__BackingField:
-    - NodeID: d1732400-b68f-4f07-b1cc-4049dc69afb8
-      _dropDownKeyChoice: 
-      <Conditions>k__BackingField: []
-      _directionPort: 0
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: -1028.8, y: 108}
-  - <ID>k__BackingField: a43c3297-6caa-4e4b-8b4d-e4489885c801
-    <Name>k__BackingField: DialogueName_2
-    <Speaker>k__BackingField: 1
-    <TraductionImage>k__BackingField: {fileID: 0}
-    isMultipleChoice: 1
-    _dropDownKeyDialogue: Gaelle_D2_C1
-    <OnlyOneConditionNeeded>k__BackingField: 0
-    <ChoicesInNode>k__BackingField:
-    - NodeID: 3c51a393-05ba-4e5a-81b3-fe371749afed
-      _dropDownKeyChoice: Toi_D3_A1
-      <Conditions>k__BackingField: []
-      _directionPort: 0
-    - NodeID: 0b74f963-82f6-48c6-a508-7e09640480d7
-      _dropDownKeyChoice: Toi_D3_A2
-      <Conditions>k__BackingField: []
-      _directionPort: 0
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 456.80002, y: 84}
+    <Position>k__BackingField: {x: 1482.4, y: -68.8}
   - <ID>k__BackingField: 389c6390-0cc5-49e3-81fd-918731eb2331
     <Name>k__BackingField: DialogueName_5
     <Speaker>k__BackingField: 1
@@ -138,7 +89,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 3873.5999, y: -55.2}
+    <Position>k__BackingField: {x: 3873.6, y: -55.199997}
   - <ID>k__BackingField: 87e23074-f42a-4d4a-a11a-9538b51e6ab6
     <Name>k__BackingField: DialogueName_1
     <Speaker>k__BackingField: 1
@@ -168,7 +119,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 4620.8003, y: -41.6}
+    <Position>k__BackingField: {x: 4620.8, y: -41.6}
   - <ID>k__BackingField: 5c1423b6-b95f-4fa1-b416-fb53b07edaf9
     <Name>k__BackingField: END
     <Speaker>k__BackingField: 0
@@ -184,12 +135,46 @@ MonoBehaviour:
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 2
     <Position>k__BackingField: {x: 5220, y: 241.6}
+  - <ID>k__BackingField: a43c3297-6caa-4e4b-8b4d-e4489885c801
+    <Name>k__BackingField: DialogueName_2
+    <Speaker>k__BackingField: 1
+    <TraductionImage>k__BackingField: {fileID: 0}
+    isMultipleChoice: 1
+    _dropDownKeyDialogue: Gaelle_D2_C1
+    <OnlyOneConditionNeeded>k__BackingField: 0
+    <ChoicesInNode>k__BackingField:
+    - NodeID: 3c51a393-05ba-4e5a-81b3-fe371749afed
+      _dropDownKeyChoice: Toi_D3_A1
+      <Conditions>k__BackingField: []
+      _directionPort: 0
+    - NodeID: 0b74f963-82f6-48c6-a508-7e09640480d7
+      _dropDownKeyChoice: Toi_D3_A2
+      <Conditions>k__BackingField: []
+      _directionPort: 0
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 456.8, y: 84}
+  - <ID>k__BackingField: d506e5d1-270c-432a-b7bc-9210bc4c5905
+    <Name>k__BackingField: START
+    <Speaker>k__BackingField: 0
+    <TraductionImage>k__BackingField: {fileID: 0}
+    isMultipleChoice: 0
+    _dropDownKeyDialogue: 
+    <OnlyOneConditionNeeded>k__BackingField: 0
+    <ChoicesInNode>k__BackingField:
+    - NodeID: d1732400-b68f-4f07-b1cc-4049dc69afb8
+      _dropDownKeyChoice: 
+      <Conditions>k__BackingField: []
+      _directionPort: 0
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 1
+    <Position>k__BackingField: {x: -1352.8, y: 84}
   - <ID>k__BackingField: d1732400-b68f-4f07-b1cc-4049dc69afb8
     <Name>k__BackingField: DialogueName_9
     <Speaker>k__BackingField: 1
-    <TraductionImage>k__BackingField: {fileID: 779523859372869476, guid: 75a103d9661e0de438f3385fffaf88ae, type: 3}
+    <TraductionImage>k__BackingField: {fileID: 0}
     isMultipleChoice: 0
-    _dropDownKeyDialogue: 
+    _dropDownKeyDialogue: Gaelle_D2_C1
     <OnlyOneConditionNeeded>k__BackingField: 0
     <ChoicesInNode>k__BackingField:
     - NodeID: 71e01e43-3f4a-4263-842d-c911bd9e162a
@@ -198,20 +183,35 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: -743.2, y: 84}
+    <Position>k__BackingField: {x: -996, y: 96}
+  - <ID>k__BackingField: 71e01e43-3f4a-4263-842d-c911bd9e162a
+    <Name>k__BackingField: DialogueName
+    <Speaker>k__BackingField: 1
+    <TraductionImage>k__BackingField: {fileID: -2488546053096382552, guid: 48d8b17070491a04c86447cb976f4dc2, type: 3}
+    isMultipleChoice: 0
+    _dropDownKeyDialogue: Gaelle_D1
+    <OnlyOneConditionNeeded>k__BackingField: 0
+    <ChoicesInNode>k__BackingField:
+    - NodeID: a43c3297-6caa-4e4b-8b4d-e4489885c801
+      _dropDownKeyChoice: Continue
+      <Conditions>k__BackingField: []
+      _directionPort: 0
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: -284.8, y: 84}
   <OldGroupNames>k__BackingField: []
   <OldUngroupedNodeNames>k__BackingField:
   - DialogueName_4
   - DialogueName_3
-  - DialogueName
-  - START
-  - DialogueName_2
   - DialogueName_5
   - DialogueName_6
   - DialogueName_7
   - DialogueName_1
   - DialogueName_8
   - END
+  - DialogueName_2
+  - START
   - DialogueName_9
+  - DialogueName
   <OldGroupedNodeNames>k__BackingField:
     list: []
