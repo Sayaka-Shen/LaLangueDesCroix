@@ -1,3 +1,4 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
 public enum SYMBOLS
@@ -30,6 +31,14 @@ public class PrefabsManager : MonoBehaviour
     [SerializeField] private Sprite ThirdImage;
     [SerializeField] private Sprite FourthImage;
     [SerializeField] private Sprite FifthImage;
+    [SerializeField] private Sprite SixthImage;
+    
+    [SerializeField] private GameObject FirstImagePrefab;
+    [SerializeField] private GameObject SecondImagePrefab;
+    [SerializeField] private GameObject ThirdImagePrefab;
+    [SerializeField] private GameObject FourthImagePrefab;
+    [SerializeField] private GameObject FifthImagePrefab;
+    [SerializeField] private GameObject SixthImagePrefab;
     
     private void Awake()
     {
@@ -76,6 +85,39 @@ public class PrefabsManager : MonoBehaviour
                 return FifthImage;
             default:
                 return null;
+        }
+    }
+
+    [NotNull]
+    public GameObject GetPrefabBasedOnSprite(Sprite sprite)
+    {
+        if (sprite == FirstImage)
+        {
+            return FirstImagePrefab;
+        }
+        else if (sprite == SecondImage)
+        {
+            return SecondImagePrefab;
+        }
+        else if (sprite == ThirdImage)
+        {
+            return ThirdImagePrefab;
+        }
+        else if (sprite == FourthImage)
+        {
+            return FourthImagePrefab;
+        }
+        else if (sprite == FifthImage)
+        {
+            return FifthImagePrefab;
+        } 
+        else if (sprite == SixthImage)
+        {
+            return SixthImagePrefab;
+        }
+        else
+        {
+            return null;
         }
     }
     

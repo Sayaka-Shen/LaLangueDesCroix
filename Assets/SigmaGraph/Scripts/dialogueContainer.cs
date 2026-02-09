@@ -43,16 +43,9 @@ public class dialogueContainer : MonoBehaviour
             {
                Debug.Log("Le message image prefab n'existe pas.");
             }
-
-            MessageImage messageImg = m_messageImgInstance.GetComponentInChildren<MessageImage>();
-            if (messageImg != null)
-            {
-                messageImg.SetSpriteImg(tradImg);
-            }
-            else
-            {
-                Debug.Log("Il n'y a pas de composant MessageImage.");
-            }
+            
+            Instantiate(PrefabsManager.Instance.GetPrefabBasedOnSprite(tradImg),m_messageImgInstance.transform.GetChild(0).transform);
+            //Instantiate le deuxieme clickabe image dans la gallery puis relier les 2 scripts entre eux
 
             StartCoroutine(ScrollNextFrame());
         }
