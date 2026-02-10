@@ -312,7 +312,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 10, y: 0}
-  m_SizeDelta: {x: -20, y: 850}
+  m_SizeDelta: {x: -20, y: 1000}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &79605738
 MonoBehaviour:
@@ -1028,7 +1028,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 477116906}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1924664963}
+        m_TargetAssemblyTypeName: PhoneManager, Assembly-CSharp
+        m_MethodName: OpenDropDownMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &477116906
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1727,7 +1739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0.23921569, g: 0.23921569, b: 0.23921569, a: 1}
+  m_Color: {r: 0.18029898, g: 0.2603773, b: 0.22033814, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1768,9 +1780,9 @@ MonoBehaviour:
     m_Left: 20
     m_Right: 20
     m_Top: 0
-    m_Bottom: 0
+    m_Bottom: 20
   m_ChildAlignment: 1
-  m_Spacing: 0
+  m_Spacing: 20
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
   m_ChildControlWidth: 1
@@ -2775,11 +2787,8 @@ MonoBehaviour:
   m_dropdownContainer: {fileID: 79605737}
   m_footerContainer: {fileID: 1228866853}
   m_messageContainer: {fileID: 733603438}
-  m_dropdownMenuFactor: 800
+  m_dropdownMenuFactor: 1000
   m_scrollContainer: {fileID: 1401300793}
-  m_panelMessage: {fileID: 503651071}
-  m_panelNotes: {fileID: 476634565}
-  m_panelGallery: {fileID: 456227104}
 --- !u!114 &1924664964
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2797,9 +2806,13 @@ MonoBehaviour:
   m_dialogueContainer: {fileID: 1401300798}
   ChoiceButtonPrefab: {fileID: 644035911041683243, guid: d5276b4136edc4c40ad059c904087cdf, type: 3}
   ChoiceButtonContainer: {fileID: 943002275}
+  m_phoneChoiceBtn: {fileID: 477116904}
   SpeakersScriptable: {fileID: 11400000, guid: 82e282dbd1d6b8c4d845bae0b97efb89, type: 2}
   m_phoneManager: {fileID: 1924664963}
   m_maxTimer: 1.5
+  m_maxShakeTimer: 4
+  m_shakeForce: 10
+  m_shakeTime: 0.8
 --- !u!114 &1924664965
 MonoBehaviour:
   m_ObjectHideFlags: 0

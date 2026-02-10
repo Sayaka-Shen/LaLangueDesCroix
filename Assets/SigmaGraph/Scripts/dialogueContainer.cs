@@ -66,7 +66,6 @@ public class dialogueContainer : MonoBehaviour
                 }
             }
             
-            
             //Instantiate le deuxieme clickabe image dans la gallery puis relier les 2 scripts entre eux
 
             StartCoroutine(ScrollNextFrame());
@@ -75,25 +74,28 @@ public class dialogueContainer : MonoBehaviour
         else
         {
             m_messageInstance = Instantiate(speakers == Espeaker.Joueur ? m_receiverPrefab : m_senderPrefab, this.transform);
-            
+            Message message = m_messageInstance.GetComponentInChildren<Message>();
+
+            if(message == null)
+            {
+                Debug.Log("Il n'y a pas de composant Message.");
+                return;
+            }
+
             if (m_messageInstance == null)
             {
                 Debug.Log("Le message prefab n'existe pas.");
                 return;
             }
 
-
-            Message message = m_messageInstance.GetComponentInChildren<Message>();
-            if (message != null)
+            if (speakers == Espeaker.GAE)
             {
-                if (!string.IsNullOrEmpty(dialogue))
-                {
-                    message.SetMessageText(dialogue);
-                }
+                message.ChangeBgColor(Color.yellow);
             }
-            else
+
+            if (!string.IsNullOrEmpty(dialogue))
             {
-                Debug.Log("Il n'y a pas de composant Message.");
+                message.SetMessageText(dialogue);
             }
 
             StartCoroutine(ScrollNextFrame());
