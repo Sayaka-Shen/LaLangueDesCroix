@@ -3,8 +3,17 @@ using UnityEngine;
 
 public enum SYMBOLS
 {
+    Translate,
+    Language,
+    Sinister,
+    Eye,
+    Understand,
+    Control,
+    Hold,
+    Path,
+    Two,
     Lost,
-    See
+    Disappear
 }
 
 public enum IMAGES
@@ -13,19 +22,28 @@ public enum IMAGES
     SecondImage,
     ThirdImage,
     FourthImage,
-    FifthImage
+    FifthImage,
+    SixthImage
 }
 
 public class PrefabsManager : MonoBehaviour
 {
     public static PrefabsManager Instance { get; private set; }
     
-    //Prefabs List
-    [SerializeField] private GameObject prefabTraduction;
-    
+    [Header("Symbols Sprites")]
+    [SerializeField] private Sprite SymbolTranslate;
+    [SerializeField] private Sprite SymbolLanguage;
+    [SerializeField] private Sprite SymbolSinister;
+    [SerializeField] private Sprite SymbolEye;
+    [SerializeField] private Sprite SymbolUnderstand;
+    [SerializeField] private Sprite SymbolControl;
+    [SerializeField] private Sprite SymbolHold;
+    [SerializeField] private Sprite SymbolPath;
+    [SerializeField] private Sprite SymbolTwo;
     [SerializeField] private Sprite SymbolLost;
-    [SerializeField] private Sprite SymbolSee;
+    [SerializeField] private Sprite SymbolDisappear;
     
+    [Header("Images Sprites")]
     [SerializeField] private Sprite FirstImage;
     [SerializeField] private Sprite SecondImage;
     [SerializeField] private Sprite ThirdImage;
@@ -33,12 +51,16 @@ public class PrefabsManager : MonoBehaviour
     [SerializeField] private Sprite FifthImage;
     [SerializeField] private Sprite SixthImage;
     
+    [Header("Images Prefabs")]
     [SerializeField] private GameObject FirstImagePrefab;
     [SerializeField] private GameObject SecondImagePrefab;
     [SerializeField] private GameObject ThirdImagePrefab;
     [SerializeField] private GameObject FourthImagePrefab;
     [SerializeField] private GameObject FifthImagePrefab;
     [SerializeField] private GameObject SixthImagePrefab;
+    
+    [Header("Other Prefabs")]
+    [SerializeField] private GameObject prefabTraduction;
     
     private void Awake()
     {
@@ -60,10 +82,28 @@ public class PrefabsManager : MonoBehaviour
     {
         switch (symbol)
         {
+            case SYMBOLS.Translate :
+                return SymbolTranslate;
+            case SYMBOLS.Language :
+                return SymbolLanguage;
+            case SYMBOLS.Sinister :
+                return SymbolSinister;
+            case SYMBOLS.Eye :
+                return SymbolEye;
+            case SYMBOLS.Understand :
+                return SymbolUnderstand;
+            case SYMBOLS.Control :
+                return SymbolControl;
+            case SYMBOLS.Hold :
+                return SymbolHold;
+            case SYMBOLS.Path :
+                return SymbolPath;
+            case SYMBOLS.Two :
+                return SymbolTwo;
             case SYMBOLS.Lost :
                 return SymbolLost;
-            case SYMBOLS.See :
-                return SymbolSee;
+            case SYMBOLS.Disappear :
+                return SymbolDisappear;
             default :
                 return null;
         }
@@ -83,6 +123,8 @@ public class PrefabsManager : MonoBehaviour
                 return FourthImage;
             case IMAGES.FifthImage :
                 return FifthImage;
+            case IMAGES.SixthImage :
+                return SixthImage;
             default:
                 return null;
         }

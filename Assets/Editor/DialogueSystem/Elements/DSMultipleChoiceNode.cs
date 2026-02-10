@@ -152,6 +152,7 @@ public class DSMultipleChoiceNode : DSNode
             allowSceneObjects = false,
             value = TraductionImage
         };
+
         traductionImgField.AddToClassList("ds-node__traductionField");
         traductionImgField.style.flexGrow = 1;
         traductionImgField.style.height = 28;
@@ -163,6 +164,17 @@ public class DSMultipleChoiceNode : DSNode
             Sprite newSprite = evt.newValue as Sprite;
             SetTraductionImage(newSprite);
             Saves.SaveTraductionImage(newSprite);
+        });
+
+
+        Label popupMessageLabel = new Label("Popup Message Label");
+        popupMessageLabel.AddToClassList("ds-node__traductionLabel");
+
+        TextField popupMessageField = new TextField();
+
+        popupMessageLabel.RegisterValueChangedCallback(evt =>
+        {
+
         });
 
         _changeNodeType = DSElementUtility.CreateButton("Switch node Type", () => { SwitchNodeType(); });

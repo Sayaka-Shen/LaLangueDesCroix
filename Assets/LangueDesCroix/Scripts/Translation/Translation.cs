@@ -79,8 +79,11 @@ public class Translation : MonoBehaviour
             {
                 var sb1 = new StringBuilder(placeholderWordOne.text);
                 var sb2 = new StringBuilder(origin.infos.wordOne);
-                sb1[origin.infos.indexRevealWordOne[i]] = sb2[origin.infos.indexRevealWordOne[i]];
-                placeholderWordOne.text =  sb1.ToString();
+                if (origin.infos.indexRevealWordOne[i] >= 0 & origin.infos.indexRevealWordOne[i] < origin.infos.wordOne.Length)
+                {
+                    sb1[origin.infos.indexRevealWordOne[i]] = sb2[origin.infos.indexRevealWordOne[i]];
+                    placeholderWordOne.text =  sb1.ToString();
+                }
             }
         }
     }
@@ -93,8 +96,12 @@ public class Translation : MonoBehaviour
             {
                 var sb1 = new StringBuilder(placeholderWordTwo.text);
                 var sb2 = new StringBuilder(origin.infos.wordTwo);
-                sb1[origin.infos.indexRevealWordTwo[i]] = sb2[origin.infos.indexRevealWordTwo[i]];
-                placeholderWordTwo.text =  sb1.ToString();
+                if (origin.infos.indexRevealWordTwo[i] >= 0 & origin.infos.indexRevealWordTwo[i] < origin.infos.wordTwo.Length)
+                {
+                    sb1[origin.infos.indexRevealWordTwo[i]] = sb2[origin.infos.indexRevealWordTwo[i]];
+                    placeholderWordTwo.text =  sb1.ToString();
+                }
+                
             }
         }
     }
@@ -126,6 +133,7 @@ public class Translation : MonoBehaviour
             Debug.Log("wordOne trouvé");
             origin.infos.foundWordOne = true;
             inptWordOne.interactable = false;
+            CheckBothValidated();
         }
         else
         {
@@ -144,6 +152,7 @@ public class Translation : MonoBehaviour
             Debug.Log("wordTwo trouvé");
             origin.infos.foundWordTwo = true;
             inptWordTwo.interactable = false;
+            CheckBothValidated();
         }
         else
         {
@@ -152,6 +161,17 @@ public class Translation : MonoBehaviour
             inptWordTwo.text = "";
             StartCoroutine(ChangeInputTextColor(inptWordTwo));
         }
+    }
+
+    public void CheckBothValidated()
+    {
+        if (origin.infos.foundWordOne && origin.infos.foundWordTwo)
+        {
+            origin.infos.parentMessage.transform.parent.GetChild(
+                origin.infos.parentMessage.transform.GetSiblingIndex() - origin.infos.messageIndexToReplace)
+                .GetComponentInChildren<Message>().SetMessageText(origin.infos.messageDecrypted);
+        }
+        
     }
     
     public void QuitTranslation()
