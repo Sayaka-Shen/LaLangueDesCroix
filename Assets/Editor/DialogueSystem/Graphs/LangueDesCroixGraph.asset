@@ -29,7 +29,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
-    <Position>k__BackingField: {x: -50.4, y: 117.6}
+    <Position>k__BackingField: {x: -50.666664, y: 117.33333}
   - <ID>k__BackingField: 43f9bc4e-d884-4fce-aaf7-51bb3454ea78
     <Name>k__BackingField: DialogueName_7
     <Speaker>k__BackingField: 2
@@ -57,13 +57,13 @@ MonoBehaviour:
     _dropDownKeyDialogue: Joueur_D1_R
     <OnlyOneConditionNeeded>k__BackingField: 0
     <ChoicesInNode>k__BackingField:
-    - NodeID: 3c120478-3504-43e0-80e6-471ab6564b02
+    - NodeID: 841d7fe3-eb95-4642-b474-0c51df4dbf2c
       _dropDownKeyChoice: 
       <Conditions>k__BackingField: []
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 855.2, y: 28.000002}
+    <Position>k__BackingField: {x: 854.6667, y: 28}
   - <ID>k__BackingField: ea4021b1-047f-4900-8910-9d5808dc998e
     <Name>k__BackingField: DialogueName_1
     <Speaker>k__BackingField: 0
@@ -72,30 +72,13 @@ MonoBehaviour:
     _dropDownKeyDialogue: Joueur_D1_R2
     <OnlyOneConditionNeeded>k__BackingField: 0
     <ChoicesInNode>k__BackingField:
-    - NodeID: 3c120478-3504-43e0-80e6-471ab6564b02
+    - NodeID: 841d7fe3-eb95-4642-b474-0c51df4dbf2c
       _dropDownKeyChoice: 
       <Conditions>k__BackingField: []
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 855.2, y: 328.80002}
-  - <ID>k__BackingField: 90bf8d6e-cbd1-42b8-88fe-3ece8a260115
-    <Name>k__BackingField: DialogueName_4
-    <Speaker>k__BackingField: 0
-    <TraductionImage>k__BackingField: {fileID: 0}
-    isMultipleChoice: 0
-    _dropDownKeyDialogue: 'Joueur_D2_R2
-
-'
-    <OnlyOneConditionNeeded>k__BackingField: 0
-    <ChoicesInNode>k__BackingField:
-    - NodeID: aaa86c9a-58e0-4d6b-a9b3-76a1c0824e2f
-      _dropDownKeyChoice: 
-      <Conditions>k__BackingField: []
-      _directionPort: 0
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 2111.2, y: 358.4}
+    <Position>k__BackingField: {x: 854.6667, y: 328.66666}
   - <ID>k__BackingField: aaa86c9a-58e0-4d6b-a9b3-76a1c0824e2f
     <Name>k__BackingField: DialogueName_5
     <Speaker>k__BackingField: 1
@@ -110,7 +93,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 2696.8, y: 211.20001}
+    <Position>k__BackingField: {x: 2696.6667, y: 211.33333}
   - <ID>k__BackingField: 9a1d41f8-ddb5-4f1d-9ada-6fb8d8f79d26
     <Name>k__BackingField: DialogueName_6
     <Speaker>k__BackingField: 1
@@ -125,7 +108,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 3315.2, y: 211.20001}
+    <Position>k__BackingField: {x: 3314.6667, y: 211.33333}
   - <ID>k__BackingField: a40e34b2-d318-472e-962f-08a1118157b1
     <Name>k__BackingField: DialogueName_8
     <Speaker>k__BackingField: 2
@@ -148,24 +131,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 3910.4, y: 211.20001}
-  - <ID>k__BackingField: 78d8d291-ebc8-4c46-8d87-dec12941a63d
-    <Name>k__BackingField: DialogueName_3
-    <Speaker>k__BackingField: 0
-    <TraductionImage>k__BackingField: {fileID: 0}
-    isMultipleChoice: 0
-    _dropDownKeyDialogue: 'Joueur_D2_R1
-
-'
-    <OnlyOneConditionNeeded>k__BackingField: 0
-    <ChoicesInNode>k__BackingField:
-    - NodeID: aaa86c9a-58e0-4d6b-a9b3-76a1c0824e2f
-      _dropDownKeyChoice: 
-      <Conditions>k__BackingField: []
-      _directionPort: 0
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 2111.2, y: 66.4}
+    <Position>k__BackingField: {x: 3910, y: 211.33333}
   - <ID>k__BackingField: 5edf1999-91d2-4d3f-9dee-e3bbebe1427d
     <Name>k__BackingField: DialogueName_9
     <Speaker>k__BackingField: 0
@@ -195,7 +161,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 4617.6, y: 349.6}
+    <Position>k__BackingField: {x: 4617.333, y: 349.33334}
   - <ID>k__BackingField: 09cabdab-9e83-4cd1-9139-cff3024aa967
     <Name>k__BackingField: DialogueName_11
     <Speaker>k__BackingField: 0
@@ -210,7 +176,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 4619.2, y: 704.8}
+    <Position>k__BackingField: {x: 4618.6665, y: 704.6667}
   - <ID>k__BackingField: e761c319-a99f-4ad2-8643-5bc59dd46cb2
     <Name>k__BackingField: DialogueName_13
     <Speaker>k__BackingField: 2
@@ -229,7 +195,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 5385.6, y: -319.19998}
+    <Position>k__BackingField: {x: 5385.333, y: -319.33334}
   - <ID>k__BackingField: 4847580c-db06-426e-b0cc-6ed708667f34
     <Name>k__BackingField: DialogueName_17
     <Speaker>k__BackingField: 2
@@ -248,7 +214,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 5396.8, y: 270.4}
+    <Position>k__BackingField: {x: 5396.6665, y: 270.66666}
   - <ID>k__BackingField: b9e2371d-7af4-4a32-ae0a-21617f92735d
     <Name>k__BackingField: DialogueName_18
     <Speaker>k__BackingField: 2
@@ -267,7 +233,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 5403.2, y: 800}
+    <Position>k__BackingField: {x: 5402.6665, y: 800}
   - <ID>k__BackingField: 92619515-7b36-4187-b002-20f44eeeea89
     <Name>k__BackingField: DialogueName_19
     <Speaker>k__BackingField: 0
@@ -282,7 +248,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 6039.2, y: -493.6}
+    <Position>k__BackingField: {x: 6038.6665, y: -493.33334}
   - <ID>k__BackingField: 0c715b16-df14-4a19-b37f-57658af6d413
     <Name>k__BackingField: DialogueName_20
     <Speaker>k__BackingField: 0
@@ -297,7 +263,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 6040.8, y: -137.59999}
+    <Position>k__BackingField: {x: 6040.6665, y: -137.33334}
   - <ID>k__BackingField: 2f4d3e4e-8da8-4dd6-bee7-ed5317243c3e
     <Name>k__BackingField: DialogueName_21
     <Speaker>k__BackingField: 0
@@ -312,7 +278,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 6050.4, y: 196.8}
+    <Position>k__BackingField: {x: 6050, y: 196.66667}
   - <ID>k__BackingField: f3a9626c-57d6-4dfd-b6d7-d0bf331c1118
     <Name>k__BackingField: DialogueName_22
     <Speaker>k__BackingField: 0
@@ -327,7 +293,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 6048, y: 525.6}
+    <Position>k__BackingField: {x: 6048, y: 525.3333}
   - <ID>k__BackingField: f9cc39bb-7f9b-4aa7-a464-a1b8416232b1
     <Name>k__BackingField: DialogueName_23
     <Speaker>k__BackingField: 0
@@ -357,7 +323,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 6044, y: 1207.2}
+    <Position>k__BackingField: {x: 6044, y: 1207.3334}
   - <ID>k__BackingField: 3a96c318-aaa2-4b4e-9deb-ec37fe7b2a61
     <Name>k__BackingField: DialogueName_25
     <Speaker>k__BackingField: 2
@@ -380,7 +346,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 6990.4, y: 534.39996}
+    <Position>k__BackingField: {x: 6990, y: 534.6667}
   - <ID>k__BackingField: 6f224353-9a37-46b2-9ccf-89ec48173b91
     <Name>k__BackingField: DialogueName_26
     <Speaker>k__BackingField: 0
@@ -395,7 +361,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 7836.8, y: 256}
+    <Position>k__BackingField: {x: 7836.6665, y: 256}
   - <ID>k__BackingField: 5bd57bdc-b117-4999-a838-63dc27683a0f
     <Name>k__BackingField: DialogueName_27
     <Speaker>k__BackingField: 0
@@ -410,7 +376,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 7831.2, y: 641.6}
+    <Position>k__BackingField: {x: 7830.6665, y: 641.3333}
   - <ID>k__BackingField: f38324f7-0f6c-45eb-a35a-b4d96415f41f
     <Name>k__BackingField: DialogueName_28
     <Speaker>k__BackingField: 0
@@ -425,7 +391,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 7844.8, y: 1023.19995}
+    <Position>k__BackingField: {x: 7844.6665, y: 1023.3334}
   - <ID>k__BackingField: 9253b374-b906-49ba-8b44-a011bc4fb9ff
     <Name>k__BackingField: DialogueName_29
     <Speaker>k__BackingField: 2
@@ -455,7 +421,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 8578.4, y: 740.8}
+    <Position>k__BackingField: {x: 8578, y: 740.6667}
   - <ID>k__BackingField: 3bf9b456-2c20-4cca-8cb0-9519834da5c5
     <Name>k__BackingField: DialogueName_32
     <Speaker>k__BackingField: 2
@@ -470,7 +436,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 8574.4, y: 1156.7999}
+    <Position>k__BackingField: {x: 8574, y: 1156.6666}
   - <ID>k__BackingField: 54a9e57c-e455-431d-8ad0-86133dbc730b
     <Name>k__BackingField: DialogueName_30
     <Speaker>k__BackingField: 1
@@ -485,7 +451,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 9304, y: 212.8}
+    <Position>k__BackingField: {x: 9304, y: 212.66667}
   - <ID>k__BackingField: fadb495a-d5c0-4b08-b182-59c1d4ccc116
     <Name>k__BackingField: DialogueName_33
     <Speaker>k__BackingField: 1
@@ -500,7 +466,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 9291.2, y: 740}
+    <Position>k__BackingField: {x: 9290.667, y: 740}
   - <ID>k__BackingField: d6bb4d7a-0692-40fe-940a-edb40ce04638
     <Name>k__BackingField: DialogueName_34
     <Speaker>k__BackingField: 1
@@ -515,7 +481,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 9291.2, y: 1208.7999}
+    <Position>k__BackingField: {x: 9290.667, y: 1208.6666}
   - <ID>k__BackingField: f634110f-3058-42f1-bb4d-29901304e579
     <Name>k__BackingField: DialogueName_35
     <Speaker>k__BackingField: 1
@@ -530,7 +496,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 10116.8, y: 232.80002}
+    <Position>k__BackingField: {x: 10116.667, y: 232.66666}
   - <ID>k__BackingField: b862260b-d54f-4a81-8c43-c77c6a967672
     <Name>k__BackingField: DialogueName_37
     <Speaker>k__BackingField: 1
@@ -545,30 +511,7 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 10109.6, y: 1261.6}
-  - <ID>k__BackingField: 3c120478-3504-43e0-80e6-471ab6564b02
-    <Name>k__BackingField: DialogueName_2
-    <Speaker>k__BackingField: 2
-    <TraductionImage>k__BackingField: {fileID: 0}
-    isMultipleChoice: 1
-    _dropDownKeyDialogue: Machine_D2
-    <OnlyOneConditionNeeded>k__BackingField: 0
-    <ChoicesInNode>k__BackingField:
-    - NodeID: 78d8d291-ebc8-4c46-8d87-dec12941a63d
-      _dropDownKeyChoice: 'Joueur_D2_R1
-
-'
-      <Conditions>k__BackingField: []
-      _directionPort: 0
-    - NodeID: 90bf8d6e-cbd1-42b8-88fe-3ece8a260115
-      _dropDownKeyChoice: 'Joueur_D2_R2
-
-'
-      <Conditions>k__BackingField: []
-      _directionPort: 0
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 1478.4, y: 207.20001}
+    <Position>k__BackingField: {x: 10109.334, y: 1261.3334}
   - <ID>k__BackingField: 220abfac-4c78-4d20-ac97-c0f2110b2655
     <Name>k__BackingField: DialogueName_36
     <Speaker>k__BackingField: 1
@@ -583,18 +526,65 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 10062.4, y: 745.6}
+    <Position>k__BackingField: {x: 10062, y: 745.3333}
+  - <ID>k__BackingField: 841d7fe3-eb95-4642-b474-0c51df4dbf2c
+    <Name>k__BackingField: DialogueName_2
+    <Speaker>k__BackingField: 2
+    <TraductionImage>k__BackingField: {fileID: 0}
+    isMultipleChoice: 1
+    _dropDownKeyDialogue: Machine_D2
+    <OnlyOneConditionNeeded>k__BackingField: 0
+    <ChoicesInNode>k__BackingField:
+    - NodeID: 7cbfbfa9-3f7c-429a-8b51-8b2d24879c16
+      _dropDownKeyChoice: Joueur_D2_R1
+      <Conditions>k__BackingField: []
+      _directionPort: 0
+    - NodeID: bfc4ffc9-a946-4bb8-8ffb-3c4a2df32184
+      _dropDownKeyChoice: Joueur_D2_R2
+      <Conditions>k__BackingField: []
+      _directionPort: 0
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1461.3333, y: 154.66667}
+  - <ID>k__BackingField: 7cbfbfa9-3f7c-429a-8b51-8b2d24879c16
+    <Name>k__BackingField: DialogueName_3
+    <Speaker>k__BackingField: 0
+    <TraductionImage>k__BackingField: {fileID: 0}
+    isMultipleChoice: 0
+    _dropDownKeyDialogue: Joueur_D2_R1
+    <OnlyOneConditionNeeded>k__BackingField: 0
+    <ChoicesInNode>k__BackingField:
+    - NodeID: aaa86c9a-58e0-4d6b-a9b3-76a1c0824e2f
+      _dropDownKeyChoice: 
+      <Conditions>k__BackingField: []
+      _directionPort: 0
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 2086, y: 59.333336}
+  - <ID>k__BackingField: bfc4ffc9-a946-4bb8-8ffb-3c4a2df32184
+    <Name>k__BackingField: DialogueName_4
+    <Speaker>k__BackingField: 0
+    <TraductionImage>k__BackingField: {fileID: 0}
+    isMultipleChoice: 0
+    _dropDownKeyDialogue: Joueur_D2_R2
+    <OnlyOneConditionNeeded>k__BackingField: 0
+    <ChoicesInNode>k__BackingField:
+    - NodeID: aaa86c9a-58e0-4d6b-a9b3-76a1c0824e2f
+      _dropDownKeyChoice: 
+      <Conditions>k__BackingField: []
+      _directionPort: 0
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 2098, y: 380.66666}
   <OldGroupNames>k__BackingField: []
   <OldUngroupedNodeNames>k__BackingField:
   - START
   - DialogueName_7
   - DialogueName
   - DialogueName_1
-  - DialogueName_4
   - DialogueName_5
   - DialogueName_6
   - DialogueName_8
-  - DialogueName_3
   - DialogueName_9
   - DialogueName_10
   - DialogueName_11
@@ -619,7 +609,9 @@ MonoBehaviour:
   - DialogueName_34
   - DialogueName_35
   - DialogueName_37
-  - DialogueName_2
   - DialogueName_36
+  - DialogueName_2
+  - DialogueName_3
+  - DialogueName_4
   <OldGroupedNodeNames>k__BackingField:
     list: []
