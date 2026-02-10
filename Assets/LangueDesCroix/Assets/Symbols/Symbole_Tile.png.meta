@@ -174,19 +174,19 @@ TextureImporter:
       name: Symbole_Tile_0
       rect:
         serializedVersion: 2
-        x: 210
-        y: 2634
+        x: 229
+        y: 2640
         width: 600
         height: 600
-      alignment: 9
-      pivot: {x: 0.42876822, y: 0.50712323}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: cd6225a86b19fad60800000000000000
+      spriteID: 7879dbc1eebf03d409e13a6fa09ef7c2
       internalID: 7903696084249224924
       vertices: []
       indices: 
@@ -196,19 +196,19 @@ TextureImporter:
       name: Symbole_Tile_1
       rect:
         serializedVersion: 2
-        x: 975
-        y: 2652
-        width: 500
-        height: 500
+        x: 1016
+        y: 2700
+        width: 400
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 91dee86aef46537c0800000000000000
+      spriteID: 26f0b778b496d6d4e80550409479c8c1
       internalID: -4092253641517372135
       vertices: []
       indices: 
@@ -218,19 +218,19 @@ TextureImporter:
       name: Symbole_Tile_2
       rect:
         serializedVersion: 2
-        x: 270
-        y: 1890
-        width: 450
-        height: 450
+        x: 294
+        y: 1918
+        width: 400
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 7a5d19a45e2757a80800000000000000
+      spriteID: c1a3346e85bead840a65728349964d40
       internalID: -8469737195076201049
       vertices: []
       indices: 
@@ -240,19 +240,19 @@ TextureImporter:
       name: Symbole_Tile_3
       rect:
         serializedVersion: 2
-        x: 984
-        y: 1903
-        width: 450
-        height: 450
+        x: 1007
+        y: 1923
+        width: 400
+        height: 400
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 5e9d9660c7375a240800000000000000
+      spriteID: f8da8ddc87a666d4bb557cd8af15b6ff
       internalID: 4802371554181241317
       vertices: []
       indices: 
@@ -262,8 +262,8 @@ TextureImporter:
       name: Symbole_Tile_4
       rect:
         serializedVersion: 2
-        x: 1666
-        y: 1848
+        x: 1668
+        y: 1849
         width: 550
         height: 550
       alignment: 0
@@ -272,9 +272,9 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e2c17089d42df5cd0800000000000000
+      spriteID: 5d3844c3405967445aeff4fdd2815f30
       internalID: -2567102031872975826
       vertices: []
       indices: 
@@ -284,8 +284,8 @@ TextureImporter:
       name: Symbole_Tile_5
       rect:
         serializedVersion: 2
-        x: 215
-        y: 985
+        x: 216
+        y: 946
         width: 600
         height: 600
       alignment: 0
@@ -294,9 +294,9 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e9b8149a7618ed0e0800000000000000
+      spriteID: c077c740e68edb44998b412fe9a98d0b
       internalID: -2243213282162668642
       vertices: []
       indices: 
@@ -306,8 +306,8 @@ TextureImporter:
       name: Symbole_Tile_6
       rect:
         serializedVersion: 2
-        x: 1026
-        y: 1092
+        x: 1024
+        y: 1105
         width: 400
         height: 400
       alignment: 0
@@ -316,9 +316,9 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 32218e95d5e7d99f0800000000000000
+      spriteID: bd1c1eec6ff6fb24d8156dcb433905d2
       internalID: -460072647516483037
       vertices: []
       indices: 
@@ -329,7 +329,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 1655
-        y: 998
+        y: 994
         width: 600
         height: 600
       alignment: 0
@@ -338,9 +338,9 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 81e3f04fb02a213d0800000000000000
+      spriteID: 2a265c55719eca2439566c7aa6265cc4
       internalID: -3237347009902985704
       vertices: []
       indices: 
@@ -350,19 +350,19 @@ TextureImporter:
       name: Symbole_Tile_8
       rect:
         serializedVersion: 2
-        x: 223
-        y: 258
+        x: 216
+        y: 202
         width: 500
-        height: 500
+        height: 550
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: a8c028738592239e0800000000000000
+      spriteID: 34a3e2ab319138a4187aa18de1f3e868
       internalID: -1643205455171679094
       vertices: []
       indices: 
@@ -372,8 +372,8 @@ TextureImporter:
       name: Symbole_Tile_9
       rect:
         serializedVersion: 2
-        x: 949
-        y: 203
+        x: 946
+        y: 211
         width: 500
         height: 500
       alignment: 0
@@ -382,9 +382,9 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: e17c678283b4ff700800000000000000
+      spriteID: d66e51fd8a4f2224a9f110f8a8d2dff1
       internalID: 576261981895837470
       vertices: []
       indices: 
@@ -394,8 +394,8 @@ TextureImporter:
       name: Symbole_Tile_10
       rect:
         serializedVersion: 2
-        x: 1693
-        y: 151
+        x: 1702
+        y: 147
         width: 500
         height: 500
       alignment: 0
@@ -404,120 +404,10 @@ TextureImporter:
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: -1
+      tessellationDetail: 0
       bones: []
-      spriteID: 6e7279f842767fcd0800000000000000
+      spriteID: 42326a33ddbd6424f992f8055aa2ea31
       internalID: -2524435659392342042
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Symbole_Tile_11
-      rect:
-        serializedVersion: 2
-        x: 333
-        y: 285
-        width: 13
-        height: 427
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 60eb47e619af7fd50800000000000000
-      internalID: 6771156067305176582
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Symbole_Tile_12
-      rect:
-        serializedVersion: 2
-        x: 583
-        y: 285
-        width: 13
-        height: 427
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 3018019b92f55c560800000000000000
-      internalID: 7333372201045885187
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Symbole_Tile_13
-      rect:
-        serializedVersion: 2
-        x: 1027
-        y: 391
-        width: 13
-        height: 188
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 929f049fdd6727390800000000000000
-      internalID: -7822058907047495383
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Symbole_Tile_14
-      rect:
-        serializedVersion: 2
-        x: 983
-        y: 364
-        width: 447
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: e51abdc650bb13aa0800000000000000
-      internalID: -6182955181427416738
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Symbole_Tile_15
-      rect:
-        serializedVersion: 2
-        x: 1727
-        y: 358
-        width: 447
-        height: 13
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: ddd12afeb904e4d90800000000000000
-      internalID: -7111675723086946851
       vertices: []
       indices: 
       edges: []
