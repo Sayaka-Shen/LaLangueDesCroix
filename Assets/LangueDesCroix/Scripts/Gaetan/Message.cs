@@ -19,6 +19,14 @@ public class Message : MonoBehaviour
 
     public void SetMessageText(string msg)
     {
+        if (msg.Contains("<sprite="))
+        {
+            m_messageContent.fontSize = 125;
+        }
+        else
+        {
+            m_messageContent.fontSize = 36;
+        }
         m_messageContent.text = msg;
     }
 
