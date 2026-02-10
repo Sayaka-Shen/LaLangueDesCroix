@@ -3738,7 +3738,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33f028ce0c7d42ab9bcb5d37e69c38e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DialogueManager
-  runtimeGraph: {fileID: 11400000, guid: f1c40b07377d0a442b33572a91c3f39e, type: 2}
+  runtimeGraph: {fileID: 11400000, guid: f456e4892553646418be7a71e903852e, type: 2}
   languageSetting: 0
   m_dialogueContainer: {fileID: 1401300798}
   ChoiceButtonPrefab: {fileID: 644035911041683243, guid: d5276b4136edc4c40ad059c904087cdf, type: 3}
