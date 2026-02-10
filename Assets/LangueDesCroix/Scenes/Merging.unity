@@ -130,6 +130,7 @@ GameObject:
   - component: {fileID: 10641062}
   - component: {fileID: 10641064}
   - component: {fileID: 10641063}
+  - component: {fileID: 10641065}
   m_Layer: 5
   m_Name: BTN_Message
   m_TagString: Untagged
@@ -171,7 +172,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_RaycastPadding: {x: 0, y: 1750, z: 880, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -194,6 +195,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 10641061}
   m_CullTransparentMesh: 1
+--- !u!114 &10641065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 10641061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e20752c7698cdac40b10aa3ea50ea2e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoutonUIType
+  _type: 0
+  _uiManager: {fileID: 1924664965}
 --- !u!1 &33486781
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,6 +454,7 @@ GameObject:
   - component: {fileID: 285825332}
   - component: {fileID: 285825334}
   - component: {fileID: 285825333}
+  - component: {fileID: 285825335}
   m_Layer: 5
   m_Name: BTN_Message
   m_TagString: Untagged
@@ -480,7 +496,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_RaycastPadding: {x: 0, y: 1750, z: 880, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -503,6 +519,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 285825331}
   m_CullTransparentMesh: 1
+--- !u!114 &285825335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285825331}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e20752c7698cdac40b10aa3ea50ea2e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoutonUIType
+  _type: 0
+  _uiManager: {fileID: 1924664965}
 --- !u!1 &301576456
 GameObject:
   m_ObjectHideFlags: 0
@@ -605,6 +635,7 @@ GameObject:
   - component: {fileID: 382862489}
   - component: {fileID: 382862491}
   - component: {fileID: 382862490}
+  - component: {fileID: 382862492}
   m_Layer: 5
   m_Name: BTN_Gallery
   m_TagString: Untagged
@@ -646,7 +677,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_RaycastPadding: {x: 215, y: 1750, z: 675, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -669,6 +700,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 382862488}
   m_CullTransparentMesh: 1
+--- !u!114 &382862492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 382862488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e20752c7698cdac40b10aa3ea50ea2e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoutonUIType
+  _type: 2
+  _uiManager: {fileID: 1924664965}
 --- !u!1 &415913690
 GameObject:
   m_ObjectHideFlags: 0
@@ -721,7 +766,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 216}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1696,6 +1741,7 @@ GameObject:
   - component: {fileID: 1002935155}
   - component: {fileID: 1002935157}
   - component: {fileID: 1002935156}
+  - component: {fileID: 1002935158}
   m_Layer: 5
   m_Name: BTN_Notes
   m_TagString: Untagged
@@ -1737,7 +1783,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_RaycastPadding: {x: 880, y: 1750, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1760,6 +1806,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1002935154}
   m_CullTransparentMesh: 1
+--- !u!114 &1002935158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1002935154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e20752c7698cdac40b10aa3ea50ea2e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoutonUIType
+  _type: 1
+  _uiManager: {fileID: 1924664965}
 --- !u!1 &1170201643
 GameObject:
   m_ObjectHideFlags: 0
@@ -1771,6 +1831,7 @@ GameObject:
   - component: {fileID: 1170201644}
   - component: {fileID: 1170201646}
   - component: {fileID: 1170201645}
+  - component: {fileID: 1170201647}
   m_Layer: 5
   m_Name: BTN_Gallery
   m_TagString: Untagged
@@ -1812,7 +1873,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_RaycastPadding: {x: 675, y: 1750, z: 216, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -1835,6 +1896,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1170201643}
   m_CullTransparentMesh: 1
+--- !u!114 &1170201647
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170201643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e20752c7698cdac40b10aa3ea50ea2e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoutonUIType
+  _type: 2
+  _uiManager: {fileID: 1924664965}
 --- !u!1 &1197754552
 GameObject:
   m_ObjectHideFlags: 0
@@ -2106,7 +2181,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 216.1}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2260,7 +2335,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 216}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2295,6 +2370,7 @@ GameObject:
   - component: {fileID: 1924664961}
   - component: {fileID: 1924664960}
   - component: {fileID: 1924664959}
+  - component: {fileID: 1924664965}
   - component: {fileID: 1924664963}
   - component: {fileID: 1924664964}
   m_Layer: 5
@@ -2429,6 +2505,21 @@ MonoBehaviour:
   SpeakersScriptable: {fileID: 11400000, guid: 82e282dbd1d6b8c4d845bae0b97efb89, type: 2}
   m_phoneManager: {fileID: 1924664963}
   m_maxTimer: 1.5
+--- !u!114 &1924664965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1924664958}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abd474ba5836a7a459339af1ec2ee840, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIManager
+  _bgMessage: {fileID: 503651071}
+  _bgNote: {fileID: 476634565}
+  _bgGalerie: {fileID: 456227104}
 --- !u!1 &2087963756
 GameObject:
   m_ObjectHideFlags: 0
@@ -2500,6 +2591,7 @@ GameObject:
   - component: {fileID: 2140430793}
   - component: {fileID: 2140430795}
   - component: {fileID: 2140430794}
+  - component: {fileID: 2140430796}
   m_Layer: 5
   m_Name: BTN_Notes
   m_TagString: Untagged
@@ -2541,7 +2633,7 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_RaycastPadding: {x: 880, y: 1750, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2564,6 +2656,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2140430792}
   m_CullTransparentMesh: 1
+--- !u!114 &2140430796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2140430792}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e20752c7698cdac40b10aa3ea50ea2e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::BoutonUIType
+  _type: 1
+  _uiManager: {fileID: 1924664965}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
