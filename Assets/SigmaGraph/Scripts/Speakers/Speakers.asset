@@ -15,5 +15,7 @@ MonoBehaviour:
   speakers:
   - Name: "Ga\xEBlle"
     speakEnum: 1
-  - Name: Toi
+  - Name: Joueur
     speakEnum: 0
+  - Name: Machine
+    speakEnum: 2

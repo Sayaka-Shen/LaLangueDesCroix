@@ -11,6 +11,7 @@ public class Speakers : ScriptableObject
 [Serializable]
 public enum Espeaker
 {
-    Toi,
-    Gaelle
+    Joueur,
+    GAE,
+    Machine
 }

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: caaa76378291a144d849f29230be0a5a, type: 3}
+  m_Name: LangueDesCroix
+  m_EditorClassIdentifier: Assembly-CSharp::DSDialogueContainerSO
+  <FileName>k__BackingField: LangueDesCroix
+  <DialogueGroups>k__BackingField:
+    list: []
+  <UngroupedDialogues>k__BackingField:
+  - {fileID: 11400000, guid: 1eb2d0a1331c8964a84d701bf362a0d6, type: 2}
+  - {fileID: 11400000, guid: 395bb51989085e44daf8cc20b1583444, type: 2}
+  - {fileID: 11400000, guid: ed248fd52e0d13744a60f8ab275943e1, type: 2}
+  - {fileID: 11400000, guid: 79042343575d2de42b3417c081b8467b, type: 2}
+  - {fileID: 11400000, guid: 41a7c54457a2e2144bd3ec766a85ccda, type: 2}
+  - {fileID: 11400000, guid: af0aa6e1a45b0f04caa1c2a4b8206826, type: 2}
+  - {fileID: 11400000, guid: 2ba4bb57042546846a67b917d9a41e08, type: 2}
+  - {fileID: 11400000, guid: 4d7729db798d9a54390c732eff5d9954, type: 2}
+  - {fileID: 11400000, guid: bac92efa0c83ff24cb7f71170772b670, type: 2}
+  - {fileID: 11400000, guid: 0ad2b4cb73c5bb14d9b05ace9283f70f, type: 2}
