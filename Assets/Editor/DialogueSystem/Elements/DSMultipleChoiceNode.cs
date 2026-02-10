@@ -83,7 +83,7 @@ public class DSMultipleChoiceNode : DSNode
         if (Saves.isMultipleChoice)
         {
             CreateSingleChoicePortNew("");
-            CreateSingleChoicePortNew("");
+            //CreateSingleChoicePortNew("");
         }
         else
             CreateSingleChoicePortNew("Continue");
@@ -418,7 +418,7 @@ public class DSMultipleChoiceNode : DSNode
             choicePort.Add(choiceLabel);
         }
 
-        if (Saves.isMultipleChoice && Saves.ChoicesInNode.Count > 2)
+        if (Saves.isMultipleChoice && Saves.ChoicesInNode.Count > 1)
         {
             Button deleteChoiceButton = DSElementUtility.CreateButton("X", () =>
             {

@@ -61,7 +61,7 @@ public class DialogueManager : MonoBehaviour
         FantasyDialogueTable.Load();
     }
 
-#if UNITY_EDITOR
+    #if UNITY_EDITOR
     // POUR METTRE A JOUR LE DIALOGUE ET LES TEXTES SI UNE NOUVELLE LANGUE EST CHOISIE //
     private void OnValidate()
     {
@@ -71,7 +71,7 @@ public class DialogueManager : MonoBehaviour
             UpdateLanguageSetting(languageSetting);
         }
     }
-#endif
+    #endif
     
     
     // MET A JOUR LA LANGUE DU DIALOGUE //
