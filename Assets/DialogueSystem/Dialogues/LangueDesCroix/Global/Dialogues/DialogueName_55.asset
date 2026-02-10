@@ -10,16 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
-  m_Name: DialogueName_2
+  m_Name: DialogueName_55
   m_EditorClassIdentifier: Assembly-CSharp::DSDialogueSO
-  <DialogueName>k__BackingField: DialogueName_2
+  <DialogueName>k__BackingField: DialogueName_55
   <Text>k__BackingField: Dialogue text.
   <Choices>k__BackingField:
   - <Text>k__BackingField: 
-    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 4da3b96563fe8a3489e24bb7f3d294e3, type: 2}
-  - <Text>k__BackingField: 
-    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 4577f3f8b36b3fe41aa28f3fbcd53a8c, type: 2}
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: fc92cf689465e834a8cfe0a82afc8c71, type: 2}
   <DialogueType>k__BackingField: 0
   <IsStartingDialogue>k__BackingField: 0
-  <Speaker>k__BackingField: 2
+  <Speaker>k__BackingField: 0
   <TraductionImage>k__BackingField: {fileID: 0}
