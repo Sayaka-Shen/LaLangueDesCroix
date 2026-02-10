@@ -1,0 +1,449 @@
+fileFormatVersion: 2
+guid: c23f4aa1b2b24b14e863c0e5fa694627
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4608098294790706418
+    second: translationSymbolTiles_0
+  - first:
+      213: 7102433716907940937
+    second: translationSymbolTiles_1
+  - first:
+      213: 1320136714726720061
+    second: translationSymbolTiles_2
+  - first:
+      213: -4158470201239780687
+    second: translationSymbolTiles_3
+  - first:
+      213: 9130991106957623095
+    second: translationSymbolTiles_4
+  - first:
+      213: 6831432412184486088
+    second: translationSymbolTiles_5
+  - first:
+      213: -4798926930298560145
+    second: translationSymbolTiles_6
+  - first:
+      213: -6551216294842184535
+    second: translationSymbolTiles_7
+  - first:
+      213: 8495099993112957100
+    second: translationSymbolTiles_8
+  - first:
+      213: -9179104618003768569
+    second: translationSymbolTiles_9
+  - first:
+      213: 3367003594822834201
+    second: translationSymbolTiles_10
+  - first:
+      213: 5803205653106798004
+    second: translationSymbolTiles_11
+  - first:
+      213: -3158503131720256993
+    second: translationSymbolTiles_12
+  - first:
+      213: 2479652170028832274
+    second: translationSymbolTiles_13
+  - first:
+      213: 7666061445310433123
+    second: translationSymbolTiles_14
+  - first:
+      213: -6081044587362082677
+    second: translationSymbolTiles_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: translationSymbolTiles_0
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 2791
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2f4551ffbf043ff30800000000000000
+      internalID: 4608098294790706418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: translationSymbolTiles_1
+      rect:
+        serializedVersion: 2
+        x: 786
+        y: 2796
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94c1e01d5d9e09260800000000000000
+      internalID: 7102433716907940937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: translationSymbolTiles_2
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 1967
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d32cc300951125210800000000000000
+      internalID: 1320136714726720061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: translationSymbolTiles_3
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 1976
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1b24e0e62652a46c0800000000000000
+      internalID: -4158470201239780687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: translationSymbolTiles_4
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 1977
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 73fb571a80cc7be70800000000000000
+      internalID: 9130991106957623095
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: translationSymbolTiles_5
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 1130
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c0a85b959f1ece50800000000000000
+      internalID: 6831432412184486088
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: translationSymbolTiles_6
+      rect:
+        serializedVersion: 2
+        x: 782
+        y: 1139
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f61af78f169c66db0800000000000000
+      internalID: -4798926930298560145
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: translationSymbolTiles_7
+      rect:
+        serializedVersion: 2
+        x: 1510
+        y: 1131
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ac4e2b5d776515a0800000000000000
+      internalID: -6551216294842184535
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: translationSymbolTiles_8
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 354
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ca0dbec4f68a4e570800000000000000
+      internalID: 8495099993112957100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: translationSymbolTiles_9
+      rect:
+        serializedVersion: 2
+        x: 777
+        y: 302
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70bdcbf9bf44d9080800000000000000
+      internalID: -9179104618003768569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: translationSymbolTiles_10
+      rect:
+        serializedVersion: 2
+        x: 1502
+        y: 268
+        width: 600
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 918d0ea2eeff9be20800000000000000
+      internalID: 3367003594822834201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 736e7cc9e548e304d95e90395c78742d
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      translationSymbolTiles_0: 4608098294790706418
+      translationSymbolTiles_1: 7102433716907940937
+      translationSymbolTiles_10: 3367003594822834201
+      translationSymbolTiles_11: 5803205653106798004
+      translationSymbolTiles_12: -3158503131720256993
+      translationSymbolTiles_13: 2479652170028832274
+      translationSymbolTiles_14: 7666061445310433123
+      translationSymbolTiles_15: -6081044587362082677
+      translationSymbolTiles_2: 1320136714726720061
+      translationSymbolTiles_3: -4158470201239780687
+      translationSymbolTiles_4: 9130991106957623095
+      translationSymbolTiles_5: 6831432412184486088
+      translationSymbolTiles_6: -4798926930298560145
+      translationSymbolTiles_7: -6551216294842184535
+      translationSymbolTiles_8: 8495099993112957100
+      translationSymbolTiles_9: -9179104618003768569
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
