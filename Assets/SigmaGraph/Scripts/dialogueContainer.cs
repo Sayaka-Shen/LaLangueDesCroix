@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using TMPro;
 using UnityEngine;
@@ -9,6 +10,9 @@ using static UnityEditor.Rendering.MaterialUpgrader;
 
 public class dialogueContainer : MonoBehaviour
 {
+    [Header("PhoneManager")]
+    [SerializeField] private PhoneManager m_phoneManager;
+
     [Header("Gallery")]
     [SerializeField] private GameObject m_galleryContainer;
     
@@ -21,6 +25,9 @@ public class dialogueContainer : MonoBehaviour
     private GameObject m_messageImgInstance;
     private RectTransform m_scrollContainerTransform;
 
+    [Header("PopupTXT")]
+    [SerializeField] private GameObject m_popup;
+
     //[SerializeField] private TextMeshProUGUI dialogueText;
     //[SerializeField] private TextMeshProUGUI speakerNameText;
     //[SerializeField] private Image traductionImage;
@@ -31,11 +38,21 @@ public class dialogueContainer : MonoBehaviour
         m_relocateScrollView = GetComponent<RelocateScrollView>();
     }
 
-    public void InitializeDialogueContainer(string dialogue, Sprite tradImg, Espeaker speakers /* Sprite traductionImg */)
+    public void InitializeDialogueContainer(string dialogue, Sprite tradImg, Espeaker speakers, string popupTxt /* Sprite traductionImg */)
     {
         //var childContainer = transform.GetChild(0);
         //if (childContainer == null) return;
         //childContainer.gameObject.SetActive(true);
+
+        if (!string.IsNullOrEmpty(popupTxt))
+        {
+            if (m_popup.TryGetComponent<PopupContainer>(out PopupContainer popupContainer))
+            {
+                popupContainer.SetPopupTxt(popupTxt);
+            }
+
+            m_phoneManager.OpenPopup();
+        }
 
         // CHECK ONLY FOR IMAGE TO SPAWN MESSAGE IMAGE PREFAB
         if (tradImg != null)
@@ -91,7 +108,7 @@ public class dialogueContainer : MonoBehaviour
 
             if (speakers == Espeaker.GAE)
             {
-                message.ChangeBgColor(Color.yellow);
+                message.ChangeBgColor(new Color(148.0f / 255.0f, 56.0f / 255.0f, 55.0f / 255.0f));
             }
 
             if (!string.IsNullOrEmpty(dialogue))
