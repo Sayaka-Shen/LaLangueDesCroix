@@ -153,7 +153,7 @@ public class DialogueManager : MonoBehaviour
             m_isWaitingToShakeAgain = true;
         }
 
-        if (_isWaitingForChoice && m_isWaitingToShakeAgain)
+        if (_isWaitingForChoice && m_isWaitingToShakeAgain && !m_phoneManager.HasAlreadyClickedDp)
         {
             m_phoneChoiceBtn.DOShakePosition(m_shakeTime, m_shakeForce);
 
