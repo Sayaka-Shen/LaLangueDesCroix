@@ -328,7 +328,7 @@ public class DialogueManager : MonoBehaviour
         }
         
         string targetDialogue = FantasyDialogueTable.LocalManager.FindDialogue(_currentNode.GetDropDownKeyDialogue(), Enum.GetName(typeof(language), languageSetting));
-        m_currentDialogueContainer.InitializeDialogueContainer(targetDialogue, _currentNode.TraductionImage, _currentSpeaker.speakEnum /*_currentNode.TraductionImage.sprite*/);
+        m_currentDialogueContainer.InitializeDialogueContainer(targetDialogue, _currentNode.TraductionImage, _currentSpeaker.speakEnum, _currentNode.PopupText /*_currentNode.TraductionImage.sprite*/);
     }
 
     private void CreateButtonsChoice()

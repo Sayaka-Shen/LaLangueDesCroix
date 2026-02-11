@@ -33,25 +33,17 @@ public class PhoneManager : MonoBehaviour
     public bool HasAlreadyClickedDp { get; private set; }
     private float m_messageContainerStartPos;
     private RectTransform m_scrollContRectTransform;
+
+    [Header("Popup")]
+    [SerializeField] private RectTransform m_popupTransform;
+    public bool HasPopupOpened { get; private set; }
     
-    //[Header("Other Apps")]
-    //[SerializeField] private GameObject m_panelMessage;
-    //[SerializeField] private GameObject m_panelNotes;
-    //[SerializeField] private GameObject m_panelGallery;
-    //private AppState m_currentState = AppState.Message;
-    //private Dictionary<AppState, GameObject> m_getPanelFromAppState;
+
 
     public void Start()
     {
         m_scrollContRectTransform = m_scrollContainer.GetComponent<RectTransform>();
         m_messageContainerStartPos = m_messageContainer.anchoredPosition.y;
-
-        //m_getPanelFromAppState = new Dictionary<AppState, GameObject>()
-        //{
-        //    { AppState.Message, m_panelMessage },
-        //    { AppState.Gallery, m_panelGallery },
-        //    { AppState.Notes, m_panelNotes },
-        //};
     }
 
     public void OpenDropDownMenu()
@@ -99,23 +91,29 @@ public class PhoneManager : MonoBehaviour
             }
         }
     }
+    public void OpenPopup()
+    {
+        if (!HasPopupOpened)
+        {
+            HasPopupOpened = true;
+            m_popupTransform.DOAnchorPosY(-40, 1.0f);
 
-    //public void OpenPhoneApplication(int appState)
-    //{
-    //    if (m_currentState == (AppState)appState) return;
-        
-    //    m_getPanelFromAppState[m_currentState].transform.DOScale(new Vector3(0, 0, 0), 0.5f);
-    //    StartCoroutine(WaitBeforeHidingPanel(m_currentState));
-        
-    //    m_currentState = (AppState)appState;
-        
-    //    m_getPanelFromAppState[m_currentState].SetActive(true);
-    //    m_getPanelFromAppState[m_currentState].transform.DOScale(new Vector3(1, 1, 1), 0.5f);
-    //}
+            StartCoroutine(WaitBeforeClosingPopup());
+        }
+    }
 
-    //IEnumerator WaitBeforeHidingPanel(AppState appState)
-    //{
-    //    yield return new WaitForSeconds(0.2f);
-    //    m_getPanelFromAppState[appState].SetActive(false);
-    //}
+    public void ClosePopup()
+    {
+        if (HasPopupOpened)
+        {
+            HasPopupOpened = false;
+            m_popupTransform.DOAnchorPosY(180, 1.0f);
+        }
+    }
+
+    public IEnumerator WaitBeforeClosingPopup()
+    {
+        yield return new WaitForSeconds(4.0f);
+        ClosePopup();
+    }
 }
