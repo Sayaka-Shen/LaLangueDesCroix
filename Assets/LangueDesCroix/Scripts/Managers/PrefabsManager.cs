@@ -13,7 +13,8 @@ public enum SYMBOLS
     Path,
     Two,
     Lost,
-    Disappear
+    Disappear,
+    Null
 }
 
 public enum IMAGES
@@ -61,6 +62,7 @@ public class PrefabsManager : MonoBehaviour
     
     [Header("Other Prefabs")]
     [SerializeField] private GameObject prefabTraduction;
+    [SerializeField] public GameObject goNoteContainer;
     
     private void Awake()
     {
@@ -104,6 +106,8 @@ public class PrefabsManager : MonoBehaviour
                 return SymbolLost;
             case SYMBOLS.Disappear :
                 return SymbolDisappear;
+            case SYMBOLS.Null :
+                return null;
             default :
                 return null;
         }
