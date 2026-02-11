@@ -31,26 +31,6 @@ MonoBehaviour:
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 1
     <Position>k__BackingField: {x: -50.399998, y: 117.600006}
-  - <ID>k__BackingField: 43f9bc4e-d884-4fce-aaf7-51bb3454ea78
-    <Name>k__BackingField: DialogueName_7
-    <Speaker>k__BackingField: 2
-    <TraductionImage>k__BackingField: {fileID: 0}
-    <PopupText>k__BackingField: 
-    isMultipleChoice: 1
-    _dropDownKeyDialogue: Machine_D1
-    <OnlyOneConditionNeeded>k__BackingField: 0
-    <ChoicesInNode>k__BackingField:
-    - NodeID: 998a00ad-344f-4034-a31a-6d7a706bdea5
-      _dropDownKeyChoice: Joueur_D1_R
-      <Conditions>k__BackingField: []
-      _directionPort: 0
-    - NodeID: ea4021b1-047f-4900-8910-9d5808dc998e
-      _dropDownKeyChoice: Joueur_D1_R2
-      <Conditions>k__BackingField: []
-      _directionPort: 0
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 228, y: 100}
   - <ID>k__BackingField: 9a1d41f8-ddb5-4f1d-9ada-6fb8d8f79d26
     <Name>k__BackingField: DialogueName_6
     <Speaker>k__BackingField: 1
@@ -253,7 +233,7 @@ MonoBehaviour:
     <TraductionImage>k__BackingField: {fileID: 0}
     <PopupText>k__BackingField: 
     isMultipleChoice: 0
-    _dropDownKeyDialogue: Joueur_D1_R
+    _dropDownKeyDialogue: Joueur_D1_R1
     <OnlyOneConditionNeeded>k__BackingField: 0
     <ChoicesInNode>k__BackingField:
     - NodeID: e100fb81-f321-4d5f-99c3-64be13c046e7
@@ -2455,10 +2435,29 @@ MonoBehaviour:
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: 2082.4, y: 291.2}
+  - <ID>k__BackingField: 43f9bc4e-d884-4fce-aaf7-51bb3454ea78
+    <Name>k__BackingField: DialogueName_7
+    <Speaker>k__BackingField: 2
+    <TraductionImage>k__BackingField: {fileID: 0}
+    <PopupText>k__BackingField: test changement
+    isMultipleChoice: 1
+    _dropDownKeyDialogue: Machine_D1
+    <OnlyOneConditionNeeded>k__BackingField: 0
+    <ChoicesInNode>k__BackingField:
+    - NodeID: 998a00ad-344f-4034-a31a-6d7a706bdea5
+      _dropDownKeyChoice: Joueur_D1_R
+      <Conditions>k__BackingField: []
+      _directionPort: 0
+    - NodeID: ea4021b1-047f-4900-8910-9d5808dc998e
+      _dropDownKeyChoice: Joueur_D1_R2
+      <Conditions>k__BackingField: []
+      _directionPort: 0
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 228, y: 100}
   <OldGroupNames>k__BackingField: []
   <OldUngroupedNodeNames>k__BackingField:
   - START
-  - DialogueName_7
   - DialogueName_6
   - DialogueName_8
   - DialogueName_11
@@ -2599,5 +2598,6 @@ MonoBehaviour:
   - DialogueName_149
   - DialogueName_150
   - DialogueName_151
+  - DialogueName_7
   <OldGroupedNodeNames>k__BackingField:
     list: []

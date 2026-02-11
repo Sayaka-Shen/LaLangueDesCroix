@@ -1,10 +1,10 @@
 ﻿Key;FR;EN
 Machine_D1;Hey, comment ca va ce soir ?..;Hey, are you awake tonight?
-Joueur_D1_R;Bien.. merci ,  mais t’as vu l’heure ? Il y a quelque chose qui ne va pas?;I’m fine… thanks. But do you realize what time it is? Is something wrong?
-Joueur_D1_R2;Oula, toi t’as quelque chose à me dire pour m’envoyer un message aussi tard;Wow… you don’t usually text this late. What’s going on?
+Joueur_D1_R1;Bien.. merci ,  mais t’as vu l’heure ? Il y a quelque chose qui ne va pas ?  ;I’m fine… thanks. But do you realize what time it is ? Is something wrong ?
+Joueur_D1_R2;Oula, toi t’as quelque chose à me dire pour m’envoyer un message aussi tard.;Wow… you don’t usually text this late. What’s going on ?
 Machine_D2;J’ai juste envie de discuter un peu...;I just feel like talking for a bit…
 "Joueur_D2_R1
-"; Ca peut pas attendre demain ? ;Can this wait until tomorrow?
+";Ca peut pas attendre demain ? ;Can this wait until tomorrow?
 "Joueur_D2_R2
 ";C’est bizarre c’est pas de ton habitude de m’envoyer des messages aussi tard..;This is strange… it’s not like you to message me so late.
 GAE_SYMB1;<sprite=8> <sprite=2>;<sprite=8> <sprite=2>

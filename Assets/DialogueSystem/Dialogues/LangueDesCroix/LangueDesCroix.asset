@@ -17,7 +17,6 @@ MonoBehaviour:
     list: []
   <UngroupedDialogues>k__BackingField:
   - {fileID: 11400000, guid: 1eb2d0a1331c8964a84d701bf362a0d6, type: 2}
-  - {fileID: 11400000, guid: 395bb51989085e44daf8cc20b1583444, type: 2}
   - {fileID: 11400000, guid: 4d7729db798d9a54390c732eff5d9954, type: 2}
   - {fileID: 11400000, guid: 0ad2b4cb73c5bb14d9b05ace9283f70f, type: 2}
   - {fileID: 11400000, guid: ebc77d61595452a4dbc05405214d9bf5, type: 2}
@@ -158,3 +157,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: eaa71383efb8d64478410ba2772692a0, type: 2}
   - {fileID: 11400000, guid: 3f15d581df507fc4ba1188de4abac5cb, type: 2}
   - {fileID: 11400000, guid: 913df7005bc9e5341a78b1c6eb5bf325, type: 2}
+  - {fileID: 11400000, guid: 395bb51989085e44daf8cc20b1583444, type: 2}
