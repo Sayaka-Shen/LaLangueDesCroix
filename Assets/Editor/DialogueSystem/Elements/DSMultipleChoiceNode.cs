@@ -170,17 +170,27 @@ public class DSMultipleChoiceNode : DSNode
         Label popupMessageLabel = new Label("Popup Message Label");
         popupMessageLabel.AddToClassList("ds-node__traductionLabel");
 
-        TextField popupMessageField = new TextField();
-
-        popupMessageLabel.RegisterValueChangedCallback(evt =>
+        TextField popupMessageField = new TextField()
         {
+            value = PopupText
+        };
 
+        popupMessageField.AddToClassList("ds-node__popupfield");
+
+        popupMessageField.RegisterValueChangedCallback(evt =>
+        {
+            string newString = evt.newValue;
+            SetPopupText(newString);
+            Saves.SavePopupText(newString);
         });
 
         _changeNodeType = DSElementUtility.CreateButton("Switch node Type", () => { SwitchNodeType(); });
 
         mainContainer.Add(tradImageLabel);
         mainContainer.Add(traductionImgField);
+        mainContainer.Add(popupMessageLabel);
+        mainContainer.Add(popupMessageField);
+
         mainContainer.Add(_changeNodeType);
         mainContainer.Add(_addChoiceButton);
 
