@@ -1845,6 +1845,7 @@ MonoBehaviour:
   SixthImagePrefab: {fileID: 5624443108993794548, guid: 2fbc98abce6219044b107182d07a0079, type: 3}
   prefabTraduction: {fileID: 4270585797788910865, guid: f0754c7b3daa0c244b6e2ff86627e0a4, type: 3}
   goNoteContainer: {fileID: 866681407}
+  dialogueManager: {fileID: 1924664964}
 --- !u!4 &950561128
 Transform:
   m_ObjectHideFlags: 0
