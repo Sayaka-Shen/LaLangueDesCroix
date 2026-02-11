@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using NaughtyAttributes;
 using System.Collections;
 using DG.Tweening;
+using Unity.VisualScripting;
 
 public enum language
 {
@@ -62,6 +63,9 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private float m_shakeTime = 1.0f;
     private float m_shakeTimer;
     private bool m_isWaitingToShakeAgain;
+
+    [Header("Traduction")]
+    public bool IsWaitingForTraduction { get; set; }
 
 
     [Button]
@@ -153,7 +157,7 @@ public class DialogueManager : MonoBehaviour
             m_isWaitingToShakeAgain = true;
         }
 
-        if (_isWaitingForChoice && m_isWaitingToShakeAgain)
+        if (_isWaitingForChoice && m_isWaitingToShakeAgain && !m_phoneManager.HasAlreadyClickedDp)
         {
             m_phoneChoiceBtn.DOShakePosition(m_shakeTime, m_shakeForce);
 
@@ -173,14 +177,13 @@ public class DialogueManager : MonoBehaviour
             m_isWaitingForMessage = true;
         }
 
-        if (m_isWaitingForMessage && !_isWaitingForChoice)
+        if (m_isWaitingForMessage && !_isWaitingForChoice && !IsWaitingForTraduction)
         {
             m_isWaitingForMessage = false;
             m_timer = 0; 
 
             TryToUpdateNextDialogueFromNextNode();
         }
-
     }
 
     // MET A JOUR LE DIALOGUE EN FONCTION DU NODE SUIVANT //
@@ -330,7 +333,7 @@ public class DialogueManager : MonoBehaviour
 
     private void CreateButtonsChoice()
     {
-        if (_currentNode.ChoicesInNode.Count > 1)
+        if (_currentNode.ChoicesInNode.Count >= 1 && _currentNode.isMultipleChoice)
         {
             _isWaitingForChoice = true;
 
