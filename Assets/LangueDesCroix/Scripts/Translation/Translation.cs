@@ -180,12 +180,12 @@ public class Translation : MonoBehaviour
     {
         Transform parent = PrefabsManager.Instance.goNoteContainer.transform;
 
-        GameObject symbol = Instantiate(PrefabsManager.Instance.prefabNoteSymbol, parent);
-        GameObject symbolTwo = Instantiate(PrefabsManager.Instance.prefabNoteSymbol, parent);
-        GameObject sentence =Instantiate(PrefabsManager.Instance.prefabNoteSentence, parent);
+        GameObject symbol = Instantiate(PrefabsManager.Instance.prefabNoteSymbol, parent.GetChild(0).transform);
+        GameObject symbolTwo = Instantiate(PrefabsManager.Instance.prefabNoteSymbol, parent.GetChild(0).transform);
+        GameObject sentence =Instantiate(PrefabsManager.Instance.prefabNoteSentence, parent.GetChild(1).transform);
         
         NoteSymbol noteSymbol = symbol.GetComponent<NoteSymbol>();
-        NoteSymbol noteSymbolTwo = symbol.GetComponent<NoteSymbol>();
+        NoteSymbol noteSymbolTwo = symbolTwo.GetComponent<NoteSymbol>();
         NoteSentence noteSentence = sentence.GetComponent<NoteSentence>();
 
         if (noteSymbol != null && noteSentence != null &&  noteSymbolTwo != null)
