@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4826231605158916409}
   - component: {fileID: 3716283589517082738}
   m_Layer: 5
-  m_Name: ClickableImage1
+  m_Name: ClickableImage6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66,7 +66,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -4566733283802636620, guid: 4d6a16fd049b0f64481b629e0a4c3e42, type: 3}
+  m_Sprite: {fileID: 4422777761893399854, guid: cf6f542d13dd18546b8d6f4fa4cf608e, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -89,20 +89,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ClickableImage
   infos:
-    image: 0
-    symbolOne: 9
-    symbolTwo: 3
+    image: 5
+    symbolOne: 2
+    symbolTwo: 6
     wordsOne:
-    - PERDUE
-    - LOST
+    - SINISTRE
+    - SINISTER
     wordsTwo:
-    - VOIR
-    - SEE
-    indexRevealWordOne: 000000000100000002000000
-    attemptsRevealWordOne: 020000000400000004000000
-    indexRevealWordTwo: 0000000002000000
-    attemptsRevealWordTwo: 0200000005000000
-    messageIndexToReplace: 2
+    - EMPRISE
+    - HOLD
+    indexRevealWordOne: 00000000010000000400000005000000
+    attemptsRevealWordOne: 02000000020000000400000004000000
+    indexRevealWordTwo: 0200000000000000
+    attemptsRevealWordTwo: 0200000004000000
+    messageIndexToReplace: 1
     wordOne: PERDU
     wordTwo: VOIR
     foundWordOne: 0
