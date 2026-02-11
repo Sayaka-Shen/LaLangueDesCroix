@@ -3,6 +3,7 @@ using System.Collections;
 using System.Text;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Translation : MonoBehaviour
@@ -16,6 +17,7 @@ public class Translation : MonoBehaviour
     [SerializeField] private TMP_InputField inptWordTwo;
     [SerializeField] private TextMeshProUGUI  placeholderWordOne;
     [SerializeField] private TextMeshProUGUI  placeholderWordTwo;
+    [SerializeField] private GameObject  goInput;
 
     public void Initialize(ClickableImage newOrigin)
     {
@@ -105,6 +107,11 @@ public class Translation : MonoBehaviour
         }
     }
 
+    public void onInputSelected()
+    {
+        EnableInput();
+    }
+
     public void onFirstValueChanged()
     {
         if (inptWordOne.text.Length > origin.infos.wordOne.Length)
@@ -112,6 +119,7 @@ public class Translation : MonoBehaviour
             inptWordOne.text = inptWordOne.text.Substring(0, origin.infos.wordOne.Length);
         }
         inptWordOne.text = inptWordOne.text.ToUpper();
+        UpdateInput(inptWordOne.text);
     }
     
     public void onSecondValueChanged()
@@ -120,8 +128,8 @@ public class Translation : MonoBehaviour
         {
             inptWordTwo.text = inptWordTwo.text.Substring(0, origin.infos.wordTwo.Length);
         }
-        
         inptWordTwo.text = inptWordTwo.text.ToUpper();
+        UpdateInput(inptWordTwo.text);
     }
     
     public void onFirstEndEdit()
@@ -139,8 +147,11 @@ public class Translation : MonoBehaviour
             origin.infos.attemptsWordOne += 1;
             UpdateFirstPlaceHolder();
             inptWordOne.text = "";
+            if (!EventSystem.current.alreadySelecting) EventSystem.current.SetSelectedGameObject(null);
             StartCoroutine(ChangeInputTextColor(inptWordOne));
         }
+        
+        DisableInput();
     }
     
     public void onSecondEndEdit()
@@ -158,8 +169,11 @@ public class Translation : MonoBehaviour
             origin.infos.attemptsWordTwo += 1;
             UpdateSecondPlaceHolder();
             inptWordTwo.text = "";
+            if (!EventSystem.current.alreadySelecting) EventSystem.current.SetSelectedGameObject(null);
             StartCoroutine(ChangeInputTextColor(inptWordTwo));
         }
+        
+        DisableInput();
     }
 
     public void CheckBothValidated()
@@ -221,5 +235,31 @@ public class Translation : MonoBehaviour
             yield return new WaitForSeconds(0.5f);
             bg.color = Color.white;
         }
+    }
+
+    
+    //Quelques fonctions externes pour simplie le code psk j'en ai marre
+    //(oui pas forcément utile mais on est juste après le cémantix "crédible" ok)
+    private void EnableInput()
+    {
+        goInput.SetActive(true);
+    }
+
+    private void DisableInput()
+    {
+        ClearInput();
+        goInput.SetActive(false);
+    }
+
+    private void UpdateInput(String newString)
+    {
+        TextMeshProUGUI inputText = goInput.GetComponentInChildren<TextMeshProUGUI>();
+        if (inputText != null) inputText.text = newString;
+    }
+
+    private void ClearInput()
+    {
+        TextMeshProUGUI inputText = goInput.GetComponentInChildren<TextMeshProUGUI>();
+        if (inputText != null) inputText.text = "";
     }
 }
