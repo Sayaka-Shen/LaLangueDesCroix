@@ -2830,6 +2830,13 @@ MonoBehaviour:
   _bgMessage: {fileID: 503651071}
   _bgNote: {fileID: 476634565}
   _bgGalerie: {fileID: 456227104}
+  _rectbgMessage: {fileID: 503651072}
+  _rectbgGalerie: {fileID: 456227105}
+  _rectbgNote: {fileID: 476634566}
+  _durationAnim: 0.5
+  startPosXRight: 100
+  startPosXLeft: -100
+  EndPosX: 0
 --- !u!1 &2087963756
 GameObject:
   m_ObjectHideFlags: 0
