@@ -18,6 +18,8 @@ public class DSNodeSaveData
 
     [field: SerializeField] public Sprite TraductionImage { get; set; }
 
+    [field: SerializeField] public string PopupText { get; set; }
+
     //[field: SerializeField] public bubleType BubleType;
 
 
@@ -53,6 +55,11 @@ public class DSNodeSaveData
     public void SaveTraductionImage(Sprite sprite)
     {
         TraductionImage = sprite;
+    }
+
+    public void SavePopupText(string newString)
+    {
+        PopupText = newString;
     }
 
     public bool isMultipleChoice = false;

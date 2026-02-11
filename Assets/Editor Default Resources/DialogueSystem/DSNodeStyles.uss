@@ -180,3 +180,10 @@ TextField
 	margin-right: 16px;
 	margin-bottom: 10px;
 }
+
+.ds-node__popupfield
+{
+	margin-left: 16px;
+	margin-right: 16px;
+	margin-bottom: 10px;
+}

@@ -17,6 +17,7 @@ public class DSNode : Node
     //public HumeurSpeaker Humeur { get; set; }
 
     public Sprite TraductionImage { get; set; }
+    public string PopupText { get; set; }
 
     public DSNodeSaveData Saves { get; set; }
     public string Text { get; set; }
@@ -337,5 +338,10 @@ public class DSNode : Node
     public void SetTraductionImage(Sprite newImg)
     {
         TraductionImage = newImg;
+    }
+
+    public void SetPopupText(string newString)
+    {
+        PopupText = newString;
     }
 }

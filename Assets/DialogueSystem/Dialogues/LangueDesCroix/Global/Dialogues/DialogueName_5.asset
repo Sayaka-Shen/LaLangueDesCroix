@@ -16,7 +16,7 @@ MonoBehaviour:
   <Text>k__BackingField: Dialogue text.
   <Choices>k__BackingField:
   - <Text>k__BackingField: 
-    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 4d7729db798d9a54390c732eff5d9954, type: 2}
+    <NextDialogue>k__BackingField: {fileID: 11400000, guid: 91958429e4a9a0b46941b7b42b41855f, type: 2}
   <DialogueType>k__BackingField: 0
   <IsStartingDialogue>k__BackingField: 0
   <Speaker>k__BackingField: 1
