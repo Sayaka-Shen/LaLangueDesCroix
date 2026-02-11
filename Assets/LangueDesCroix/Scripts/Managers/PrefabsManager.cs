@@ -62,6 +62,7 @@ public class PrefabsManager : MonoBehaviour
     
     [Header("Other Prefabs")]
     [SerializeField] private GameObject prefabTraduction;
+    [SerializeField] public GameObject goNoteContainer;
     
     private void Awake()
     {
