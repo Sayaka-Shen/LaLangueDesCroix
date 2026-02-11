@@ -41,6 +41,7 @@ public class dialogueContainer : MonoBehaviour
         if (tradImg != null)
         {
             m_messageImgInstance = Instantiate(m_imgPrefab, this.transform);
+            PrefabsManager.Instance.dialogueManager.IsWaitingForTraduction = true;
 
             if (m_messageImgInstance == null)
             {

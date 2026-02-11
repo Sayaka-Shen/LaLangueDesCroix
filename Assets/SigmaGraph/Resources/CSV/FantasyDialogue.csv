@@ -2,10 +2,12 @@
 Machine_D1;Hey, comment ca va ce soir ?..;Hey, are you awake tonight?
 Joueur_D1_R;Bien.. merci ,  mais t’as vu l’heure ? Il y a quelque chose qui ne va pas?;I’m fine… thanks. But do you realize what time it is? Is something wrong?
 Joueur_D1_R2;Oula, toi t’as quelque chose à me dire pour m’envoyer un message aussi tard;Wow… you don’t usually text this late. What’s going on?
-Machine_D2;J’ai juste envi de discuter un peu…;I just feel like talking for a bit…
-Joueur_D2_R1; Ca peut pas attendre demain ? ;Can this wait until tomorrow?
-Joueur_D2_R2;C’est bizarre c’est pas de ton habitude de m’envoyer des messages aussi tard..;This is strange… it’s not like you to message me so late.
-GAE_SYMB1;<sprite=3> <sprite=9>;<sprite=3> <sprite=9>
+Machine_D2;J’ai juste envi de discuter un peu...;I just feel like talking for a bit…
+"Joueur_D2_R1
+"; Ca peut pas attendre demain ? ;Can this wait until tomorrow?
+"Joueur_D2_R2
+";C’est bizarre c’est pas de ton habitude de m’envoyer des messages aussi tard..;This is strange… it’s not like you to message me so late.
+GAE_SYMB1;<sprite=8> <sprite=2>;<sprite=8> <sprite=2>
 Joueur_SYMB1_R1;Hein? C’est quoi ca??;What the hell…?
 GAE_SYMB1_TRAD;*je ne vois rien , je suis perdue ici , j’ai peur , aide moi..*;*I can’t see anything. I’m lost. I’m scared. Please… help me…*
 Machine_D3;C’est fini , tu peux lui dire Adieu , tu ne la reverras plus..;"It’s over.
@@ -50,7 +52,7 @@ Machine_D8;Malheureusement pour toi tout ceci est bien réel;
 Machine_D9;...;...
 Machine_D10;Moi c’est F.R.E.D , un peu de respect pour mon numéro de matricule ;"My designation is F.R.E.D.
 Show respect for my serial identity."
-GAE_SYMB2;<sprite=0> <sprite=1>;<sprite=0> <sprite=1>
+GAE_SYMB2;<sprite=1> <sprite=0>;<sprite=1> <sprite=0>
 JOUEUR_SYMB2_R1;Ca recommence... Gaëlle...;"It’s happening again…
 Gaëlle…"
 GAE_SYMB2_TRAD;*Notre seul moyen de communication est par le biais de photos et de symboles.. Une sorte de décryptage . Fais attention à la machine , je l’ai conçue pour qu’elle ait des sensations et de réels sentiments . Si tu la braques, elle ne te répondra plus . Au contraire si tu vas trop dans son sens , elle va croire que tu te joues d’elle . Alors écoutes la , et choisis bien les réponses que tu vas lui apporter , ma vie en dépend...;"This is our only way to communicate…
@@ -97,7 +99,7 @@ Machine_D20;Certes.. mais.. C’est pas une raison ! ;Certainly… but that’s 
 Machine_D21;Hypocrite.. Tu ne t’intéresse pas à ce que je peux ressentir , laisses tombé;Hypocrite. You’re not interested in what I can feel, you let me fall.
 Joueur_D18_R1;Tu sais , maintenant avec les IA... Alors , elle a peut être essayé de faire une petite pause avec tout ça;You know, now with AI, humans can try to make a pact with you.
 Joueur_D19_R1;Te jeter, tu disais?.. ;Ignore you? You say ?
-GAE_SYMB3;<sprite=0> ;<sprite=0> 
+GAE_SYMB3;<sprite=6> ;<sprite=6> 
 Joueur_SYMB3_R1;OK.. une nouvelle image , si j’arrive à la décrypter j’aurai peut être des nouvelles de Gaëlle;Okay… a new image. I can decode it. I’m getting new data.
 GAE_SYMB3_TRAD;*Quand tu arrives à traduire , ici ,de nouveaux chemins apparaissent . Je peux peut être m’en sortir comme ça.. Tu es mes yeux à présent X;"When you manage to translate it, new paths appear. I can see you now.If it’s the only way to get you out of here…
 "
@@ -112,7 +114,7 @@ Joueur_D24_R1;J’essaye de comprendre les positions de chacun, c’est pas faci
 Joueur_D24_R2;Mais peut être qu’un terrain d’entente est négociable , je serai votre médiateur;But maybe common ground can be negotiated. I would be your mediator.
 Machine_D25;Quelqu’un qui me prend en considération ? Bizarre..;Someone… considering me? That’s strange.
 Machine_D26;N’insistes pas ;Don’t push it.
-GAE_SYMB4;<sprite=4> <sprite=10>;<sprite=4> <sprite=10>
+GAE_SYMB4;<sprite=10> <sprite=4>;<sprite=10> <sprite=4>
 GAE_SYMB4_TRAD;"* C’est pas pour te mettre la  pression, mais mon temps est compté ici, si je passe trop de temps dans cette matrice , j’y resterai bloqué... À
 JAMAIS*"; My time is running out. If I stay too long in this matrix, I’ll be trapped here… forever.
 Machine_D27;"Tic Tac..Tic Tac... Le temps est compté et tu n’a toujours pas trouvé de solutions..
@@ -147,7 +149,7 @@ Joueur_D34_R2;Le droit de te racheter une conscience !;The right to redeem yours
 Machine_D35;C’est vrai que vous êtes plutot fascinant à vrai dire...;It’s true, you are quite fascinating, actually…
 Machine_D36;Rigoles, tu n’aura bientot plus l’occasion de le faire quand ton amie sera perdue à tout jamais..;Laugh while you can. Soon you won’t have the chance, when your friend is lost forever.
 Joueur_D35_R1;En contre partie , j’aimerai que tu m’aides ;In return… I would like you to help me.
-GAE_SYMB5;<sprite=5> <sprite=8>;<sprite=5> <sprite=8>
+GAE_SYMB5;<sprite=7> <sprite=9>;<sprite=7> <sprite=9>
 Joueur_SYMB5_R1;Enfin.. Je commence à plus supporter ses manières..;Finally… I can’t stand its behavior anymore…
 Joueur_SYMB5_R2;C’est pas trop tôt !;About time!
 GAE_SYMB5_TRAD;* Si la machine propose son aide , n’accepte pas , elle est rusé , elle réussira à te contrôler et nous serons perdu tout les deux..*;"Whatever you do, if the machine offers its help, don’t accept.
@@ -181,7 +183,7 @@ You’ll carve your way to her… and maybe find an exit together."
 Joueur_D49_R1;Enfaite , depuis le début tu savais très bien , tu te joues de moi..;So you knew all along… you’ve been playing with me.
 Joueur_D49_R2;Et qu’est ce qui me dit que je peux avoir confiance en toi ? ;And what makes you think I can trust you?
 Joueur_D49_R3;QUOI?! Mais.. C’est insensé..;WHAT?! That’s insane!
-GAE_SYMB6;<sprite=2> <sprite=6>;<sprite=2> <sprite=6>
+GAE_SYMB6;<sprite=3> <sprite=5>;<sprite=3> <sprite=5>
 GAE_SYMB6_TRAD;"*Cet endroit est tellement sinistre.. J’ai si peur.. Pourvu qu’il n'ait pas déjà une emprise sur toi..*
 ";"This place is so sinister… I’m so scared…
 I hope it doesn’t already have control over you…"

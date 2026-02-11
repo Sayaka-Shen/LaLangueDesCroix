@@ -59,10 +59,11 @@ public class PrefabsManager : MonoBehaviour
     [SerializeField] private GameObject FourthImagePrefab;
     [SerializeField] private GameObject FifthImagePrefab;
     [SerializeField] private GameObject SixthImagePrefab;
-    
+
     [Header("Other Prefabs")]
     [SerializeField] private GameObject prefabTraduction;
     [SerializeField] public GameObject goNoteContainer;
+    public DialogueManager dialogueManager;
     
     private void Awake()
     {
