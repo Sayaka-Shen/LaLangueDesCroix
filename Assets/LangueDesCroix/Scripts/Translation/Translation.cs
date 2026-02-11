@@ -169,6 +169,8 @@ public class Translation : MonoBehaviour
             origin.infos.parentMessage.transform.parent.GetChild(
                 origin.infos.parentMessage.transform.GetSiblingIndex() - origin.infos.messageIndexToReplace)
                 .GetComponentInChildren<Message>().SetMessageText(origin.infos.messageDecrypted);
+
+            StartCoroutine(WaitBeforeQuittingTranslation());
         }
     }
     
@@ -176,6 +178,13 @@ public class Translation : MonoBehaviour
     {
         origin.fillTwinInfos();
         Destroy(gameObject);
+    }
+
+    public IEnumerator WaitBeforeQuittingTranslation()
+    {
+        yield return new WaitForSeconds(.5f);
+        QuitTranslation();
+        PrefabsManager.Instance.dialogueManager.IsWaitingForTraduction = false;
     }
 
     IEnumerator ChangeInputTextColor(TMP_InputField inputField)
