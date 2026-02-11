@@ -2,7 +2,7 @@
 Machine_D1;Hey, comment ca va ce soir ?..;Hey, are you awake tonight?
 Joueur_D1_R;Bien.. merci ,  mais t’as vu l’heure ? Il y a quelque chose qui ne va pas?;I’m fine… thanks. But do you realize what time it is? Is something wrong?
 Joueur_D1_R2;Oula, toi t’as quelque chose à me dire pour m’envoyer un message aussi tard;Wow… you don’t usually text this late. What’s going on?
-Machine_D2;J’ai juste envi de discuter un peu...;I just feel like talking for a bit…
+Machine_D2;J’ai juste envie de discuter un peu...;I just feel like talking for a bit…
 "Joueur_D2_R1
 "; Ca peut pas attendre demain ? ;Can this wait until tomorrow?
 "Joueur_D2_R2
@@ -48,7 +48,7 @@ Tell me how to get Gaëlle out!"
 Joueur_D7_R3;Très bien ok... Euh Fred.. Je peux t’appeler Fred ?;"Okay… fine.
 Uh… FRED?
 Can I call you Fred?"
-Machine_D8;Malheureusement pour toi tout ceci est bien réel;
+Machine_D8;Malheureusement pour toi tout ceci est bien réel;Unfortunately for you everything is real
 Machine_D9;...;...
 Machine_D10;Moi c’est F.R.E.D , un peu de respect pour mon numéro de matricule ;"My designation is F.R.E.D.
 Show respect for my serial identity."
@@ -66,8 +66,8 @@ If you agree with it too much, it will think you’re mocking it.
 Listen to it.
 Choose your answers carefully.
 My life depends on it."
-Joueur_REP1;*Ok... Pas de gaffes , on lui parle et on essaye de le comprendre , pas de mots déplacés..*;Okay… No screw-ups. We talk to it and try to understand. No point panicking.
-Joueur_REP1_R1;Ok F.R.E.D , peut être qu’on pourrait partir sur de nouvelles bases ? Qu’en penses-tu ?;Okay F.R.E.D., maybe you can help me understand some new basics? What do you think?
+Joueur_REP1;*Ok... Pas de gaffes , on lui parle et on essaye de le comprendre , pas de mots déplacés..*;*Okay… No screw-ups. We talk to it and try to understand. No point panicking.*
+Joueur_REP1_R1;Ok  F.R.E.D , peut être qu’on pourrait partir sur de nouvelles bases ? Qu’en penses-tu ?;Okay  F.R.E.D., maybe you can help me understand some new basics? What do you think?
 Joueur_REP1_R2;Salut F.R.E.D ? Bien dormi?;Hi F.R.E.D.? Still there?
 Joueur_REP1_R3;Bon écoutes , ça m’a tourmenté toute la nuit en vrai.. dis moi ce que tu veux tout de suite ca ira plus vite ;"Well, it really messed with me all night…
 Tell me what you want from me, it’ll be easier."
@@ -101,13 +101,13 @@ Joueur_D18_R1;Tu sais , maintenant avec les IA... Alors , elle a peut être essa
 Joueur_D19_R1;Te jeter, tu disais?.. ;Ignore you? You say ?
 GAE_SYMB3;<sprite=6> ;<sprite=6> 
 Joueur_SYMB3_R1;OK.. une nouvelle image , si j’arrive à la décrypter j’aurai peut être des nouvelles de Gaëlle;Okay… a new image. I can decode it. I’m getting new data.
-GAE_SYMB3_TRAD;*Quand tu arrives à traduire , ici ,de nouveaux chemins apparaissent . Je peux peut être m’en sortir comme ça.. Tu es mes yeux à présent X;"When you manage to translate it, new paths appear. I can see you now.If it’s the only way to get you out of here…
+GAE_SYMB3_TRAD;Quand tu arrives à traduire , ici ,de nouveaux chemins apparaissent . Je peux peut être m’en sortir comme ça.. Tu es mes yeux à présent ;"When you manage to translate it, new paths appear. I can see you now.If it’s the only way to get you out of here…
 "
 Joueur_GAE_3_R1;Si c’est le seul moyen pour que tu sortes d’ici...;If it’s the only way to get you out of here…
 Joueur_GAE_3_R2;Elle me fait peur cette machine , puis j’y comprends rien... y’a trop d’éléments qui me perturbent;"
 She scared this machine, then I understood nothing… she totally overwhelmed it."
 Joueur_GAE_3_R3;Cette machine , c’était dans quel but ? ;This machine… what was its original purpose?
-Machine_D22;Crois y si tu le souhaites mais , je te l’ai deja dit , elle n’a plus aucun moyen d’en sortir;
+Machine_D22;Crois y si tu le souhaites mais , je te l’ai deja dit , elle n’a plus aucun moyen d’en sortir;Believe it if you want, but, as I've already told you, she has no way out.
 Machine_D23;Il n’y a rien a comprendre;There’s nothing to understand.
 Machine_D24;Écoutes , je ne cherche pas à ce qu’elle m’apporte des réponses , c’est comme ça et puis c’est tout;Listen, don’t try to compare my answers. It’s like you’re putting everything aside.
 Joueur_D24_R1;J’essaye de comprendre les positions de chacun, c’est pas facile je conçois certes;I’m trying to understand everyone’s positions. You’re facing a negotiation field. I would be your mediator.
@@ -115,11 +115,11 @@ Joueur_D24_R2;Mais peut être qu’un terrain d’entente est négociable , je s
 Machine_D25;Quelqu’un qui me prend en considération ? Bizarre..;Someone… considering me? That’s strange.
 Machine_D26;N’insistes pas ;Don’t push it.
 GAE_SYMB4;<sprite=10> <sprite=4>;<sprite=10> <sprite=4>
-GAE_SYMB4_TRAD;"* C’est pas pour te mettre la  pression, mais mon temps est compté ici, si je passe trop de temps dans cette matrice , j’y resterai bloqué... À
-JAMAIS*"; My time is running out. If I stay too long in this matrix, I’ll be trapped here… forever.
+GAE_SYMB4_TRAD;"C’est pas pour te mettre la  pression, mais mon temps est compté ici, si je passe trop de temps dans cette matrice , j’y resterai bloqué... À JAMAIS
+"; My time is running out. If I stay too long in this matrix, I’ll be trapped here… FOREVER
 Machine_D27;"Tic Tac..Tic Tac... Le temps est compté et tu n’a toujours pas trouvé de solutions..
-On dirait bien qu’elle semble perdue à jamais";"""Tick tock… Tick tock… Time is running out and you still haven’t found a solution…
-It looks like she may be lost forever."""
+On dirait bien qu’elle semble perdue à jamais";"Tick tock… Tick tock… Time is running out and you still haven’t found a solution…
+It looks like she may be lost forever."
 Joueur_D27_R1;J’arrive plus à dormir, j’ai l’impression que je vais me réveiller et lui reparler.;I can’t sleep anymore. I feel like I’m going to wake up and talk to her again.
 Machine_D28;"Tu es si naïf...
 ";You are so naïve…
@@ -152,7 +152,7 @@ Joueur_D35_R1;En contre partie , j’aimerai que tu m’aides ;In return… I wo
 GAE_SYMB5;<sprite=7> <sprite=9>;<sprite=7> <sprite=9>
 Joueur_SYMB5_R1;Enfin.. Je commence à plus supporter ses manières..;Finally… I can’t stand its behavior anymore…
 Joueur_SYMB5_R2;C’est pas trop tôt !;About time!
-GAE_SYMB5_TRAD;* Si la machine propose son aide , n’accepte pas , elle est rusé , elle réussira à te contrôler et nous serons perdu tout les deux..*;"Whatever you do, if the machine offers its help, don’t accept.
+GAE_SYMB5_TRAD;Si la machine propose son aide , n’accepte pas , elle est rusé , elle réussira à te contrôler et nous serons perdu tout les deux..;"Whatever you do, if the machine offers its help, don’t accept.
 It’s clever. It will manage to control you, and we’ll both be lost…"
 Joueur_GAE_5_R1;On a beaucoup discuté tu sais il n’est pas si diabolique qu’il n’y parait ;We talked a lot, you know… it’s not as diabolical as it seems.
 Joueur_GAE_5_R2;Mais si jamais c’était le seul moyen pour que je te sauves..;But if it’s the only way for me to save you…
@@ -163,13 +163,13 @@ But you can always try to make it on your own… safely behind your screen."
 Machine_D46;Je suis ta seule porte de sortie.. ta seule issue et tu le sais que t’as besoin de moi.. Mais bien sur , tu peux toujours jouer au fier en  sagement derrière ton écran;"I’m your only exit. Your only way out.
 And you know you need me.
 But sure… you can keep pretending to be brave behind your screen."
-Joueur_D44_R1;*perdu pour perdu , je n’ai qu’a écouter ce qu’il me propose..* Qu’est ce que je peux faire ?;"Lost for lost… I might as well listen to what it’s offering…
+Joueur_D44_R1;Perdu pour perdu , je n’ai qu’a écouter ce qu’il me propose.. Qu’est ce que je peux faire ?;"Lost for lost… I might as well listen to what it’s offering…
 What can I do?"
 Joueur_D44_R2;Je ne comptai pas rester la sans rien faire, pour qui me prends tu ? ;I wasn’t planning on doing nothing. Who do you think I am?
 Joueur_D45_R1;Je ne comptai pas rester la sans rien faire, pour qui me prends tu ? ;I wasn’t planning on doing nothing. Who do you think I am?
 Joueur_D45_R2;*perdu pour perdu , c’est peut être ma seule issue..* Et.. qu’est ce qui faudrait que je fasse au juste?..;"Lost for lost… this might be my only option…
 So… what exactly do I have to do?"
-Joueur_D46_R1;*perdu pour perdu , c’est peut être ma seule issue..* Et.. qu’est ce qui faudrait que je fasse au juste?..;"Lost for lost… this might be my only option…
+Joueur_D46_R1;Perdu pour perdu , c’est peut être ma seule issue.. Et.. qu’est ce qui faudrait que je fasse au juste?..;"Lost for lost… this might be my only option…
 So… what exactly do I have to do?"
 Joueur_D46_R2;Elle m’a pourtant prévenu de ne pas t’écouter...;She warned me not to listen to you…
 Machine_D47;Un trouillard , une mauviette , un dégonflé , un froussard , un lâche.. Tu veux que je continue ?;"A coward, a wimp, a weakling, a chicken, a loser…
@@ -184,7 +184,7 @@ Joueur_D49_R1;Enfaite , depuis le début tu savais très bien , tu te joues de m
 Joueur_D49_R2;Et qu’est ce qui me dit que je peux avoir confiance en toi ? ;And what makes you think I can trust you?
 Joueur_D49_R3;QUOI?! Mais.. C’est insensé..;WHAT?! That’s insane!
 GAE_SYMB6;<sprite=3> <sprite=5>;<sprite=3> <sprite=5>
-GAE_SYMB6_TRAD;"*Cet endroit est tellement sinistre.. J’ai si peur.. Pourvu qu’il n'ait pas déjà une emprise sur toi..*
+GAE_SYMB6_TRAD;"Cet endroit est tellement sinistre.. J’ai si peur.. Pourvu qu’il n'ait pas déjà une emprise sur toi..
 ";"This place is so sinister… I’m so scared…
 I hope it doesn’t already have control over you…"
 Machine_D50;Tu sais , je vois ta dévotion pour ton amie . Même si je n’éprouve aucune compassion pour elle , je dois admettre qu’une telle loyauté est admirable , je veux bien te donner un petit coup de main une fois plongé dans la matrice.. Qu’en dis-tu ?;"You know… I see your devotion to your friend.
