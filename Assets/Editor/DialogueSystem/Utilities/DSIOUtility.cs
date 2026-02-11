@@ -83,7 +83,6 @@ public static class DSIOUtility
         // clear dialogue container entries before repopulating (defensive)
         dialogueContainer.Initialize(graphFileName);
             
-            
         SyncChoicesFromEdges_SingleTarget();
 
         SaveGroups(graphData, dialogueContainer);
@@ -190,6 +189,7 @@ public static class DSIOUtility
             DialogueType = node.DialogueType,
             Position = node.GetPosition().position,
             TraductionImage = node.TraductionImage,
+            PopupText = node.PopupText,
             isMultipleChoice = node.Saves.isMultipleChoice,
             OnlyOneConditionNeeded = node.Saves.OnlyOneConditionNeeded,
         };
@@ -228,9 +228,9 @@ public static class DSIOUtility
             node.DialogueType,
             node.IsStartingNode(),
             node.Speaker,
-            node.TraductionImage
+            node.TraductionImage,
+            node.PopupText
         );
-
 
         node.Saves.OnlyOneConditionNeeded = node.OnlyOneConditionNeeded;
         //node.Saves.SaveTraductionImage(node.TraductionImage);
@@ -369,7 +369,9 @@ public static class DSIOUtility
     private static void LoadNodes(List<DSNodeSaveData> nodes)
     {
         graphView.ClearExistingNames();
+
         FantasyDialogueTable.Load();
+        
         foreach (DSNodeSaveData nodeData in nodes)
         {
             List<DSChoiceSaveData> choices = CloneNodeChoices(nodeData.ChoicesInNode);
@@ -383,9 +385,11 @@ public static class DSIOUtility
             //node.BubleType = nodeData.GetBubleType();
             node.SetSpeaker(nodeData.Speaker);
             node.SetTraductionImage(nodeData.TraductionImage);
+            node.SetPopupText(nodeData.PopupText);
             //node.SetHumeur(nodeData.GetHumeur());
                 
             node.Saves.OnlyOneConditionNeeded = nodeData.OnlyOneConditionNeeded;
+
             node.Draw(new Color());
             graphView.AddElement(node);
 

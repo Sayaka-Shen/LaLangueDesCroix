@@ -12,8 +12,9 @@ public class DSDialogueSO : ScriptableObject
     [field: SerializeField] public bool IsStartingDialogue { get; set; }
     [field: SerializeField] public Espeaker Speaker { get; set; }
     [field: SerializeField] public Sprite TraductionImage { get; set; }
+    [field: SerializeField] public string PopupText { get; set; }
 
-    public void Initialize(string dialogueName, string text, List<DSDialogueChoiceData> choices, DSDialogueType dialogueType, bool isStartingDialogue, Espeaker espeaker, Sprite tradImg)
+    public void Initialize(string dialogueName, string text, List<DSDialogueChoiceData> choices, DSDialogueType dialogueType, bool isStartingDialogue, Espeaker espeaker, Sprite tradImg, string popupTxt)
     {
         DialogueName = dialogueName;
         Text = text;
@@ -22,5 +23,6 @@ public class DSDialogueSO : ScriptableObject
         IsStartingDialogue = isStartingDialogue;
         Speaker = espeaker;
         TraductionImage = tradImg;
+        PopupText = popupTxt;
     }
 }
