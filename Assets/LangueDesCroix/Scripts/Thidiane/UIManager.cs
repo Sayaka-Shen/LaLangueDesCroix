@@ -4,6 +4,8 @@ using DG.Tweening;
 
 public class UIManager : MonoBehaviour
 {
+    [SerializeField]private TypeBouton _currentType;
+
     [SerializeField] private GameObject _bgMessage;
     [SerializeField] private GameObject _bgNote;
     [SerializeField] private GameObject _bgGalerie;
@@ -17,7 +19,7 @@ public class UIManager : MonoBehaviour
     [Header("Note")]
     [SerializeField] private RectTransform _rectbgNote;
 
-
+    [Header("Animation")]
     public float _durationAnim = 0.5f;
     public float startPosXRight = 100;
     public float startPosXLeft = -100;
@@ -25,7 +27,7 @@ public class UIManager : MonoBehaviour
 
     void Start()
     {
-        
+
     }
 
     public void AfficherUI(TypeBouton type)
@@ -52,7 +54,18 @@ public class UIManager : MonoBehaviour
                 _rectbgNote.DOAnchorPosX(EndPosX, _durationAnim).SetEase(Ease.OutBack);
                 break;
             case TypeBouton.Galerie:
-                _rectbgGalerie.anchoredPosition = new Vector2(startPosXRight, _rectbgGalerie.anchoredPosition.y);
+
+                if (_currentType == TypeBouton.Note)
+                {
+                    _rectbgGalerie.anchoredPosition = new Vector2(startPosXLeft, _rectbgGalerie.anchoredPosition.y);
+                }
+
+                if (_currentType == TypeBouton.Message)
+                {
+                    _rectbgGalerie.anchoredPosition = new Vector2(startPosXRight, _rectbgGalerie.anchoredPosition.y);
+                }
+
+                //_rectbgGalerie.anchoredPosition = new Vector2(startPosXRight, _rectbgGalerie.anchoredPosition.y);
 
                 _bgGalerie.transform.SetSiblingIndex(2);
                 _bgMessage.transform.SetSiblingIndex(1);
@@ -62,5 +75,8 @@ public class UIManager : MonoBehaviour
 
                 break;
         }
+        _currentType = type;
     }
+
+   
 }
