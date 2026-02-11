@@ -16,8 +16,7 @@ public class Translation : MonoBehaviour
     [SerializeField] private TMP_InputField inptWordTwo;
     [SerializeField] private TextMeshProUGUI  placeholderWordOne;
     [SerializeField] private TextMeshProUGUI  placeholderWordTwo;
-    
-    
+
     public void Initialize(ClickableImage newOrigin)
     {
         this.origin = newOrigin;
@@ -171,7 +170,6 @@ public class Translation : MonoBehaviour
                 origin.infos.parentMessage.transform.GetSiblingIndex() - origin.infos.messageIndexToReplace)
                 .GetComponentInChildren<Message>().SetMessageText(origin.infos.messageDecrypted);
         }
-        
     }
     
     public void QuitTranslation()

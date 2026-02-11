@@ -16,6 +16,7 @@ public class Message : MonoBehaviour
     [Header("Message Properties")]
     [SerializeField] private TextMeshProUGUI m_messageContent;
     [SerializeField] private MessagesType mMessageType;
+    [SerializeField] private Image m_bgImg;
 
     public void SetMessageText(string msg)
     {
@@ -61,5 +62,11 @@ public class Message : MonoBehaviour
     public MessagesType GetMessageOwner()
     {
         return mMessageType;
+    }
+
+
+    public void ChangeBgColor(Color newColor)
+    {
+        m_bgImg.color = newColor;
     }
 }
