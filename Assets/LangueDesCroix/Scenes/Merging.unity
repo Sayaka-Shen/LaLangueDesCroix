@@ -1838,12 +1838,13 @@ MonoBehaviour:
   FifthImage: {fileID: -4674904311301953499, guid: 0461c626415cdc24b8d9e292da966031, type: 3}
   SixthImage: {fileID: 4422777761893399854, guid: cf6f542d13dd18546b8d6f4fa4cf608e, type: 3}
   FirstImagePrefab: {fileID: 5624443108993794548, guid: fdd79bfad6cd98d4584f65921f607531, type: 3}
-  SecondImagePrefab: {fileID: 0}
-  ThirdImagePrefab: {fileID: 0}
-  FourthImagePrefab: {fileID: 0}
-  FifthImagePrefab: {fileID: 0}
-  SixthImagePrefab: {fileID: 0}
+  SecondImagePrefab: {fileID: 5624443108993794548, guid: 52449a23e51907a4db1a1206aa9eef54, type: 3}
+  ThirdImagePrefab: {fileID: 5624443108993794548, guid: 7a06d256d0e773045a8e22398686cb8f, type: 3}
+  FourthImagePrefab: {fileID: 5624443108993794548, guid: 257556d1ccba81743a8286618bb987d4, type: 3}
+  FifthImagePrefab: {fileID: 5624443108993794548, guid: 37644359f1bc2c5449e92bdbe450ff10, type: 3}
+  SixthImagePrefab: {fileID: 5624443108993794548, guid: 2fbc98abce6219044b107182d07a0079, type: 3}
   prefabTraduction: {fileID: 4270585797788910865, guid: f0754c7b3daa0c244b6e2ff86627e0a4, type: 3}
+  goNoteContainer: {fileID: 866681407}
 --- !u!4 &950561128
 Transform:
   m_ObjectHideFlags: 0
