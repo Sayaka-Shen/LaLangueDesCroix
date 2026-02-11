@@ -170,7 +170,33 @@ public class Translation : MonoBehaviour
                 origin.infos.parentMessage.transform.GetSiblingIndex() - origin.infos.messageIndexToReplace)
                 .GetComponentInChildren<Message>().SetMessageText(origin.infos.messageDecrypted);
 
+            InstantiateNotes();
+
             StartCoroutine(WaitBeforeQuittingTranslation());
+        }
+    }
+
+    public void InstantiateNotes()
+    {
+        Transform parent = PrefabsManager.Instance.goNoteContainer.transform;
+
+        GameObject symbol = Instantiate(PrefabsManager.Instance.prefabNoteSymbol, parent);
+        GameObject symbolTwo = Instantiate(PrefabsManager.Instance.prefabNoteSymbol, parent);
+        GameObject sentence =Instantiate(PrefabsManager.Instance.prefabNoteSentence, parent);
+        
+        NoteSymbol noteSymbol = symbol.GetComponent<NoteSymbol>();
+        NoteSymbol noteSymbolTwo = symbol.GetComponent<NoteSymbol>();
+        NoteSentence noteSentence = sentence.GetComponent<NoteSentence>();
+
+        if (noteSymbol != null && noteSentence != null &&  noteSymbolTwo != null)
+        {
+            noteSymbol.Initialize(PrefabsManager.Instance.GetSymbol(origin.infos.symbolOne), origin.infos.wordOne);
+            noteSymbolTwo.Initialize(PrefabsManager.Instance.GetSymbol(origin.infos.symbolTwo), origin.infos.wordTwo);
+
+            String symbols = "";
+            symbols += PrefabsManager.Instance.GetStringFromSymbol(origin.infos.symbolOne);
+            symbols += PrefabsManager.Instance.GetStringFromSymbol(origin.infos.symbolTwo);
+            noteSentence.Initialize(symbols, origin.infos.messageDecrypted);
         }
     }
     

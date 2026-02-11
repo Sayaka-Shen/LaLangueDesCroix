@@ -1,3 +1,4 @@
+using System;
 using JetBrains.Annotations;
 using UnityEngine;
 
@@ -62,6 +63,8 @@ public class PrefabsManager : MonoBehaviour
 
     [Header("Other Prefabs")]
     [SerializeField] private GameObject prefabTraduction;
+    [SerializeField] public GameObject prefabNoteSymbol;
+    [SerializeField] public GameObject prefabNoteSentence;
     [SerializeField] public GameObject goNoteContainer;
     public DialogueManager dialogueManager;
     
@@ -111,6 +114,39 @@ public class PrefabsManager : MonoBehaviour
                 return null;
             default :
                 return null;
+        }
+    }
+
+    public String GetStringFromSymbol(SYMBOLS symbol)
+    {
+        switch (symbol)
+        {
+            case SYMBOLS.Translate :
+                return "<sprite=1>";
+            case SYMBOLS.Language :
+                return "<sprite=0>";
+            case SYMBOLS.Sinister :
+                return "<sprite=3>";
+            case SYMBOLS.Eye :
+                return "<sprite=2>";
+            case SYMBOLS.Understand :
+                return "<sprite=4>";
+            case SYMBOLS.Control :
+                return "<sprite=7>";
+            case SYMBOLS.Hold :
+                return "<sprite=5>";
+            case SYMBOLS.Path :
+                return "<sprite=6>";
+            case SYMBOLS.Two :
+                return "<sprite=9>";
+            case SYMBOLS.Lost :
+                return "<sprite=8>";
+            case SYMBOLS.Disappear :
+                return "<sprite=10>";
+            case SYMBOLS.Null :
+                return "";
+            default :
+                return "";
         }
     }
     

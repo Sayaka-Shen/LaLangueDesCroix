@@ -1844,6 +1844,8 @@ MonoBehaviour:
   FifthImagePrefab: {fileID: 5624443108993794548, guid: 37644359f1bc2c5449e92bdbe450ff10, type: 3}
   SixthImagePrefab: {fileID: 5624443108993794548, guid: 2fbc98abce6219044b107182d07a0079, type: 3}
   prefabTraduction: {fileID: 4270585797788910865, guid: f0754c7b3daa0c244b6e2ff86627e0a4, type: 3}
+  prefabNoteSymbol: {fileID: 400681548835590281, guid: 85c6e984fd7cc094fb7018b4f858f722, type: 3}
+  prefabNoteSentence: {fileID: 5570178625780262895, guid: feda0cdb95735164ea138a8c51f0adae, type: 3}
   goNoteContainer: {fileID: 866681407}
   dialogueManager: {fileID: 1924664964}
 --- !u!4 &950561128
