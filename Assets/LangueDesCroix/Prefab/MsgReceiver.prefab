@@ -67,8 +67,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: 
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 2104947307c618248b5553c147044dca, type: 2}
+  m_sharedMaterial: {fileID: -9173454729332511616, guid: 2104947307c618248b5553c147044dca, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -328,6 +328,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Message
   m_messageContent: {fileID: 8143739563397866370}
   mMessageType: 0
+  m_bgImg: {fileID: 7318484121000872513}
 --- !u!1 &4186598248920638778
 GameObject:
   m_ObjectHideFlags: 0

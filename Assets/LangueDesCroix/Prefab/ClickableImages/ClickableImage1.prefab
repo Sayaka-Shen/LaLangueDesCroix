@@ -90,19 +90,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ClickableImage
   infos:
     image: 0
-    symbolOne: 0
-    symbolTwo: 1
+    symbolOne: 9
+    symbolTwo: 3
     wordsOne:
-    - PERDU
+    - PERDUE
     - LOST
     wordsTwo:
     - VOIR
     - SEE
-    indexRevealWordOne: 00000000
-    attemptsRevealWordOne: 00000000
-    indexRevealWordTwo: 01000000
-    attemptsRevealWordTwo: 02000000
-    messageIndexToReplace: 1
+    indexRevealWordOne: 000000000100000002000000
+    attemptsRevealWordOne: 020000000400000004000000
+    indexRevealWordTwo: 0000000002000000
+    attemptsRevealWordTwo: 0200000005000000
+    messageIndexToReplace: 2
     wordOne: PERDU
     wordTwo: VOIR
     foundWordOne: 0

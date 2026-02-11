@@ -18,6 +18,6 @@ MonoBehaviour:
   - <Text>k__BackingField: 
     <NextDialogue>k__BackingField: {fileID: 11400000, guid: 0a74b6cb0aca0e64a931c1329bc7a1d6, type: 2}
   <DialogueType>k__BackingField: 0
-  <IsStartingDialogue>k__BackingField: 1
+  <IsStartingDialogue>k__BackingField: 0
   <Speaker>k__BackingField: 2
   <TraductionImage>k__BackingField: {fileID: 0}

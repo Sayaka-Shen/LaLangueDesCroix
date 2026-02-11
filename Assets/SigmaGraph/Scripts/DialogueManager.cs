@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using NaughtyAttributes;
 using System.Collections;
+using DG.Tweening;
 
 public enum language
 {
@@ -34,6 +35,7 @@ public class DialogueManager : MonoBehaviour
     [Header("Choice Button UI")]
     public Button ChoiceButtonPrefab;
     public Transform ChoiceButtonContainer;
+    public Transform m_phoneChoiceBtn;
 
     public Speakers SpeakersScriptable;
     private SpeakerInfo _currentSpeaker;
@@ -53,6 +55,13 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private float m_maxTimer = 1.5f;
     private float m_timer;
     private bool m_isWaitingForMessage;
+
+    [Header("Shake Timer")]
+    [SerializeField] private float m_maxShakeTimer = 2.0f;
+    [SerializeField] private float m_shakeForce = 2.0f;
+    [SerializeField] private float m_shakeTime = 1.0f;
+    private float m_shakeTimer;
+    private bool m_isWaitingToShakeAgain;
 
 
     [Button]
@@ -132,11 +141,33 @@ public class DialogueManager : MonoBehaviour
 
     private void Update()
     {
+        // Shake
+        if(_isWaitingForChoice && !m_isWaitingToShakeAgain)
+        {
+            m_shakeTimer += Time.deltaTime;
+        }
+
+        // Shake Timer finished
+        if(m_shakeTimer >= m_maxShakeTimer)
+        {
+            m_isWaitingToShakeAgain = true;
+        }
+
+        if (_isWaitingForChoice && m_isWaitingToShakeAgain && !m_phoneManager.HasAlreadyClickedDp)
+        {
+            m_phoneChoiceBtn.DOShakePosition(m_shakeTime, m_shakeForce);
+
+            // Reset Shake timer
+            m_shakeTimer = 0.0f;
+            m_isWaitingToShakeAgain = false;
+        }
+
+        // Base Loop
         if (!_isWaitingForChoice)
         {
             m_timer += Time.deltaTime;
         }
-
+       
         if (m_timer >= m_maxTimer)
         {
             m_isWaitingForMessage = true;
@@ -302,7 +333,6 @@ public class DialogueManager : MonoBehaviour
         if (_currentNode.ChoicesInNode.Count > 1)
         {
             _isWaitingForChoice = true;
-            StartCoroutine(WaitBeforeOpeningDropdown());
 
             foreach (DSChoiceSaveData choice in _currentNode.ChoicesInNode)
             {
@@ -371,12 +401,6 @@ public class DialogueManager : MonoBehaviour
     private void SetNewSpeaker(SpeakerInfo speaker)
     {
         _currentSpeaker = speaker;
-    }
-
-    private IEnumerator WaitBeforeOpeningDropdown()
-    {
-        yield return new WaitForSeconds(.2f);
-        m_phoneManager.OpenDropDownMenu();
     }
 
     private DSNodeSaveData GetNodeStart()
