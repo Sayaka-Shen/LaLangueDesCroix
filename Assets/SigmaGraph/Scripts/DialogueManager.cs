@@ -113,7 +113,10 @@ public class DialogueManager : MonoBehaviour
     {
         IsWaitingForChoice = false;
 
-        languageSetting = TranslationManager.Instance.GetActualLanguage();
+        if (TranslationManager.Instance != null)
+        {
+            languageSetting = TranslationManager.Instance.GetActualLanguage();
+        }
         _previewLanguage = languageSetting;
         FantasyDialogueTable.Load();
         foreach (var node in runtimeGraph.Nodes)
