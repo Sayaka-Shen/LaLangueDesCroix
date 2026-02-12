@@ -25,7 +25,16 @@ public class Translation : MonoBehaviour
 
         imgTradImage.sprite = PrefabsManager.Instance.GetImage(origin.infos.image);
         imgSymbolOne.sprite = PrefabsManager.Instance.GetSymbol(origin.infos.symbolOne);
-        imgSymbolTwo.sprite = PrefabsManager.Instance.GetSymbol(origin.infos.symbolTwo);
+        if (origin.infos.symbolTwo == SYMBOLS.Null)
+        {
+            imgSymbolTwo.transform.parent.gameObject.SetActive(false);
+            origin.infos.foundWordTwo = true;
+        }
+        else
+        {
+            imgSymbolTwo.sprite = PrefabsManager.Instance.GetSymbol(origin.infos.symbolTwo);
+        }
+        
 
         InitializePlaceholders();
         CheckFields();
@@ -195,18 +204,26 @@ public class Translation : MonoBehaviour
         Transform parent = PrefabsManager.Instance.goNoteContainer.transform;
 
         GameObject symbol = Instantiate(PrefabsManager.Instance.prefabNoteSymbol, parent.GetChild(0).transform);
-        GameObject symbolTwo = Instantiate(PrefabsManager.Instance.prefabNoteSymbol, parent.GetChild(0).transform);
-        GameObject sentence =Instantiate(PrefabsManager.Instance.prefabNoteSentence, parent.GetChild(1).transform);
+        if (origin.infos.symbolTwo != SYMBOLS.Null)
+        {
+            GameObject symbolTwo = Instantiate(PrefabsManager.Instance.prefabNoteSymbol, parent.GetChild(0).transform);
+            NoteSymbol noteSymbolTwo = symbolTwo.GetComponent<NoteSymbol>();
+
+            if (noteSymbolTwo != null)
+            {
+                noteSymbolTwo.Initialize(PrefabsManager.Instance.GetSymbol(origin.infos.symbolTwo), origin.infos.wordTwo);
+            }
+        }
         
+        GameObject sentence =Instantiate(PrefabsManager.Instance.prefabNoteSentence, parent.GetChild(1).transform);
         NoteSymbol noteSymbol = symbol.GetComponent<NoteSymbol>();
-        NoteSymbol noteSymbolTwo = symbolTwo.GetComponent<NoteSymbol>();
+        
         NoteSentence noteSentence = sentence.GetComponent<NoteSentence>();
 
-        if (noteSymbol != null && noteSentence != null &&  noteSymbolTwo != null)
+        if (noteSymbol != null && noteSentence != null)
         {
             noteSymbol.Initialize(PrefabsManager.Instance.GetSymbol(origin.infos.symbolOne), origin.infos.wordOne);
-            noteSymbolTwo.Initialize(PrefabsManager.Instance.GetSymbol(origin.infos.symbolTwo), origin.infos.wordTwo);
-
+            
             String symbols = "";
             symbols += PrefabsManager.Instance.GetStringFromSymbol(origin.infos.symbolOne);
             symbols += PrefabsManager.Instance.GetStringFromSymbol(origin.infos.symbolTwo);
