@@ -6,11 +6,11 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/LangueDesCroix/Scenes/GaetanTesting.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
-  - enabled: 0
-    path: Assets/LangueDesCroix/Scenes/NicoTesting/Nico.unity
-    guid: 1eb1f40dbf5beca4ab5a42cda8f28c9a
+    path: Assets/LangueDesCroix/Scenes/Menu.unity
+    guid: 816538aa721a71947a39fc1705218079
+  - enabled: 1
+    path: Assets/LangueDesCroix/Scenes/Merging.unity
+    guid: c197cd8ed4792be43aeb1c3a3795c06e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

@@ -11,6 +11,8 @@ public class LoadingMenu : MonoBehaviour
 
     [SerializeField] private bool isLoading = false;
 
+    
+
 
     void Start()
     {
@@ -25,6 +27,7 @@ public class LoadingMenu : MonoBehaviour
     public void Chargement()
     {
         StartCoroutine(LoadOther());
+        AudioManager.instance.PlayMusic("");
     }
 
 
@@ -36,7 +39,7 @@ public class LoadingMenu : MonoBehaviour
             yield return null;
         }
         isLoading = true;
-        //SceneManager.LoadScene("MenuPrincipal");
+        SceneManager.LoadScene("Merging");
     }
 
     
