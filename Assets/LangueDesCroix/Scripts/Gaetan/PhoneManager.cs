@@ -6,13 +6,6 @@ using DG.Tweening;
 using UnityEngine;
 using UnityEngine.UI;
 
-public enum AppState
-{
-    Message = 0, 
-    Gallery = 1, 
-    Notes = 2,
-}
-
 public class PhoneManager : MonoBehaviour
 {
     // Phone DropDown
@@ -22,6 +15,8 @@ public class PhoneManager : MonoBehaviour
     [SerializeField] private RectTransform m_messageContainer;
     [SerializeField] private int m_dropdownMenuFactor = 100;
     [SerializeField] private GameObject m_scrollContainer;
+    [SerializeField] private DialogueManager m_dialogueManager;
+
     public GameObject ScrollContainer 
     { 
         get
@@ -48,7 +43,7 @@ public class PhoneManager : MonoBehaviour
 
     public void OpenDropDownMenu()
     {
-        if (!HasAlreadyClickedDp)
+        if (!HasAlreadyClickedDp && m_dialogueManager.IsWaitingForChoice)
         {
             HasAlreadyClickedDp = true;
 

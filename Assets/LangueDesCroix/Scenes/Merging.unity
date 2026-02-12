@@ -3380,6 +3380,7 @@ MonoBehaviour:
   m_messageContainer: {fileID: 733603438}
   m_dropdownMenuFactor: 810
   m_scrollContainer: {fileID: 1401300793}
+  m_dialogueManager: {fileID: 1924664964}
   m_popupTransform: {fileID: 356715876}
 --- !u!114 &1924664964
 MonoBehaviour:

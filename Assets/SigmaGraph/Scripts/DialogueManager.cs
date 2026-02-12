@@ -43,8 +43,7 @@ public class DialogueManager : MonoBehaviour
 
     private Dictionary<string, DSNodeSaveData> _nodeLookup = new Dictionary<string, DSNodeSaveData>();
     private DSNodeSaveData _currentNode;
-    
-    private bool _isWaitingForChoice = false;
+    public bool IsWaitingForChoice { get; private set; }
     
     private dialogueContainer m_currentDialogueContainer;
     //private dialogueContainer _oldDialogueContainer;
@@ -91,7 +90,7 @@ public class DialogueManager : MonoBehaviour
     public void UpdateLanguageSetting(language newLanguage)
     {
         languageSetting = newLanguage;
-        if (_isWaitingForChoice)
+        if (IsWaitingForChoice)
         {
             foreach (Transform child in ChoiceButtonContainer)
             {
@@ -112,6 +111,8 @@ public class DialogueManager : MonoBehaviour
 
     private void Start()
     {
+        IsWaitingForChoice = false;
+
         _previewLanguage = languageSetting;
         FantasyDialogueTable.Load();
         foreach (var node in runtimeGraph.Nodes)
@@ -146,7 +147,7 @@ public class DialogueManager : MonoBehaviour
     private void Update()
     {
         // Shake
-        if(_isWaitingForChoice && !m_isWaitingToShakeAgain)
+        if(IsWaitingForChoice && !m_isWaitingToShakeAgain)
         {
             m_shakeTimer += Time.deltaTime;
         }
@@ -157,7 +158,7 @@ public class DialogueManager : MonoBehaviour
             m_isWaitingToShakeAgain = true;
         }
 
-        if (_isWaitingForChoice && m_isWaitingToShakeAgain && !m_phoneManager.HasAlreadyClickedDp)
+        if (IsWaitingForChoice && m_isWaitingToShakeAgain && !m_phoneManager.HasAlreadyClickedDp)
         {
             m_phoneChoiceBtn.DOShakePosition(m_shakeTime, m_shakeForce);
 
@@ -167,7 +168,7 @@ public class DialogueManager : MonoBehaviour
         }
 
         // Base Loop
-        if (!_isWaitingForChoice)
+        if (!IsWaitingForChoice)
         {
             m_timer += Time.deltaTime;
         }
@@ -177,7 +178,7 @@ public class DialogueManager : MonoBehaviour
             m_isWaitingForMessage = true;
         }
 
-        if (m_isWaitingForMessage && !_isWaitingForChoice && !IsWaitingForTraduction)
+        if (m_isWaitingForMessage && !IsWaitingForChoice && !IsWaitingForTraduction)
         {
             m_isWaitingForMessage = false;
             m_timer = 0; 
@@ -335,7 +336,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (_currentNode.ChoicesInNode.Count >= 1 && _currentNode.isMultipleChoice)
         {
-            _isWaitingForChoice = true;
+            IsWaitingForChoice = true;
 
             foreach (DSChoiceSaveData choice in _currentNode.ChoicesInNode)
             {
@@ -360,7 +361,7 @@ public class DialogueManager : MonoBehaviour
                 
                 choiceButton.onClick.AddListener(() =>
                 {
-                    _isWaitingForChoice = false;
+                    IsWaitingForChoice = false;
                     UpdateDialogueFromNode(GetNextNode(choice.NodeID));
                     m_phoneManager.CloseDropdownMenu();
 
