@@ -44,10 +44,14 @@ public class Message : MonoBehaviour
         RectTransform parent = transform.parent.GetComponent<RectTransform>();;
         RectTransform rt = this.GetComponent<RectTransform>();
         if (!parent || !rt) yield break;
+
+        if (mMessageType != MessagesType.Image)
+        {
+            //We want the message to take only 70% of the width
+            float targetWidth = parent.rect.width * 0.7f;
+            rt.sizeDelta = new Vector2(targetWidth, rt.sizeDelta.y);
+        }
         
-        //We want the message to take only 70% of the width
-        float targetWidth = parent.rect.width * 0.7f;
-        rt.sizeDelta = new Vector2(targetWidth, rt.sizeDelta.y);
     }
     void LateUpdate()
     {
