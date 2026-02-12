@@ -16,7 +16,6 @@ public class PhoneManager : MonoBehaviour
     [SerializeField] private int m_dropdownMenuFactor = 100;
     [SerializeField] private GameObject m_scrollContainer;
     [SerializeField] private DialogueManager m_dialogueManager;
-    private bool m_doLittleScrollOnce = false;
 
     public GameObject ScrollContainer 
     { 

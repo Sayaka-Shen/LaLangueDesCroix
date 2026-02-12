@@ -50,11 +50,11 @@ public class ClickableImage : MonoBehaviour, IPointerClickHandler
         
         switch (TranslationManager.Instance.GetActualLanguage())
         {
-            case LANGUAGE.French:
+            case language.FR:
                 infos.wordOne = infos.wordsOne[0];
                 infos.wordTwo = infos.wordsTwo[0];
                 break;
-            case LANGUAGE.English:
+            case language.EN:
                 infos.wordOne = infos.wordsOne[1];
                 infos.wordTwo = infos.wordsTwo[1];
                 break;
