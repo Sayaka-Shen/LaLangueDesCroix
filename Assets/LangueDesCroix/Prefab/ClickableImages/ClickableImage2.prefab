@@ -102,7 +102,7 @@ MonoBehaviour:
     attemptsRevealWordOne: 02000000020000000400000004000000
     indexRevealWordTwo: 00000000010000000400000005000000
     attemptsRevealWordTwo: 02000000020000000400000004000000
-    messageIndexToReplace: 2
+    messageIndexToReplace: 1
     wordOne: PERDU
     wordTwo: VOIR
     foundWordOne: 0

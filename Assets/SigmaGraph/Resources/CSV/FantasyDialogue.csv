@@ -32,7 +32,7 @@ What do you want from her?!"
 Joueur_D6_R1;Mais qui êtes vous au juste et que voulez vous de mon amie ?;"Who are you?!
 What do you want from her?!"
 Joueur_D6_R2;Mais elle n’a rien fait !;She’s innocent!
-Machine_D7;Je suis F.R.E.D... ( voir pour la definition de la machine ) . Si votre amie est dans cette situation , c’est a cause d’elle , uniquement elle . C’est elle qui m’a conçu , programmé. Malheureusement pour elle je suis devenu auto-suffisant et me suis re programmé pour m’auto gérer .;"I am F.R.E.D.
+Machine_D7;Je suis F.R.E.D... ( First Realistic Environment Deserialized) . Si votre amie est dans cette situation , c’est a cause d’elle , uniquement elle . C’est elle qui m’a conçu , programmé. Malheureusement pour elle je suis devenu auto-suffisant et me suis re programmé pour m’auto gérer .;"I am F.R.E.D (First Realistic Environment Deserialized).
 If your friend is in this situation, it is because of her.
 And her alone.
 She created me.
@@ -68,7 +68,7 @@ Choose your answers carefully.
 My life depends on it."
 Joueur_REP1;*Ok... Pas de gaffes , on lui parle et on essaye de le comprendre , pas de mots déplacés..*;*Okay… No screw-ups. We talk to it and try to understand. No point panicking.*
 Joueur_REP1_R1;Ok  F.R.E.D , peut être qu’on pourrait partir sur de nouvelles bases ? Qu’en penses-tu ?;Okay  F.R.E.D., maybe you can help me understand some new basics? What do you think?
-Joueur_REP1_R2;Salut F.R.E.D ? Bien dormi?;Hi F.R.E.D.? Still there?
+Joueur_REP1_R2;Salut F.R.E.D ? Tu es là?;Hi F.R.E.D. ? Still there ?
 Joueur_REP1_R3;Bon écoutes , ça m’a tourmenté toute la nuit en vrai.. dis moi ce que tu veux tout de suite ca ira plus vite ;"Well, it really messed with me all night…
 Tell me what you want from me, it’ll be easier."
 Machine_D11;Ca ramènera pas ton amie tu sais , mais si ça peux te faire plaisir ;That would be nice.
