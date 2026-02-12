@@ -149,10 +149,12 @@ public class Translation : MonoBehaviour
             Debug.Log("wordOne trouvé");
             origin.infos.foundWordOne = true;
             inptWordOne.interactable = false;
+            AudioManager.instance.PlaySFX("translation_right");
             CheckBothValidated();
         }
         else
         {
+            AudioManager.instance.PlaySFX("translation_wrong");
             origin.infos.attemptsWordOne += 1;
             UpdateFirstPlaceHolder();
             inptWordOne.text = "";
@@ -171,10 +173,12 @@ public class Translation : MonoBehaviour
             Debug.Log("wordTwo trouvé");
             origin.infos.foundWordTwo = true;
             inptWordTwo.interactable = false;
+            AudioManager.instance.PlaySFX("translation_right");
             CheckBothValidated();
         }
         else
         {
+            AudioManager.instance.PlaySFX("translation_wrong");
             origin.infos.attemptsWordTwo += 1;
             UpdateSecondPlaceHolder();
             inptWordTwo.text = "";
