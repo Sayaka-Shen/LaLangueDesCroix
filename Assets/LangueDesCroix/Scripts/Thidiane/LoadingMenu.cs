@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class LoadingMenu : MonoBehaviour
 {
@@ -10,10 +11,12 @@ public class LoadingMenu : MonoBehaviour
 
     [SerializeField] private bool isLoading = false;
 
+    
+
+
     void Start()
     {
         loadingBarImage.value = 0f;
-        StartCoroutine(LoadSceneAsync());
     }
 
     void Update()
@@ -24,18 +27,10 @@ public class LoadingMenu : MonoBehaviour
     public void Chargement()
     {
         StartCoroutine(LoadOther());
+        AudioManager.instance.PlaySFX("select_language");
     }
 
 
-    IEnumerator LoadSceneAsync()
-    {
-        while (loadingBarImage.value <= 0.5f)
-        {
-            loadingBarImage.value += Time.deltaTime / loadingDuration;
-            yield return null;
-        }
-        isLoading = true;
-    }
     IEnumerator LoadOther()
     {
         while (loadingBarImage.value <= 1f)
@@ -44,6 +39,7 @@ public class LoadingMenu : MonoBehaviour
             yield return null;
         }
         isLoading = true;
+        SceneManager.LoadScene("Merging");
     }
 
     

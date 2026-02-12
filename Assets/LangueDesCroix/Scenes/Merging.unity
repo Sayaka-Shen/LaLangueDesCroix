@@ -373,8 +373,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: 10, y: 0}
-  m_SizeDelta: {x: -20, y: 800}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 800}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &79605738
 MonoBehaviour:
@@ -389,7 +389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.74509805}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -1983,14 +1983,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: -2849986626127190051, guid: e0fbb1750f8a9cf41b8b5e1a529f4460, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2119,7 +2119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc80e3e33b0c46c4eb04efd70a53f69e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TranslationManager
-  actualLanguage: 1
+  m_currentLanguage: 0
 --- !u!1 &1002935154
 GameObject:
   m_ObjectHideFlags: 0
@@ -2239,14 +2239,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f645d65435061ab4eba77567269d30f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
-  musicSound:
-  - name: "Th\xE8me"
-    clip: {fileID: 0}
+  musicSound: []
   sfxSound:
-  - name: Message
-    clip: {fileID: 8300000, guid: 2723064e4f37e254da02374beef7ed82, type: 3}
-  - name: App
-    clip: {fileID: 8300000, guid: a62983feb210f7446a4b0132ccda6896, type: 3}
+  - name: receive_message
+    clip: {fileID: 8300000, guid: 4c8a87225e6a5054d9fff08826919b43, type: 3}
+  - name: send_message
+    clip: {fileID: 8300000, guid: e4fcd46aeba38f545a15ef6401275fc8, type: 3}
+  - name: select_language
+    clip: {fileID: 8300000, guid: b82ba562fa35317468dcaa47c9d007c9, type: 3}
+  - name: translation_right
+    clip: {fileID: 8300000, guid: 6e74fe7c3f1f3b4439454de31d8af26d, type: 3}
+  - name: translation_wrong
+    clip: {fileID: 8300000, guid: 66f67a70e5c4920429ae199fb8b6d9d7, type: 3}
   musicSource: {fileID: 155822600}
   sfxSource: {fileID: 1030118621}
 --- !u!4 &1021109680
@@ -3380,6 +3384,7 @@ MonoBehaviour:
   m_messageContainer: {fileID: 733603438}
   m_dropdownMenuFactor: 810
   m_scrollContainer: {fileID: 1401300793}
+  m_dialogueManager: {fileID: 1924664964}
   m_popupTransform: {fileID: 356715876}
 --- !u!114 &1924664964
 MonoBehaviour:

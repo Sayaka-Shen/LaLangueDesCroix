@@ -10,7 +10,8 @@ public enum LANGUAGE
 public class TranslationManager : MonoBehaviour
 {
     public static TranslationManager Instance { get; private set; }
-    public LANGUAGE actualLanguage = LANGUAGE.French;
+
+    public LANGUAGE m_currentLanguage = LANGUAGE.French;
 
     private void Awake()
     {
@@ -19,13 +20,21 @@ public class TranslationManager : MonoBehaviour
             Destroy(this);
             return;
         }
-
-        Instance = this;
+        else
+        {
+            Instance = this;
+            DontDestroyOnLoad(this);
+        }
     }
     
     public LANGUAGE GetActualLanguage()
     {
-        return actualLanguage;
+        return m_currentLanguage;
+    }
+
+    public void SetCurrentLanguage(LANGUAGE language)
+    {
+        m_currentLanguage = language;
     }
 }
 
