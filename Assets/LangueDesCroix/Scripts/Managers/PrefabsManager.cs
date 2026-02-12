@@ -60,6 +60,14 @@ public class PrefabsManager : MonoBehaviour
     [SerializeField] private GameObject FourthImagePrefab;
     [SerializeField] private GameObject FifthImagePrefab;
     [SerializeField] private GameObject SixthImagePrefab;
+    
+    [Header("Images Traduction")] 
+    [SerializeField] private GameObject FirstImageTrad;
+    [SerializeField] private GameObject SecondImageTrad;
+    [SerializeField] private GameObject ThirdImageTrad;
+    [SerializeField] private GameObject FourthImageTrad;
+    [SerializeField] private GameObject FifthImageTrad;
+    [SerializeField] private GameObject SixthImageTrad;
 
     [Header("Other Prefabs")]
     [SerializeField] private GameObject prefabTraduction;
@@ -170,6 +178,28 @@ public class PrefabsManager : MonoBehaviour
                 return null;
         }
     }
+    
+    public GameObject GetImageTrad(IMAGES images)
+    {
+        switch (images)
+        {
+            case IMAGES.FirstImage :
+                return FirstImageTrad;
+            case IMAGES.SecondImage :
+                return SecondImageTrad;
+            case IMAGES.ThirdImage :
+                return ThirdImageTrad;
+            case IMAGES.FourthImage :
+                return FourthImageTrad;
+            case IMAGES.FifthImage :
+                return FifthImageTrad;
+            case IMAGES.SixthImage :
+                return SixthImageTrad;
+            default:
+                return null;
+        }
+    }
+    
 
     [NotNull]
     public GameObject GetPrefabBasedOnSprite(Sprite sprite)
