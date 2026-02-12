@@ -27,7 +27,7 @@ public class LoadingMenu : MonoBehaviour
     public void Chargement()
     {
         StartCoroutine(LoadOther());
-        AudioManager.instance.PlaySFX("");
+        AudioManager.instance.PlaySFX("select_language");
     }
 
 
