@@ -2250,9 +2250,7 @@ MonoBehaviour:
     <PopupText>k__BackingField: "La machine n\u2019aime pas ton c\xF4t\xE9 brute
       de d\xE9coffrage.. "
     isMultipleChoice: 0
-    _dropDownKeyDialogue: 'Joueur_D2_R2
-
-'
+    _dropDownKeyDialogue: Joueur_D2_R2
     <OnlyOneConditionNeeded>k__BackingField: 0
     <ChoicesInNode>k__BackingField:
     - NodeID: aaa86c9a-58e0-4d6b-a9b3-76a1c0824e2f
@@ -2262,30 +2260,6 @@ MonoBehaviour:
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: 2092.8, y: 323.2}
-  - <ID>k__BackingField: 8ca62a4a-604d-46be-a33f-84be741daf40
-    <Name>k__BackingField: DialogueName_3
-    <Speaker>k__BackingField: 2
-    <TraductionImage>k__BackingField: {fileID: 0}
-    <PopupText>k__BackingField: 
-    isMultipleChoice: 1
-    _dropDownKeyDialogue: Machine_D2
-    <OnlyOneConditionNeeded>k__BackingField: 0
-    <ChoicesInNode>k__BackingField:
-    - NodeID: 2d7fc828-b511-46a8-bd8a-dd2edacb509d
-      _dropDownKeyChoice: 'Joueur_D2_R1
-
-'
-      <Conditions>k__BackingField: []
-      _directionPort: 0
-    - NodeID: 9e31a25b-8736-4465-94bb-486fe9c5a899
-      _dropDownKeyChoice: 'Joueur_D2_R2
-
-'
-      <Conditions>k__BackingField: []
-      _directionPort: 0
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 1482.3999, y: 63.199997}
   - <ID>k__BackingField: f62b7f84-b007-4156-91c2-28dc5c7dbd36
     <Name>k__BackingField: DialogueName_72
     <Speaker>k__BackingField: 0
@@ -2393,9 +2367,7 @@ MonoBehaviour:
     <TraductionImage>k__BackingField: {fileID: 0}
     <PopupText>k__BackingField: 
     isMultipleChoice: 0
-    _dropDownKeyDialogue: 'Joueur_D2_R1
-
-'
+    _dropDownKeyDialogue: Joueur_D2_R1
     <OnlyOneConditionNeeded>k__BackingField: 0
     <ChoicesInNode>k__BackingField:
     - NodeID: aaa86c9a-58e0-4d6b-a9b3-76a1c0824e2f
@@ -2477,6 +2449,26 @@ MonoBehaviour:
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: 3244.8, y: -165.6}
+  - <ID>k__BackingField: 8ca62a4a-604d-46be-a33f-84be741daf40
+    <Name>k__BackingField: DialogueName_3
+    <Speaker>k__BackingField: 2
+    <TraductionImage>k__BackingField: {fileID: 0}
+    <PopupText>k__BackingField: 
+    isMultipleChoice: 1
+    _dropDownKeyDialogue: Machine_D2
+    <OnlyOneConditionNeeded>k__BackingField: 0
+    <ChoicesInNode>k__BackingField:
+    - NodeID: 2d7fc828-b511-46a8-bd8a-dd2edacb509d
+      _dropDownKeyChoice: Joueur_D2_R1
+      <Conditions>k__BackingField: []
+      _directionPort: 0
+    - NodeID: 9e31a25b-8736-4465-94bb-486fe9c5a899
+      _dropDownKeyChoice: Joueur_D2_R2
+      <Conditions>k__BackingField: []
+      _directionPort: 0
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 1482.3999, y: 63.199997}
   <OldGroupNames>k__BackingField: []
   <OldUngroupedNodeNames>k__BackingField:
   - START
@@ -2610,7 +2602,6 @@ MonoBehaviour:
   - DialogueName_118
   - DialogueName_121
   - DialogueName_2
-  - DialogueName_3
   - DialogueName_72
   - DialogueName_84
   - DialogueName_119
@@ -2622,5 +2613,6 @@ MonoBehaviour:
   - DialogueName_5
   - DialogueName_6
   - DialogueName_12
+  - DialogueName_3
   <OldGroupedNodeNames>k__BackingField:
     list: []
