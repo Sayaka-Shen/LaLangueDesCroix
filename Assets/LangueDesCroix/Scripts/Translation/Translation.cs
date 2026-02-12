@@ -18,12 +18,14 @@ public class Translation : MonoBehaviour
     [SerializeField] private TextMeshProUGUI  placeholderWordOne;
     [SerializeField] private TextMeshProUGUI  placeholderWordTwo;
     [SerializeField] private GameObject  goInput;
+    private ImageTranslation ImgTranslation;
 
     public void Initialize(ClickableImage newOrigin)
     {
         this.origin = newOrigin;
 
-        GameObject test = Instantiate(PrefabsManager.Instance.GetImageTrad(origin.infos.image), TradImage.transform);
+        GameObject TraductionImg = Instantiate(PrefabsManager.Instance.GetImageTrad(origin.infos.image), TradImage.transform);
+        ImgTranslation = TraductionImg.GetComponent<ImageTranslation>();
         
         imgSymbolOne.sprite = PrefabsManager.Instance.GetSymbol(origin.infos.symbolOne);
         if (origin.infos.symbolTwo == SYMBOLS.Null)
@@ -47,12 +49,14 @@ public class Translation : MonoBehaviour
         {
             placeholderWordOne.text = origin.infos.wordOne;
             inptWordOne.interactable = false;
+            ImgTranslation.DestroyGlitchOne();
         }
         
         if (origin.infos.foundWordTwo)
         {
             placeholderWordTwo.text = origin.infos.wordTwo;
             inptWordTwo.interactable = false;
+            ImgTranslation.DestroyGlitchTwo();
         }
     }
     
@@ -151,6 +155,7 @@ public class Translation : MonoBehaviour
             origin.infos.foundWordOne = true;
             inptWordOne.interactable = false;
             AudioManager.instance.PlaySFX("translation_right");
+            ImgTranslation.FadeGlitchOne();
             CheckBothValidated();
         }
         else
@@ -175,6 +180,7 @@ public class Translation : MonoBehaviour
             origin.infos.foundWordTwo = true;
             inptWordTwo.interactable = false;
             AudioManager.instance.PlaySFX("translation_right");
+            ImgTranslation.FadeGlitchTwo();
             CheckBothValidated();
         }
         else
@@ -198,6 +204,7 @@ public class Translation : MonoBehaviour
                 origin.infos.parentMessage.transform.GetSiblingIndex() - origin.infos.messageIndexToReplace)
                 .GetComponentInChildren<Message>().SetMessageText(origin.infos.messageDecrypted);
 
+            LayoutRebuilder.ForceRebuildLayoutImmediate(origin.infos.parentMessage.transform.parent.gameObject.GetComponent<RectTransform>());
             InstantiateNotes();
 
             StartCoroutine(WaitBeforeQuittingTranslation());
