@@ -2239,14 +2239,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f645d65435061ab4eba77567269d30f9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::AudioManager
-  musicSound:
-  - name: "Th\xE8me"
-    clip: {fileID: 0}
+  musicSound: []
   sfxSound:
-  - name: Message
-    clip: {fileID: 8300000, guid: 2723064e4f37e254da02374beef7ed82, type: 3}
-  - name: App
-    clip: {fileID: 8300000, guid: a62983feb210f7446a4b0132ccda6896, type: 3}
+  - name: receive_message
+    clip: {fileID: 8300000, guid: 4c8a87225e6a5054d9fff08826919b43, type: 3}
+  - name: send_message
+    clip: {fileID: 8300000, guid: e4fcd46aeba38f545a15ef6401275fc8, type: 3}
+  - name: select_language
+    clip: {fileID: 8300000, guid: b82ba562fa35317468dcaa47c9d007c9, type: 3}
+  - name: translation_right
+    clip: {fileID: 8300000, guid: 6e74fe7c3f1f3b4439454de31d8af26d, type: 3}
+  - name: translation_wrong
+    clip: {fileID: 8300000, guid: 66f67a70e5c4920429ae199fb8b6d9d7, type: 3}
   musicSource: {fileID: 155822600}
   sfxSource: {fileID: 1030118621}
 --- !u!4 &1021109680
