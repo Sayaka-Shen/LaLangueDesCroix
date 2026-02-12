@@ -10,6 +10,7 @@ public class BoutonUIType : MonoBehaviour, IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         _uiManager.AfficherUI(_type);
+        AudioManager.instance.PlaySFX("");
     }
 
 
