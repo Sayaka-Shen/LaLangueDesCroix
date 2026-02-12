@@ -64,7 +64,6 @@ public class Message : MonoBehaviour
         return mMessageType;
     }
 
-
     public void ChangeBgColor(Color newColor)
     {
         m_bgImg.color = newColor;

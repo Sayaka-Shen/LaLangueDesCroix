@@ -2,6 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VectorGraphics;
 
 public class LoadingMenu : MonoBehaviour
 {
@@ -10,8 +11,6 @@ public class LoadingMenu : MonoBehaviour
     [SerializeField] private float loadingDuration = 3f;
 
     [SerializeField] private bool isLoading = false;
-
-    
 
 
     void Start()
@@ -30,6 +29,25 @@ public class LoadingMenu : MonoBehaviour
         AudioManager.instance.PlaySFX("select_language");
     }
 
+    public void SetLanguage(bool isFrench)
+    {
+        if(isFrench)
+        {
+            TranslationManager.Instance.SetCurrentLanguage(language.FR);
+        }
+        else
+        {
+            TranslationManager.Instance.SetCurrentLanguage(language.EN);
+        }
+
+        StartCoroutine(WaitBeforeLoadingScene());
+    }
+
+    private IEnumerator WaitBeforeLoadingScene()
+    {
+        yield return new WaitForSeconds(loadingDuration);
+        SceneManager.LoadScene(1);
+    }
 
     IEnumerator LoadOther()
     {
