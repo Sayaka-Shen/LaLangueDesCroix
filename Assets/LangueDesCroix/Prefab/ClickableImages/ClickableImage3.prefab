@@ -95,11 +95,12 @@ MonoBehaviour:
     wordsOne:
     - CHEMIN
     - PATH
-    wordsTwo: []
+    wordsTwo:
+    - NULL
     indexRevealWordOne: 0000000001000000
     attemptsRevealWordOne: 0200000004000000
-    indexRevealWordTwo: 
-    attemptsRevealWordTwo: 
+    indexRevealWordTwo: 00000000
+    attemptsRevealWordTwo: 00000000
     messageIndexToReplace: 2
     wordOne: PERDU
     wordTwo: VOIR
