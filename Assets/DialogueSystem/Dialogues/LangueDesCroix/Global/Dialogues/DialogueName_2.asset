@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9f262818b55b0f4418296bad0176bdab, type: 3}
-  m_Name: DialogueName_151
+  m_Name: DialogueName_2
   m_EditorClassIdentifier: Assembly-CSharp::DSDialogueSO
-  <DialogueName>k__BackingField: DialogueName_151
+  <DialogueName>k__BackingField: DialogueName_2
   <Text>k__BackingField: Dialogue text.
   <Choices>k__BackingField:
   - <Text>k__BackingField: 
@@ -21,4 +21,5 @@ MonoBehaviour:
   <IsStartingDialogue>k__BackingField: 0
   <Speaker>k__BackingField: 0
   <TraductionImage>k__BackingField: {fileID: 0}
-  <PopupText>k__BackingField: 
+  <PopupText>k__BackingField: "La machine n\u2019aime pas ton c\xF4t\xE9 brute de
+    d\xE9coffrage.. "

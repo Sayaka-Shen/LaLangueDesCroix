@@ -21,4 +21,5 @@ MonoBehaviour:
   <IsStartingDialogue>k__BackingField: 0
   <Speaker>k__BackingField: 0
   <TraductionImage>k__BackingField: {fileID: 0}
-  <PopupText>k__BackingField: 
+  <PopupText>k__BackingField: "La machine se rappellera de votre sens de l\u2019humour
+    n\xE9gatif"

@@ -256,7 +256,7 @@ MonoBehaviour:
     _dropDownKeyDialogue: Joueur_D1_R
     <OnlyOneConditionNeeded>k__BackingField: 0
     <ChoicesInNode>k__BackingField:
-    - NodeID: e100fb81-f321-4d5f-99c3-64be13c046e7
+    - NodeID: 8ca62a4a-604d-46be-a33f-84be741daf40
       _dropDownKeyChoice: 
       <Conditions>k__BackingField: []
       _directionPort: 0
@@ -288,7 +288,7 @@ MonoBehaviour:
     _dropDownKeyDialogue: Joueur_D1_R2
     <OnlyOneConditionNeeded>k__BackingField: 0
     <ChoicesInNode>k__BackingField:
-    - NodeID: e100fb81-f321-4d5f-99c3-64be13c046e7
+    - NodeID: 8ca62a4a-604d-46be-a33f-84be741daf40
       _dropDownKeyChoice: 
       <Conditions>k__BackingField: []
       _directionPort: 0
@@ -627,7 +627,7 @@ MonoBehaviour:
     <Name>k__BackingField: DialogueName_56
     <Speaker>k__BackingField: 0
     <TraductionImage>k__BackingField: {fileID: 0}
-    <PopupText>k__BackingField: 
+    <PopupText>k__BackingField: "La machine commence \xE0 surchauffer.."
     isMultipleChoice: 0
     _dropDownKeyDialogue: Joueur_D14_R2
     <OnlyOneConditionNeeded>k__BackingField: 0
@@ -707,7 +707,8 @@ MonoBehaviour:
     <Name>k__BackingField: DialogueName_60
     <Speaker>k__BackingField: 0
     <TraductionImage>k__BackingField: {fileID: 0}
-    <PopupText>k__BackingField: 
+    <PopupText>k__BackingField: "La machine \xE0 l\u2019air d\u2019appr\xE9cier ta
+      bienveillance.."
     isMultipleChoice: 0
     _dropDownKeyDialogue: Joueur_D18_R1
     <OnlyOneConditionNeeded>k__BackingField: 0
@@ -859,7 +860,7 @@ MonoBehaviour:
     <Name>k__BackingField: DialogueName_44
     <Speaker>k__BackingField: 0
     <TraductionImage>k__BackingField: {fileID: 0}
-    <PopupText>k__BackingField: 
+    <PopupText>k__BackingField: "La machine commence \xE0 surchauffer.."
     isMultipleChoice: 0
     _dropDownKeyDialogue: Joueur_D13_R1
     <OnlyOneConditionNeeded>k__BackingField: 0
@@ -1079,22 +1080,6 @@ MonoBehaviour:
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: 21208, y: 330.4}
-  - <ID>k__BackingField: f62b7f84-b007-4156-91c2-28dc5c7dbd36
-    <Name>k__BackingField: DialogueName_72
-    <Speaker>k__BackingField: 0
-    <TraductionImage>k__BackingField: {fileID: 0}
-    <PopupText>k__BackingField: 
-    isMultipleChoice: 0
-    _dropDownKeyDialogue: Joueur_D24_R1
-    <OnlyOneConditionNeeded>k__BackingField: 0
-    <ChoicesInNode>k__BackingField:
-    - NodeID: d6c2ae56-3d71-4c22-a52b-0287ce2106b0
-      _dropDownKeyChoice: 
-      <Conditions>k__BackingField: []
-      _directionPort: 0
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 22024.799, y: 1096}
   - <ID>k__BackingField: dad3223f-82ba-45be-ad91-6c9d089f1bf3
     <Name>k__BackingField: DialogueName_73
     <Speaker>k__BackingField: 0
@@ -1239,7 +1224,8 @@ MonoBehaviour:
     <Name>k__BackingField: DialogueName_83
     <Speaker>k__BackingField: 0
     <TraductionImage>k__BackingField: {fileID: 0}
-    <PopupText>k__BackingField: 
+    <PopupText>k__BackingField: "La machine sent votre agressivit\xE9 , elle le gardera
+      en m\xE9moire"
     isMultipleChoice: 0
     _dropDownKeyDialogue: Joueur_D28_R2
     <OnlyOneConditionNeeded>k__BackingField: 0
@@ -1283,22 +1269,6 @@ MonoBehaviour:
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: 27535.2, y: 528.8}
-  - <ID>k__BackingField: 84db90f2-ea06-458d-a660-f4ee855d637b
-    <Name>k__BackingField: DialogueName_84
-    <Speaker>k__BackingField: 2
-    <TraductionImage>k__BackingField: {fileID: 0}
-    <PopupText>k__BackingField: 
-    isMultipleChoice: 1
-    _dropDownKeyDialogue: Machine_D29
-    <OnlyOneConditionNeeded>k__BackingField: 0
-    <ChoicesInNode>k__BackingField:
-    - NodeID: a09f36f2-8f3d-4aa8-b10d-79704cc7f87c
-      _dropDownKeyChoice: Joueur_D29_R1
-      <Conditions>k__BackingField: []
-      _directionPort: 0
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 27531.2, y: 104}
   - <ID>k__BackingField: a09f36f2-8f3d-4aa8-b10d-79704cc7f87c
     <Name>k__BackingField: DialogueName_85
     <Speaker>k__BackingField: 0
@@ -1443,7 +1413,7 @@ MonoBehaviour:
     <Name>k__BackingField: DialogueName_95
     <Speaker>k__BackingField: 0
     <TraductionImage>k__BackingField: {fileID: 0}
-    <PopupText>k__BackingField: 
+    <PopupText>k__BackingField: ' '
     isMultipleChoice: 0
     _dropDownKeyDialogue: Joueur_D33_R1
     <OnlyOneConditionNeeded>k__BackingField: 0
@@ -1459,7 +1429,7 @@ MonoBehaviour:
     <Name>k__BackingField: DialogueName_94
     <Speaker>k__BackingField: 2
     <TraductionImage>k__BackingField: {fileID: 0}
-    <PopupText>k__BackingField: 
+    <PopupText>k__BackingField: "La machine semble vouloir coop\xE9rer "
     isMultipleChoice: 1
     _dropDownKeyDialogue: Machine_D34
     <OnlyOneConditionNeeded>k__BackingField: 0
@@ -1511,7 +1481,8 @@ MonoBehaviour:
     <Name>k__BackingField: DialogueName_98
     <Speaker>k__BackingField: 0
     <TraductionImage>k__BackingField: {fileID: 0}
-    <PopupText>k__BackingField: 
+    <PopupText>k__BackingField: "La machine se rappellera de votre sens de l\u2019humour
+      n\xE9gatif"
     isMultipleChoice: 0
     _dropDownKeyDialogue: Joueur_D34_R2
     <OnlyOneConditionNeeded>k__BackingField: 0
@@ -1543,7 +1514,7 @@ MonoBehaviour:
     <Name>k__BackingField: DialogueName_101
     <Speaker>k__BackingField: 2
     <TraductionImage>k__BackingField: {fileID: 0}
-    <PopupText>k__BackingField: 
+    <PopupText>k__BackingField: "La machine semble  coop\xE9rer "
     isMultipleChoice: 1
     _dropDownKeyDialogue: Machine_D35
     <OnlyOneConditionNeeded>k__BackingField: 0
@@ -1799,7 +1770,7 @@ MonoBehaviour:
     <Name>k__BackingField: DialogueName_147
     <Speaker>k__BackingField: 2
     <TraductionImage>k__BackingField: {fileID: 0}
-    <PopupText>k__BackingField: 
+    <PopupText>k__BackingField: "La machine semble  coop\xE9rer "
     isMultipleChoice: 1
     _dropDownKeyDialogue: Machine_D42
     <OnlyOneConditionNeeded>k__BackingField: 0
@@ -1815,7 +1786,7 @@ MonoBehaviour:
     <Name>k__BackingField: DialogueName_141
     <Speaker>k__BackingField: 2
     <TraductionImage>k__BackingField: {fileID: 0}
-    <PopupText>k__BackingField: 
+    <PopupText>k__BackingField: "La machine semble vouloir coop\xE9rer "
     isMultipleChoice: 1
     _dropDownKeyDialogue: Machine_D41
     <OnlyOneConditionNeeded>k__BackingField: 0
@@ -1851,7 +1822,8 @@ MonoBehaviour:
     <Name>k__BackingField: DialogueName_145
     <Speaker>k__BackingField: 0
     <TraductionImage>k__BackingField: {fileID: 0}
-    <PopupText>k__BackingField: 
+    <PopupText>k__BackingField: "La machine se rappellera de votre sens de l\u2019humour
+      n\xE9gatif"
     isMultipleChoice: 0
     _dropDownKeyDialogue: Joueur_D41_R2
     <OnlyOneConditionNeeded>k__BackingField: 0
@@ -2175,22 +2147,6 @@ MonoBehaviour:
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: 37621.598, y: 889.6}
-  - <ID>k__BackingField: be213395-b269-456d-a480-8e37ddac62d2
-    <Name>k__BackingField: DialogueName_119
-    <Speaker>k__BackingField: 2
-    <TraductionImage>k__BackingField: {fileID: 0}
-    <PopupText>k__BackingField: 
-    isMultipleChoice: 1
-    _dropDownKeyDialogue: Machine_D48
-    <OnlyOneConditionNeeded>k__BackingField: 0
-    <ChoicesInNode>k__BackingField:
-    - NodeID: 043f1f85-7969-41b3-8ba3-277fc1516caf
-      _dropDownKeyChoice: Joueur_D47_R1
-      <Conditions>k__BackingField: []
-      _directionPort: 0
-    <GroupID>k__BackingField: 
-    <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 38268, y: 1254.4}
   - <ID>k__BackingField: 043f1f85-7969-41b3-8ba3-277fc1516caf
     <Name>k__BackingField: DialogueName_120
     <Speaker>k__BackingField: 0
@@ -2395,8 +2351,27 @@ MonoBehaviour:
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
     <Position>k__BackingField: {x: 37901.598, y: -212}
-  - <ID>k__BackingField: e100fb81-f321-4d5f-99c3-64be13c046e7
-    <Name>k__BackingField: DialogueName_149
+  - <ID>k__BackingField: 9e31a25b-8736-4465-94bb-486fe9c5a899
+    <Name>k__BackingField: DialogueName_2
+    <Speaker>k__BackingField: 0
+    <TraductionImage>k__BackingField: {fileID: 0}
+    <PopupText>k__BackingField: "La machine n\u2019aime pas ton c\xF4t\xE9 brute
+      de d\xE9coffrage.. "
+    isMultipleChoice: 0
+    _dropDownKeyDialogue: 'Joueur_D2_R2
+
+'
+    <OnlyOneConditionNeeded>k__BackingField: 0
+    <ChoicesInNode>k__BackingField:
+    - NodeID: aaa86c9a-58e0-4d6b-a9b3-76a1c0824e2f
+      _dropDownKeyChoice: 
+      <Conditions>k__BackingField: []
+      _directionPort: 0
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 2092.8, y: 323.2}
+  - <ID>k__BackingField: 8ca62a4a-604d-46be-a33f-84be741daf40
+    <Name>k__BackingField: DialogueName_3
     <Speaker>k__BackingField: 2
     <TraductionImage>k__BackingField: {fileID: 0}
     <PopupText>k__BackingField: 
@@ -2404,13 +2379,13 @@ MonoBehaviour:
     _dropDownKeyDialogue: Machine_D2
     <OnlyOneConditionNeeded>k__BackingField: 0
     <ChoicesInNode>k__BackingField:
-    - NodeID: e45a0398-359d-4733-91a3-f52b507c9cbd
+    - NodeID: 2d7fc828-b511-46a8-bd8a-dd2edacb509d
       _dropDownKeyChoice: 'Joueur_D2_R1
 
 '
       <Conditions>k__BackingField: []
       _directionPort: 0
-    - NodeID: a690ba74-efc9-44dd-aa1b-1d2b436ae203
+    - NodeID: 9e31a25b-8736-4465-94bb-486fe9c5a899
       _dropDownKeyChoice: 'Joueur_D2_R2
 
 '
@@ -2418,9 +2393,9 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 1460.7999, y: 160.8}
-  - <ID>k__BackingField: e45a0398-359d-4733-91a3-f52b507c9cbd
-    <Name>k__BackingField: DialogueName_150
+    <Position>k__BackingField: {x: 1482.3999, y: 63.199997}
+  - <ID>k__BackingField: 2d7fc828-b511-46a8-bd8a-dd2edacb509d
+    <Name>k__BackingField: DialogueName_4
     <Speaker>k__BackingField: 0
     <TraductionImage>k__BackingField: {fileID: 0}
     <PopupText>k__BackingField: 
@@ -2436,25 +2411,56 @@ MonoBehaviour:
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 2083.2, y: -69.6}
-  - <ID>k__BackingField: a690ba74-efc9-44dd-aa1b-1d2b436ae203
-    <Name>k__BackingField: DialogueName_151
+    <Position>k__BackingField: {x: 2080, y: -136}
+  - <ID>k__BackingField: f62b7f84-b007-4156-91c2-28dc5c7dbd36
+    <Name>k__BackingField: DialogueName_72
     <Speaker>k__BackingField: 0
     <TraductionImage>k__BackingField: {fileID: 0}
-    <PopupText>k__BackingField: 
+    <PopupText>k__BackingField: "La machine appr\xE9cie fortement ta bienveillance"
     isMultipleChoice: 0
-    _dropDownKeyDialogue: 'Joueur_D2_R2
-
-'
+    _dropDownKeyDialogue: Joueur_D24_R1
     <OnlyOneConditionNeeded>k__BackingField: 0
     <ChoicesInNode>k__BackingField:
-    - NodeID: aaa86c9a-58e0-4d6b-a9b3-76a1c0824e2f
+    - NodeID: d6c2ae56-3d71-4c22-a52b-0287ce2106b0
       _dropDownKeyChoice: 
       <Conditions>k__BackingField: []
       _directionPort: 0
     <GroupID>k__BackingField: 
     <DialogueType>k__BackingField: 0
-    <Position>k__BackingField: {x: 2082.4, y: 291.2}
+    <Position>k__BackingField: {x: 22024.799, y: 1096}
+  - <ID>k__BackingField: 84db90f2-ea06-458d-a660-f4ee855d637b
+    <Name>k__BackingField: DialogueName_84
+    <Speaker>k__BackingField: 2
+    <TraductionImage>k__BackingField: {fileID: 0}
+    <PopupText>k__BackingField: "La machine semble vouloir coop\xE9rer "
+    isMultipleChoice: 1
+    _dropDownKeyDialogue: Machine_D29
+    <OnlyOneConditionNeeded>k__BackingField: 0
+    <ChoicesInNode>k__BackingField:
+    - NodeID: a09f36f2-8f3d-4aa8-b10d-79704cc7f87c
+      _dropDownKeyChoice: Joueur_D29_R1
+      <Conditions>k__BackingField: []
+      _directionPort: 0
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 27531.2, y: 104}
+  - <ID>k__BackingField: be213395-b269-456d-a480-8e37ddac62d2
+    <Name>k__BackingField: DialogueName_119
+    <Speaker>k__BackingField: 2
+    <TraductionImage>k__BackingField: {fileID: 0}
+    <PopupText>k__BackingField: "La machine se rappellera de votre r\xE9ticence \xE0
+      lui faire confiance"
+    isMultipleChoice: 1
+    _dropDownKeyDialogue: Machine_D48
+    <OnlyOneConditionNeeded>k__BackingField: 0
+    <ChoicesInNode>k__BackingField:
+    - NodeID: 043f1f85-7969-41b3-8ba3-277fc1516caf
+      _dropDownKeyChoice: Joueur_D47_R1
+      <Conditions>k__BackingField: []
+      _directionPort: 0
+    <GroupID>k__BackingField: 
+    <DialogueType>k__BackingField: 0
+    <Position>k__BackingField: {x: 38268, y: 1254.4}
   <OldGroupNames>k__BackingField: []
   <OldUngroupedNodeNames>k__BackingField:
   - START
@@ -2519,7 +2525,6 @@ MonoBehaviour:
   - DialogueName_70
   - DialogueName_71
   - DialogueName_69
-  - DialogueName_72
   - DialogueName_73
   - DialogueName_75
   - DialogueName_74
@@ -2531,7 +2536,6 @@ MonoBehaviour:
   - DialogueName_83
   - DialogueName_82
   - DialogueName_86
-  - DialogueName_84
   - DialogueName_85
   - DialogueName_88
   - DialogueName_91
@@ -2583,7 +2587,6 @@ MonoBehaviour:
   - DialogueName_115
   - DialogueName_117
   - DialogueName_116
-  - DialogueName_119
   - DialogueName_120
   - END
   - DialogueName_122
@@ -2596,8 +2599,11 @@ MonoBehaviour:
   - DialogueName_128
   - DialogueName_118
   - DialogueName_121
-  - DialogueName_149
-  - DialogueName_150
-  - DialogueName_151
+  - DialogueName_2
+  - DialogueName_3
+  - DialogueName_4
+  - DialogueName_72
+  - DialogueName_84
+  - DialogueName_119
   <OldGroupedNodeNames>k__BackingField:
     list: []
