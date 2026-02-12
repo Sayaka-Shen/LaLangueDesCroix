@@ -9,8 +9,8 @@ public class BoutonUIType : MonoBehaviour, IPointerClickHandler
     [SerializeField] private UIManager _uiManager;
     public void OnPointerClick(PointerEventData eventData)
     {
-        _uiManager.AfficherUI(_type);
         AudioManager.instance.PlaySFX("select_language");
+        _uiManager.AfficherUI(_type);
     }
 
 
