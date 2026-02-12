@@ -10,7 +10,7 @@ public class Translation : MonoBehaviour
 {
     private ClickableImage origin;
     
-    [SerializeField] private Image imgTradImage;
+    [SerializeField] private GameObject TradImage;
     [SerializeField] private Image imgSymbolOne;
     [SerializeField] private Image imgSymbolTwo;
     [SerializeField] private TMP_InputField inptWordOne;
@@ -23,7 +23,8 @@ public class Translation : MonoBehaviour
     {
         this.origin = newOrigin;
 
-        imgTradImage.sprite = PrefabsManager.Instance.GetImage(origin.infos.image);
+        GameObject test = Instantiate(PrefabsManager.Instance.GetImageTrad(origin.infos.image), TradImage.transform);
+        
         imgSymbolOne.sprite = PrefabsManager.Instance.GetSymbol(origin.infos.symbolOne);
         if (origin.infos.symbolTwo == SYMBOLS.Null)
         {

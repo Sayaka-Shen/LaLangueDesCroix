@@ -2088,6 +2088,12 @@ MonoBehaviour:
   FourthImagePrefab: {fileID: 5624443108993794548, guid: 257556d1ccba81743a8286618bb987d4, type: 3}
   FifthImagePrefab: {fileID: 5624443108993794548, guid: 37644359f1bc2c5449e92bdbe450ff10, type: 3}
   SixthImagePrefab: {fileID: 5624443108993794548, guid: 2fbc98abce6219044b107182d07a0079, type: 3}
+  FirstImageTrad: {fileID: 3354074727168635136, guid: 4f1bf90442c03be4cbd3f40cd4cf7e88, type: 3}
+  SecondImageTrad: {fileID: 3354074727168635136, guid: 0833aed20fda2ba4182125afddfa405d, type: 3}
+  ThirdImageTrad: {fileID: 3354074727168635136, guid: 4ba7aaed42fcdbf40a192964e6cc66c7, type: 3}
+  FourthImageTrad: {fileID: 3354074727168635136, guid: 0d8ce577a5667c340bea4ee4d8814c07, type: 3}
+  FifthImageTrad: {fileID: 3354074727168635136, guid: 2dcad6aa16a675f4b83ad2a8a6091126, type: 3}
+  SixthImageTrad: {fileID: 3354074727168635136, guid: 4e5be9fc0476144488877ac873f43c58, type: 3}
   prefabTraduction: {fileID: 4270585797788910865, guid: f0754c7b3daa0c244b6e2ff86627e0a4, type: 3}
   prefabNoteSymbol: {fileID: 400681548835590281, guid: 85c6e984fd7cc094fb7018b4f858f722, type: 3}
   prefabNoteSentence: {fileID: 5570178625780262895, guid: feda0cdb95735164ea138a8c51f0adae, type: 3}
