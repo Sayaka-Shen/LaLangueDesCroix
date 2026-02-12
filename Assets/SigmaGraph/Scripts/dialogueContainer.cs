@@ -87,12 +87,24 @@ public class dialogueContainer : MonoBehaviour
             //Instantiate le deuxieme clickabe image dans la gallery puis relier les 2 scripts entre eux
 
             StartCoroutine(ScrollNextFrame());
+            AudioManager.instance.PlaySFX("receive_message");
         }
         // CHECK ONLY FOR TEXT TO SPAWN THE MESSAGE PREFAB
         else
         {
             m_messageInstance = Instantiate(speakers == Espeaker.Joueur ? m_receiverPrefab : m_senderPrefab, this.transform);
-            Message message = m_messageInstance.GetComponentInChildren<Message>();
+
+            if(speakers == Espeaker.Joueur)
+            {
+                AudioManager.instance.PlaySFX("send_message");
+            }
+            else
+            {
+                AudioManager.instance.PlaySFX("receive_message");
+            }
+
+
+                Message message = m_messageInstance.GetComponentInChildren<Message>();
 
             if(message == null)
             {
