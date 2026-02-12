@@ -55,10 +55,19 @@ public class PhoneManager : MonoBehaviour
             dropDownFootCurrentPos.y += m_dropdownMenuFactor;
             m_footerContainer.DOAnchorPos(dropDownFootCurrentPos, .5f);
 
-            if (m_scrollContRectTransform.sizeDelta.y > 0 && m_messageContainer.anchoredPosition.y == m_messageContainerStartPos)
+            if ((m_scrollContRectTransform.sizeDelta.y > 0 && m_messageContainer.anchoredPosition.y == m_messageContainerStartPos) || m_scrollContainer.transform.childCount >= 5)
             {
                 Vector2 messageContainerCurrentPos = m_messageContainer.anchoredPosition;
-                messageContainerCurrentPos.y += m_dropdownMenuFactor;
+
+                if (m_scrollContainer.transform.childCount >= 5 && m_scrollContRectTransform.sizeDelta.y < 0)
+                {
+                    messageContainerCurrentPos.y += 150;
+                }
+                else
+                {
+                    messageContainerCurrentPos.y += m_dropdownMenuFactor;
+                }
+
                 m_messageContainer.DOAnchorPos(messageContainerCurrentPos, .5f);
             }
         }
@@ -78,10 +87,19 @@ public class PhoneManager : MonoBehaviour
             dropDownFootCurrentPos.y -= m_dropdownMenuFactor;
             m_footerContainer.DOAnchorPos(dropDownFootCurrentPos, .5f);
 
-            if (m_scrollContRectTransform.sizeDelta.y > 0 && m_messageContainer.anchoredPosition.y != m_messageContainerStartPos)
+            if ((m_scrollContRectTransform.sizeDelta.y > 0 && m_messageContainer.anchoredPosition.y != m_messageContainerStartPos) || m_scrollContainer.transform.childCount >= 5)
             {
                 Vector2 messageContainerCurrentPos = m_messageContainer.anchoredPosition;
-                messageContainerCurrentPos.y -= m_dropdownMenuFactor;
+
+                if (m_scrollContainer.transform.childCount >= 5 && m_scrollContRectTransform.sizeDelta.y < 0)
+                {
+                    messageContainerCurrentPos.y -= 150;
+                }
+                else
+                {
+                    messageContainerCurrentPos.y -= m_dropdownMenuFactor;
+                }
+
                 m_messageContainer.DOAnchorPos(messageContainerCurrentPos, .5f);
             }
         }

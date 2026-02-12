@@ -11,7 +11,7 @@ public class TranslationManager : MonoBehaviour
 {
     public static TranslationManager Instance { get; private set; }
 
-    public LANGUAGE m_currentLanguage = LANGUAGE.French;
+    public language currentLanguage = language.FR;
 
     private void Awake()
     {
@@ -27,14 +27,14 @@ public class TranslationManager : MonoBehaviour
         }
     }
     
-    public LANGUAGE GetActualLanguage()
+    public language GetActualLanguage()
     {
-        return m_currentLanguage;
+        return currentLanguage;
     }
 
-    public void SetCurrentLanguage(LANGUAGE language)
+    public void SetCurrentLanguage(language language)
     {
-        m_currentLanguage = language;
+        currentLanguage = language;
     }
 }
 
