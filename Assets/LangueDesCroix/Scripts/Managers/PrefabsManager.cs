@@ -75,6 +75,7 @@ public class PrefabsManager : MonoBehaviour
     [SerializeField] public GameObject prefabNoteSentence;
     [SerializeField] public GameObject goNoteContainer;
     public DialogueManager dialogueManager;
+    public PhoneManager phoneManager;
     
     private void Awake()
     {
