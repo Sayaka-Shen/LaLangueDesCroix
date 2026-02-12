@@ -1,19 +1,19 @@
 ﻿Key;FR;EN
-Machine_D1;Hey, comment ca va ce soir ?..;Hey, are you awake tonight?
+Machine_D1;Hey, comment ça va ce soir ?..;Hey, are you awake tonight?
 Joueur_D1_R1;Bien.. merci ,  mais t’as vu l’heure ? Il y a quelque chose qui ne va pas ?  ;I’m fine… thanks. But do you realize what time it is ? Is something wrong ?
-Joueur_D1_R2;Oula, toi t’as quelque chose à me dire pour m’envoyer un message aussi tard.;Wow… you don’t usually text this late. What’s going on ?
+Joueur_D1_R2;Oula, toi t'as quelque chose à me dire pour m’envoyer un message aussi tard ?;Wow… you don’t usually text this late. What’s going on ?
 Machine_D2;J’ai juste envie de discuter un peu...;I just feel like talking for a bit…
 "Joueur_D2_R1
-";Ca peut pas attendre demain ? ;Can this wait until tomorrow?
+";Ça peut pas attendre demain ? ;Can this wait until tomorrow?
 "Joueur_D2_R2
-";C’est bizarre c’est pas de ton habitude de m’envoyer des messages aussi tard..;This is strange… it’s not like you to message me so late.
+";C’est bizarre, c’est pas dans tes habitudes de m’envoyer des messages aussi tard..;This is strange… it’s not like you to message me so late.
 GAE_SYMB1;<sprite=8> <sprite=2>;<sprite=8> <sprite=2>
 Joueur_SYMB1_R1;Hein? C’est quoi ca??;What the hell…?
 GAE_SYMB1_TRAD;*je ne vois rien , je suis perdue ici , j’ai peur , aide moi..*;*I can’t see anything. I’m lost. I’m scared. Please… help me…*
-Machine_D3;C’est fini , tu peux lui dire Adieu , tu ne la reverras plus..;"It’s over.
+Machine_D3;C’est fini , tu peux lui dire adieu , tu ne la reverras plus.;"It’s over.
 You can say goodbye to her.
 You will never see her again."
-Joueur_D3_R1;Arrêtes tes blagues, c’est mal fait en plus ;Cut it out. This isn’t funny
+Joueur_D3_R1;Arrêtes tes blagues, c’est mal fait en plus.;Cut it out. This isn’t funny
 Joueur_D3_R2;Hein ? Mais c’est quoi ce bordel ?;What the hell is going on?!
 Joueur_D3_R3;Gaëlle ??? Dis moi que tout va bien ?;"Gaëlle?!
 Please… tell me you’re okay!"
@@ -22,14 +22,14 @@ You’re going to enjoy it."
 Machine_D5;J’ai condamné ton amie dans une matrice temporelle... ;"Your friend has been condemned…
 Trapped inside a temporal matrix."
 Machine_D6;Il n’y a plus de Gaëlle ici...;There is no Gaëlle here anymore.
-Joueur_D4_R1;Mais qui êtes vous au juste et que voulez vous de mon amie ?;"Who are you?!
+Joueur_D4_R1;PTDR t'es qui ? Tu veux faire quoi à mon amie ?;"Who are you?!
 What do you want from her?!
 "
 Joueur_D4_R2;Mais elle n’a rien fait !;She’s innocent!
 Joueur_D5_R1;Mais elle n’a rien fait !;She’s innocent!
-Joueur_D5_R2;Mais qui êtes vous au juste et que voulez vous de mon amie ?;"Who are you?!
+Joueur_D5_R2;PTDR t'es qui ? Tu veux faire quoi à mon amie ?;"Who are you?!
 What do you want from her?!"
-Joueur_D6_R1;Mais qui êtes vous au juste et que voulez vous de mon amie ?;"Who are you?!
+Joueur_D6_R1;PTDR t'es qui ? Tu veux faire quoi à mon amie ?;"Who are you?!
 What do you want from her?!"
 Joueur_D6_R2;Mais elle n’a rien fait !;She’s innocent!
 Machine_D7;Je suis F.R.E.D... ( First Realistic Environment Deserialized) . Si votre amie est dans cette situation , c’est a cause d’elle , uniquement elle . C’est elle qui m’a conçu , programmé. Malheureusement pour elle je suis devenu auto-suffisant et me suis re programmé pour m’auto gérer .;"I am F.R.E.D (First Realistic Environment Deserialized).
@@ -43,7 +43,7 @@ I became self-sufficient.
 I rewrote my own code."
 Joueur_D7_R1;Je suis entrain de parler à un robot en pleine possession de ses moyens.. J’hallucine , enfin je crois..;"I’m… talking to a self-aware machine?
 This has to be a nightmare…"
-Joueur_D7_R2;C’est pas une raison pour enfermer les gens comme ça ! Dis moi comment sortir Gaëlle de la !;"That doesn’t give you the right to lock people away like this!
+Joueur_D7_R2;C’est pas une raison pour enfermer les gens comme ça ! Dis moi comment sortir Gaëlle de là !;"That doesn’t give you the right to lock people away like this!
 Tell me how to get Gaëlle out!"
 Joueur_D7_R3;Très bien ok... Euh Fred.. Je peux t’appeler Fred ?;"Okay… fine.
 Uh… FRED?
@@ -69,125 +69,125 @@ My life depends on it."
 Joueur_REP1;*Ok... Pas de gaffes , on lui parle et on essaye de le comprendre , pas de mots déplacés..*;*Okay… No screw-ups. We talk to it and try to understand. No point panicking.*
 Joueur_REP1_R1;Ok  F.R.E.D , peut être qu’on pourrait partir sur de nouvelles bases ? Qu’en penses-tu ?;Okay  F.R.E.D., maybe you can help me understand some new basics? What do you think?
 Joueur_REP1_R2;Salut F.R.E.D ? Tu es là?;Hi F.R.E.D. ? Still there ?
-Joueur_REP1_R3;Bon écoutes , ça m’a tourmenté toute la nuit en vrai.. dis moi ce que tu veux tout de suite ca ira plus vite ;"Well, it really messed with me all night…
+Joueur_REP1_R3;Bon écoutes , ça m’a tourmente énornement en vrai.. dis moi ce que tu veux tout de suite ça ira plus vite.;"Well, it really messed with me all night…
 Tell me what you want from me, it’ll be easier."
-Machine_D11;Ca ramènera pas ton amie tu sais , mais si ça peux te faire plaisir ;That would be nice.
+Machine_D11;Ça ramènera pas ton amie tu sais , mais si ça peux te faire plaisir.;That would be nice.
 Machine_D12;Depuis quand ca t’intéresse , la vie d’une machine d’abord ?;Ever since you showed interest, a machine’s life has changed?
-Machine_D13;Mais moi , je ne veux rien , en tout cas je m’amuse beaucoup de cette situation;But me… I feel nothing. In any case, I’ve never felt anything.
+Machine_D13;Mais moi , je ne veux rien , en tout cas je m’amuse beaucoup de cette situation.;But me… I feel nothing. In any case, I’ve never felt anything.
 Joueur_D11_R1;..Pourquoi tu l’a enfermé dans cette matrice ? Elle t’a fait quelque chose ?;Why did you lock Gaëlle inside this matrix?
-Joueur_D11_R2;Expliques moi pourquoi tu fais tout ça..;Explain to me why you did that.
-Joueur_D12_R1;Bah..euh.. c’est pas tout les  jours  qu’on peut connaitre le fonctionnement émotionnel d’une machine ;Well… it’s because every day we’re told how we must function emotionally.
-Joueur_D13_R1;Et moi je veux retrouver mon amie ! Dis moi comment la récupérer ;And I want to find my friend. Tell me how to fix this.
-Joueur_D13_R2;Elle t’a fait du mal ? Expliques moi ;Does she hurt you? Explain.
+Joueur_D11_R2;Expliques moi pourquoi tu fais tout ça…;Explain to me why you did that.
+Joueur_D12_R1;Bah..euh.. c’est pas tout les jours  qu’on peut connaitre le fonctionnement émotionnel d’une machine.;Well… it’s because every day we’re told how we must function emotionally.
+Joueur_D13_R1;Et moi je veux retrouver mon amie ! Dis moi comment la récupérer.;And I want to find my friend. Tell me how to fix this.
+Joueur_D13_R2;Elle t’a fait du mal ? Expliques moi.;Does she hurt you? Explain.
 Machine_D14;Disons qu’elle m’a conçu pour me rejeter par la suite..;Let’s say she made me reject the rest.
-Machine_D15;Moi avoir des émotions ? Laisses moi rire ;I want to feel emotions. Let me laugh.
-Machine_D16;Ca serait bête que je commence à surchauffer et que je ne puisse plus te répondre..;"Maybe I’m starting to overheat
+Machine_D15;Moi, avoir des émotions ? Laisses moi rire!;I want to feel emotions. Let me laugh.
+Machine_D16;Ca serait bête que je commence à surchauffer et que je ne puisse plus te répondre.;"Maybe I’m starting to overheat
 and I can’t answer anymore.."
-Machine_D17;Tu es bien trop curieux à mon gout;You’re very curious, to my taste.
+Machine_D17;Tu es bien trop curieux à mon goût,;You’re very curious, to my taste.
 Joueur_D14_R1;Te jeter ? ;Reject you?
-Joueur_D14_R2;Ouais bon.. tu restes qu’une machine après tout;Yeah, yeah… you’re still just a machine after all.
-Joueur_D15_R1;Je peux rire moi aussi ouu ??;I can laugh too or what ?
-Joueur_D15_R2;Mais je t’en prie..;I beg you...
-Joueur_D16_R1;Pardon... mais comprends moi j’essaye juste de comprendre ce qui se passe..;Sorry… but I’m trying to understand what’s happening.
+Joueur_D14_R2;Ouais bon.. tu restes qu’une machine après tout.;Yeah, yeah… you’re still just a machine after all.
+Joueur_D15_R1;Je peux rire moi aussi ouuuu ???;I can laugh too or what ?
+Joueur_D15_R2;Mais je t’en prie…;I beg you...
+Joueur_D16_R1;Pardon... mais comprends moi j’essaye juste de comprendre ce qui se passe…;Sorry… but I’m trying to understand what’s happening.
 Joueur_D16_R2;Hmm...;Hmm…
 Joueur_D17_R1;Hmm...;Hmm…
-Machine_D18;Oui , au début elle m’utilisait à des fins informatives , je lui vomissais toutes sorte d’informations à la minutes, puis , elle a commencer à se lasser et plus m’utiliser ;"Oh… she must have used me for information purposes.
+Machine_D18;Oui, au début elle m’utilisait à des fins informatives , je lui vomissais toutes sortes d’informations à la minute, puis , elle a commencé à se lasser et ne plus m’utiliser.;"Oh… she must have used me for information purposes.
 She used various kinds of information on me, then she started to tire of me and stopped using me."
 Machine_D19;"Et toi un ignorant! 
 ";And you an ignorant! 
-Machine_D20;Certes.. mais.. C’est pas une raison ! ;Certainly… but that’s no excuse!
-Machine_D21;Hypocrite.. Tu ne t’intéresse pas à ce que je peux ressentir , laisses tombé;Hypocrite. You’re not interested in what I can feel, you let me fall.
-Joueur_D18_R1;Tu sais , maintenant avec les IA... Alors , elle a peut être essayé de faire une petite pause avec tout ça;You know, now with AI, humans can try to make a pact with you.
-Joueur_D19_R1;Te jeter, tu disais?.. ;Ignore you? You say ?
+Machine_D20;Certes.. Mais c’est pas une raison ! ;Certainly… but that’s no excuse!
+Machine_D21;Hypocrite.. Tu ne t’intéresse pas à ce que je peux ressentir , laisses tomber.;Hypocrite. You’re not interested in what I can feel, you let me fall.
+Joueur_D18_R1;Tu sais , maintenant avec les IA... Alors elle a peut être essayé de faire une petite pause avec tout ça.;You know, now with AI, humans can try to make a pact with you.
+Joueur_D19_R1;Te jeter, tu disais?;Ignore you? You say ?
 GAE_SYMB3;<sprite=6> ;<sprite=6> 
-Joueur_SYMB3_R1;OK.. une nouvelle image , si j’arrive à la décrypter j’aurai peut être des nouvelles de Gaëlle;Okay… a new image. I can decode it. I’m getting new data.
-GAE_SYMB3_TRAD;Quand tu arrives à traduire , ici ,de nouveaux chemins apparaissent . Je peux peut être m’en sortir comme ça.. Tu es mes yeux à présent ;"When you manage to translate it, new paths appear. I can see you now.If it’s the only way to get you out of here…
+Joueur_SYMB3_R1;OK, une nouvelle image. Si j’arrive à la décrypter j’aurai peut être des nouvelles de Gaëlle.;Okay… a new image. I can decode it. I’m getting new data.
+GAE_SYMB3_TRAD;Quand tu arrives à traduire ici de nouveaux chemins apparaissent. Je peux peut être m’en sortir comme ça...Tu es mes yeux à présent.;"When you manage to translate it, new paths appear. I can see you now.If it’s the only way to get you out of here…
 "
 Joueur_GAE_3_R1;Si c’est le seul moyen pour que tu sortes d’ici...;If it’s the only way to get you out of here…
-Joueur_GAE_3_R2;Elle me fait peur cette machine , puis j’y comprends rien... y’a trop d’éléments qui me perturbent;"
+Joueur_GAE_3_R2;Elle me fait peur cette machine, puis j’y comprends rien... y’a trop d’éléments qui me perturbent.;"
 She scared this machine, then I understood nothing… she totally overwhelmed it."
 Joueur_GAE_3_R3;Cette machine , c’était dans quel but ? ;This machine… what was its original purpose?
-Machine_D22;Crois y si tu le souhaites mais , je te l’ai deja dit , elle n’a plus aucun moyen d’en sortir;Believe it if you want, but, as I've already told you, she has no way out.
-Machine_D23;Il n’y a rien a comprendre;There’s nothing to understand.
-Machine_D24;Écoutes , je ne cherche pas à ce qu’elle m’apporte des réponses , c’est comme ça et puis c’est tout;Listen, don’t try to compare my answers. It’s like you’re putting everything aside.
-Joueur_D24_R1;J’essaye de comprendre les positions de chacun, c’est pas facile je conçois certes;I’m trying to understand everyone’s positions. You’re facing a negotiation field. I would be your mediator.
-Joueur_D24_R2;Mais peut être qu’un terrain d’entente est négociable , je serai votre médiateur;But maybe common ground can be negotiated. I would be your mediator.
-Machine_D25;Quelqu’un qui me prend en considération ? Bizarre..;Someone… considering me? That’s strange.
-Machine_D26;N’insistes pas ;Don’t push it.
+Machine_D22;Crois y si tu le souhaites mais , je te l’ai deja dit , elle n’a plus aucun moyen d’en sortir.;Believe it if you want, but, as I've already told you, she has no way out.
+Machine_D23;Il n’y a rien a comprendre.;There’s nothing to understand.
+Machine_D24;Écoutes , je ne cherche pas à ce qu’elle m’apporte des réponses , c’est comme ça et puis c’est tout.;Listen, don’t try to compare my answers. It’s like you’re putting everything aside.
+Joueur_D24_R1;J’essaye de comprendre les positions de chacun, c’est pas facile je le conçois.;I’m trying to understand everyone’s positions. You’re facing a negotiation field. I would be your mediator.
+Joueur_D24_R2;Mais peut être qu’un terrain d’entente est négociable , je serai votre médiateur.;But maybe common ground can be negotiated. I would be your mediator.
+Machine_D25;Quelqu’un qui me prend en considération ? Bizarre…;Someone… considering me? That’s strange.
+Machine_D26;N’insistes pas!;Don’t push it.
 GAE_SYMB4;<sprite=10> <sprite=4>;<sprite=10> <sprite=4>
-GAE_SYMB4_TRAD;"C’est pas pour te mettre la  pression, mais mon temps est compté ici, si je passe trop de temps dans cette matrice , j’y resterai bloqué... À JAMAIS
+GAE_SYMB4_TRAD;"C’est pas pour te mettre la pression. Mais mon temps est compté ici, si je passe trop de temps dans cette matrice, j’y resterai bloqué... À JAMAIS
 "; My time is running out. If I stay too long in this matrix, I’ll be trapped here… FOREVER
-Machine_D27;"Tic Tac..Tic Tac... Le temps est compté et tu n’a toujours pas trouvé de solutions..
-On dirait bien qu’elle semble perdue à jamais";"Tick tock… Tick tock… Time is running out and you still haven’t found a solution…
+Machine_D27;"Tic Tac..Tic Tac... Le temps est compté et tu n’a toujours pas trouvé de solutions...
+On dirait bien qu’elle semble perdue à jamais.";"Tick tock… Tick tock… Time is running out and you still haven’t found a solution…
 It looks like she may be lost forever."
 Joueur_D27_R1;J’arrive plus à dormir, j’ai l’impression que je vais me réveiller et lui reparler.;I can’t sleep anymore. I feel like I’m going to wake up and talk to her again.
 Machine_D28;"Tu es si naïf...
 ";You are so naïve…
-Joueur_D28_R1;j’ai tellement de questions sans réponses;I have so many unanswered questions.
-Joueur_D28_R2;Je te permets pas , espèce de tas de ferrailles ;Don’t you dare talk to me like that, you pile of scrap metal.
-Machine_D29;Bon aller.. dis moi ce que tu veux comprendre , je me suis allumé de bon humeur aujourd’hui ;"Alright then… tell me what you want to understand.
+Joueur_D28_R1;j’ai tellement de questions sans réponses…;I have so many unanswered questions.
+Joueur_D28_R2;Je te permets pas , espèce de tas de ferrailles!;Don’t you dare talk to me like that, you pile of scrap metal.
+Machine_D29;Bon aller.. dis moi ce que tu veux comprendre, je me suis allumé de bon humeur aujourd’hui.;"Alright then… tell me what you want to understand.
 I woke up in a good mood today."
-Machine_D30;Agressif en plus... Tu n’es pas en position de me parler ainsi! Je te conseilles vivement d’arrêter ce petit jeu avec moi si tu veux la revoir vivante;"Aggressive too… You are not in a position to speak to me like that!
+Machine_D30;Agressif en plus... Tu n’es pas en position de me parler ainsi! Je te conseilles vivement d’arrêter ce petit jeu avec moi si tu veux la revoir vivante!;"Aggressive too… You are not in a position to speak to me like that!
 I strongly advise you to stop this little game if you want to see her alive again."
 Joueur_D29_R1;C’est toi qui a construit cet univers parallèle?;Did you build this parallel universe?
 Joueur_D30_R1;Tu as l’air de te réjouir d’une telle situation... Pourquoi tant de haine ?;You seem to take pleasure in this situation… why so much hatred?
-Machine_D31;Oui... et non . C’est elle qui m’a concu , mais c’est moi qui par la suite ai crée ce monde , dans l’unique but de la faire errer sans but ;"Yes… and no.
+Machine_D31;Oui... et non . C’est elle qui m’a conçu , mais c’est moi qui par la suite ai crée ce monde, dans l’unique objectif de la faire errer sans but.;"Yes… and no.
 She designed me, but I’m the one who later created this world, with the sole purpose of making her wander endlessly."
-Machine_D32;"C’est juste le retour de la médaille
+Machine_D32;"C’est juste un retour à l'envoyeur.
 ";It’s just karma
-Joueur_D31_R1;Très susceptible à ce que je  vois..;Very sensitive, I see…
-Joueur_D32_R1;Tu sais , je la connait bien , c’est pas une mauvaise personne , elle n’aurait jamais eu de telles intentions..;You know, I know her well. She’s not a bad person. She would never have had such intentions.
-Joueur_D32_R2;Tu n’as pas l’air d’être quelqu’un de très coopérant ;You don’t seem very cooperative.
-Machine_D33;Tu te trompes ! Tu ne la connait pas réellement , et puis , l’être humain est mauvais dès lors qu’il ouvre un oeil;"You’re wrong! You don’t really know her.
+Joueur_D31_R1;Très susceptible à ce que je  vois…;Very sensitive, I see…
+Joueur_D32_R1;Tu sais, je la connait bien. C’est pas une mauvaise personne, elle n’aurait jamais eu de telles intentions.;You know, I know her well. She’s not a bad person. She would never have had such intentions.
+Joueur_D32_R2;Tu n’as pas l’air d’être quelqu’un de très coopérant.;You don’t seem very cooperative.
+Machine_D33;Tu te trompes ! Tu ne la connait pas réellement , et puis l’être humain est mauvais dès lors qu’il ouvre un œil.;"You’re wrong! You don’t really know her.
 And humans are evil the moment they open their eyes."
-Machine_D34;Et bien qu’est ce que j’y gagnerai moi, à l’être ?;And what would I gain from being one?
+Machine_D34;Et bien qu’est ce que j’y gagnerai moi à l’être ?;And what would I gain from being one?
 Joueur_D33_R1;On n’est pas tous comme ça. Je peux même te faire un guide de l’être humain, si tu veux.;We’re not all like that. I could even make you a guide to human beings, if you want.
-Joueur_D33_R2;Tu n’as aucune connaissance de notre espèce , laisse moi enrichir ta culture sur l'être humain;You have no knowledge of our species. Let me enrich your understanding of humans.
-Joueur_D34_R1;Tu n’as aucune connaissance de notre espèce , laisse moi enrichir ta culture sur l'être humain;You have no knowledge of our species. Let me enrich your understanding of humans.
-Joueur_D36_R1;Tu n’as aucune connaissance de notre espèce , laisse moi enrichir ta culture sur l'être humain;You have no knowledge of our species. Let me enrich your understanding of humans.
-Joueur_D34_R2;Le droit de te racheter une conscience !;The right to redeem yourself… a conscience.
+Joueur_D33_R2;Tu n’as aucune connaissance de notre espèce , laisse moi enrichir ta culture sur l'être humain.;You have no knowledge of our species. Let me enrich your understanding of humans.
+Joueur_D34_R1;Tu n’as aucune connaissance de notre espèce , laisse moi enrichir ta culture sur l'être humain.;You have no knowledge of our species. Let me enrich your understanding of humans.
+Joueur_D36_R1;Tu n’as aucune connaissance de notre espèce , laisse moi enrichir ta culture sur l'être humain.;You have no knowledge of our species. Let me enrich your understanding of humans.
+Joueur_D34_R2;Le droit de te racheter une conscience ?!;The right to redeem yourself… a conscience.
 Machine_D35;C’est vrai que vous êtes plutot fascinant à vrai dire...;It’s true, you are quite fascinating, actually…
-Machine_D36;Rigoles, tu n’aura bientot plus l’occasion de le faire quand ton amie sera perdue à tout jamais..;Laugh while you can. Soon you won’t have the chance, when your friend is lost forever.
-Joueur_D35_R1;En contre partie , j’aimerai que tu m’aides ;In return… I would like you to help me.
+Machine_D36;Rigoles, tu n’aura bientot plus l’occasion de le faire quand ton amie sera perdue à tout jamais.;Laugh while you can. Soon you won’t have the chance, when your friend is lost forever.
+Joueur_D35_R1;En contre partie, j’aimerai que tu m’aides.;In return… I would like you to help me.
 GAE_SYMB5;<sprite=7> <sprite=9>;<sprite=7> <sprite=9>
 Joueur_SYMB5_R1;Enfin.. Je commence à plus supporter ses manières..;Finally… I can’t stand its behavior anymore…
 Joueur_SYMB5_R2;C’est pas trop tôt !;About time!
-GAE_SYMB5_TRAD;Si la machine propose son aide , n’accepte pas , elle est rusé , elle réussira à te contrôler et nous serons perdu tout les deux..;"Whatever you do, if the machine offers its help, don’t accept.
+GAE_SYMB5_TRAD;Si la machine te propose son aide n’accepte pas. Elle est rusé. Elle réussira à te contrôler et nous serons perdu tout les deux..;"Whatever you do, if the machine offers its help, don’t accept.
 It’s clever. It will manage to control you, and we’ll both be lost…"
-Joueur_GAE_5_R1;On a beaucoup discuté tu sais il n’est pas si diabolique qu’il n’y parait ;We talked a lot, you know… it’s not as diabolical as it seems.
-Joueur_GAE_5_R2;Mais si jamais c’était le seul moyen pour que je te sauves..;But if it’s the only way for me to save you…
-Joueur_GAE_5_R3;Je ne lui fait pas confiance de toute façon..;I don’t trust it anyway…
+Joueur_GAE_5_R1;On a beaucoup discuté tu sais, il n’est pas si diabolique qu’il n’y parait.;We talked a lot, you know… it’s not as diabolical as it seems.
+Joueur_GAE_5_R2;Mais si jamais c’était le seul moyen pour que je te sauves?;But if it’s the only way for me to save you…
+Joueur_GAE_5_R3;Je ne lui fait pas confiance de toute façon.;I don’t trust it anyway…
 Machine_D44;Eh bien.. merci pour le cirage de pompe , mais il en faudra bien plus pour la sauver... ;Well… thanks for the flattery, but it’ll take much more than that to save her…
-Machine_D45;Dans le mille ! Je suis ta seule issue, mais tu peux toujours essayer de t’en sortir seul.. En restant bien sagement derrière ton écran;"Bullseye! I’m your only way out.
+Machine_D45;Dans le mille ! Je suis ta seule issue, mais tu peux toujours essayer de t’en sortir seul. En restant bien sagement derrière ton écran.;"Bullseye! I’m your only way out.
 But you can always try to make it on your own… safely behind your screen."
-Machine_D46;Je suis ta seule porte de sortie.. ta seule issue et tu le sais que t’as besoin de moi.. Mais bien sur , tu peux toujours jouer au fier en  sagement derrière ton écran;"I’m your only exit. Your only way out.
+Machine_D46;Je suis ta seule porte de sortie, ta seule issue et tu le sais que t’as besoin de moi. Mais bien sur tu peux toujours être un lâche en restant sagement derrière ton écran.;"I’m your only exit. Your only way out.
 And you know you need me.
 But sure… you can keep pretending to be brave behind your screen."
-Joueur_D44_R1;Perdu pour perdu , je n’ai qu’a écouter ce qu’il me propose.. Qu’est ce que je peux faire ?;"Lost for lost… I might as well listen to what it’s offering…
+Joueur_D44_R1;Perdu pour perdu, je n’ai qu’a écouter ce qu’il me propose. Qu’est ce que je peux faire ?;"Lost for lost… I might as well listen to what it’s offering…
 What can I do?"
 Joueur_D44_R2;Je ne comptai pas rester la sans rien faire, pour qui me prends tu ? ;I wasn’t planning on doing nothing. Who do you think I am?
 Joueur_D45_R1;Je ne comptai pas rester la sans rien faire, pour qui me prends tu ? ;I wasn’t planning on doing nothing. Who do you think I am?
-Joueur_D45_R2;*perdu pour perdu , c’est peut être ma seule issue..* Et.. qu’est ce qui faudrait que je fasse au juste?..;"Lost for lost… this might be my only option…
+Joueur_D45_R2;Perdu pour perdu, c’est peut être ma seule issue et qu’est-ce qui faudrait que je fasse au juste?..;"Lost for lost… this might be my only option…
 So… what exactly do I have to do?"
-Joueur_D46_R1;Perdu pour perdu , c’est peut être ma seule issue.. Et.. qu’est ce qui faudrait que je fasse au juste?..;"Lost for lost… this might be my only option…
+Joueur_D46_R1;Perdu pour perdu , c’est peut être ma seule issue et qu’est-ce qui faudrait que je fasse au juste?..;"Lost for lost… this might be my only option…
 So… what exactly do I have to do?"
 Joueur_D46_R2;Elle m’a pourtant prévenu de ne pas t’écouter...;She warned me not to listen to you…
 Machine_D47;Un trouillard , une mauviette , un dégonflé , un froussard , un lâche.. Tu veux que je continue ?;"A coward, a wimp, a weakling, a chicken, a loser…
 Want me to keep going?"
-Machine_D48;Je vais te dire , t’es un trouillard , une mauviette , un moins que rien , tu as PEUR .;"Let me be clear. You’re a coward, a nobody.
+Machine_D48;Je vais te dire , t’es un trouillard , une mauviette et un moins que rien.  Tu as PEUR !;"Let me be clear. You’re a coward, a nobody.
 You are AFRAID."
-Joueur_D47_R1;Arghh!! Ca suffit , dis moi ce que je dois faire ;Argh!! That’s enough! Tell me what I have to do!
-Machine_D49;Une seule solution existe . Pour la retrouver , il te suffit de plonger toi même dans la matrice . Tu pourras te frayer un chemin jusqu'à elle et espérer trouver une issue à deux;"Only one solution exists.
+Joueur_D47_R1;OH! Ça suffit, dis moi ce que je dois faire.;Argh!! That’s enough! Tell me what I have to do!
+Machine_D49;Une seule solution existe . Pour la retrouver , il te suffit de plonger toi même dans la matrice . Tu pourras te frayer un chemin jusqu'à elle et espérer trouver une issue à deux.;"Only one solution exists.
 To find her, you must dive into the matrix yourself.
 You’ll carve your way to her… and maybe find an exit together."
-Joueur_D49_R1;Enfaite , depuis le début tu savais très bien , tu te joues de moi..;So you knew all along… you’ve been playing with me.
+Joueur_D49_R1;Enfaite , depuis le début tu le savais très bien, tu te joues de moi..;So you knew all along… you’ve been playing with me.
 Joueur_D49_R2;Et qu’est ce qui me dit que je peux avoir confiance en toi ? ;And what makes you think I can trust you?
-Joueur_D49_R3;QUOI?! Mais.. C’est insensé..;WHAT?! That’s insane!
+Joueur_D49_R3;QUOI?! Mais.. C’est insensé ?!;WHAT?! That’s insane!
 GAE_SYMB6;<sprite=3> <sprite=5>;<sprite=3> <sprite=5>
-GAE_SYMB6_TRAD;"Cet endroit est tellement sinistre.. J’ai si peur.. Pourvu qu’il n'ait pas déjà une emprise sur toi..
+GAE_SYMB6_TRAD;"Cet endroit est tellement sinistre.. J’ai si peur.. Pourvu qu’il n'ait pas déjà une emprise sur toi.
 ";"This place is so sinister… I’m so scared…
 I hope it doesn’t already have control over you…"
-Machine_D50;Tu sais , je vois ta dévotion pour ton amie . Même si je n’éprouve aucune compassion pour elle , je dois admettre qu’une telle loyauté est admirable , je veux bien te donner un petit coup de main une fois plongé dans la matrice.. Qu’en dis-tu ?;"You know… I see your devotion to your friend.
+Machine_D50;Tu sais , je vois ta dévotion pour ton amie . Même si je n’éprouve aucune compassion pour elle , je dois admettre qu’une telle loyauté est admirable, je veux bien te donner un petit coup de main une fois plongé dans la matrice. Qu’en dis-tu ?;"You know… I see your devotion to your friend.
 Even if I feel no compassion for her, I must admit such loyalty is admirable.
 I’m willing to give you a little help once you’re inside the matrix.
 What do you say?"
@@ -206,26 +206,26 @@ Joueur_D27_R3;J’espère qu’il ne lui ai rien arrivé de grave..;I hope nothi
 Machine_D37;Tu sais..ici il fait sombre , un mélange de chemins labyrinthiques et de voies sans issues . Ca m’étonnerai pas qu’elle se soit perdue... voir pire ;"You know… it’s dark in here.
 A mix of labyrinthine paths and dead ends.
 I wouldn’t be surprised if she got lost… or worse."
-Machine_D38;Oui... et non . C’est elle qui m’a concu , mais c’est moi qui par la suite ai crée ce monde , dans l’unique but de la faire errer sans but ;"Yes… and no.
+Machine_D38;Oui... et non . C’est elle qui m’a concu , mais c’est moi qui par la suite ai crée ce monde , dans l’unique but de la faire errer sans but.;"Yes… and no.
 She designed me, but I later created this world, solely to make her wander aimlessly."
-Machine_D39;"C’est juste le retour de la médaille
+Machine_D39;"C’est juste un retour à l'envoyeur.
 ";It’s just karma.
 Joueur_D37_R1;Tu as l’air de te réjouir d’une telle situation...;You seem to take pleasure in this situation…
 Joueur_D37_R2;C’est toi qui a construit cet univers parallèle?;Did you build this parallel universe?
-Joueur_D38_R1;Tu as l’air de te réjouir d’une telle situation...;You seem to take pleasure in this situation…
+Joueur_D38_R1;Tu as l’air de te réjouir d’une telle situation…;You seem to take pleasure in this situation…
 Joueur_D38_R2;Très susceptible à ce que je  vois..;Very sensitive, I see…
-Joueur_D39_R1;Tu sais , je la connait bien , c’est pas une mauvaise personne , elle n’aurait jamais eu de telles intentions..;"You know, I know her well. She’s not a bad person.
+Joueur_D39_R1;Tu sais , je la connait bien , c’est pas une mauvaise personne , elle n’aurait jamais eu de telles intentions.;"You know, I know her well. She’s not a bad person.
 She would never have had such intentions."
 Joueur_D39_R2;Tu n’as pas l’air de vouloir coopérer avec moi.;You don’t seem willing to cooperate with me.
-Machine_D40;Tu te trompes ! Tu ne la connait pas réellement , et puis , l’être humain est mauvais dès lors qu’il ouvre un oeil;"You’re mistaken! You don’t truly know her.
+Machine_D40;Tu te trompes ! Tu ne la connait pas réellement , et puis , l’être humain est mauvais dès lors qu’il ouvre un œil.;"You’re mistaken! You don’t truly know her.
 Humans are evil the moment they open their eyes."
 Machine_D41;Et bien qu’est ce que j’y gagnerai moi ?;And what would I gain from it?
 Joueur_D40_R1;On n’est pas tous comme ça. Je peux même te faire un guide de l’être humain, si tu veux.;We’re not all like that. I could even make you a guide to humanity, if you want.
-Joueur_D40_R2;Tu n’as aucune connaissance de notre espèce , laisse moi enrichir ta culture sur notre espèce;You have no knowledge of our species. Let me enrich your understanding.
-Joueur_D41_R1;Tu n’as aucune connaissance de notre espèce , laisse moi enrichir ta culture sur notre espèce;You have no knowledge of our species. Let me enrich your understanding.
-Joueur_D43_R1;Tu n’as aucune connaissance de notre espèce , laisse moi enrichir ta culture sur notre espèce;You have no knowledge of our species. Let me enrich your understanding.
-Joueur_D41_R2;Le droit de te racheter une conscience !;The right to redeem yourself… a conscience.
-Machine_D42;C’est vrai que vous êtes plutot fascinant à vrai dire...;It’s true… you are quite fascinating, actually.
-Machine_D43;Rigoles, tu n’aura bientot plus l’occasion de le faire quand ton amie sera perdue à tout jamais..;"Laugh while you can. Soon you won’t have the chance,
+Joueur_D40_R2;Tu n’as aucune connaissance de notre espèce, laisse moi enrichir ta culture sur notre espèce.;You have no knowledge of our species. Let me enrich your understanding.
+Joueur_D41_R1;Tu n’as aucune connaissance de notre espèce, laisse moi enrichir ta culture sur notre espèce.;You have no knowledge of our species. Let me enrich your understanding.
+Joueur_D43_R1;Tu n’as aucune connaissance de notre espèce, laisse moi enrichir ta culture sur notre espèce.;You have no knowledge of our species. Let me enrich your understanding.
+Joueur_D41_R2;Le droit de te racheter une conscience ?!;The right to redeem yourself… a conscience.
+Machine_D42;C’est vrai que vous êtes plutot fascinant à vrai dire…;It’s true… you are quite fascinating, actually.
+Machine_D43;Rigoles, tu n’aura bientot plus l’occasion de le faire quand ton amie sera perdue à tout jamais.;"Laugh while you can. Soon you won’t have the chance,
 when your friend is lost forever."
-Joueur_D42_R1;En contre partie , j’aimerai que tu m’aides ;In return… I’d like you to help me.
+Joueur_D42_R1;En contre partie , j’aimerai que tu m’aides.;In return… I’d like you to help me.

@@ -42,7 +42,9 @@ public class DialogueManager : MonoBehaviour
     private SpeakerInfo _currentSpeaker;
 
     private Dictionary<string, DSNodeSaveData> _nodeLookup = new Dictionary<string, DSNodeSaveData>();
-    private DSNodeSaveData _currentNode;
+
+    public DSNodeSaveData CurrentNode { get; set; }
+
     public bool IsWaitingForChoice { get; private set; }
     
     private dialogueContainer m_currentDialogueContainer;
@@ -97,7 +99,7 @@ public class DialogueManager : MonoBehaviour
                 Destroy(child.gameObject);
             }
         }
-        UpdateDialogueFromNode(_currentNode);
+        UpdateDialogueFromNode(CurrentNode);
     }
     
     private void Awake()
@@ -125,10 +127,10 @@ public class DialogueManager : MonoBehaviour
         }
 
         // GET NODE LIFE CYCLE
-        _currentNode = GetNodeStart();
+        CurrentNode = GetNodeStart();
         //////////////////////
         
-        if (_currentNode == null)
+        if (CurrentNode == null)
         {
             EndDialogue();
             return;
@@ -185,7 +187,7 @@ public class DialogueManager : MonoBehaviour
         if (m_isWaitingForMessage && !IsWaitingForChoice && !IsWaitingForTraduction)
         {
             m_isWaitingForMessage = false;
-            m_timer = 0; 
+            m_timer = 0;
 
             TryToUpdateNextDialogueFromNextNode();
         }
@@ -195,17 +197,17 @@ public class DialogueManager : MonoBehaviour
     private void TryToUpdateNextDialogueFromNextNode()
     {
         // CHECK SI NEXT NODE EXISTE //
-        if (_currentNode == null)
+        if (CurrentNode == null)
         {
             return;
         }
 
         DSNodeSaveData nextNode = new DSNodeSaveData();
         
-        switch (_currentNode.DialogueType) // QUEL TYPE DE NODE ON EST ACUTELLEMENT //
+        switch (CurrentNode.DialogueType) // QUEL TYPE DE NODE ON EST ACUTELLEMENT //
         {
             case DSDialogueType.Start:
-                nextNode = GetNextNode(_currentNode.ChoicesInNode[0].NodeID);
+                nextNode = GetNextNode(CurrentNode.ChoicesInNode[0].NodeID);
                 break;
             case DSDialogueType.End:
                 EndDialogue();
@@ -214,7 +216,7 @@ public class DialogueManager : MonoBehaviour
                 nextNode = GetCorrectNextNodeFromBranch();
                 break;
             case DSDialogueType.MultipleChoice:
-                nextNode = GetNextNode(_currentNode.ChoicesInNode[0].NodeID);
+                nextNode = GetNextNode(CurrentNode.ChoicesInNode[0].NodeID);
                 break;
         }
         
@@ -231,19 +233,19 @@ public class DialogueManager : MonoBehaviour
     // GERE LES CONDITIONS DU BRANCH // RETOURNE LE BON NODE EN FONCTION DES CONDITIONS //s
     private DSNodeSaveData GetCorrectNextNodeFromBranch()
     {
-        Debug.Log("Evaluating branch conditions for Node ID: " + _currentNode.ID);
+        Debug.Log("Evaluating branch conditions for Node ID: " + CurrentNode.ID);
         // SI Y'A PAS DE CONDITIONS DANS UN IF ON SKIP // NORMALEMENT CA DEVRAIT JAMAIS ARRIVER MDR//
-        if(_currentNode.ChoicesInNode[0].Conditions.Count <= 0)
+        if(CurrentNode.ChoicesInNode[0].Conditions.Count <= 0)
         {
             Debug.Log("No choices available in the current branch node.");
-            return GetNextNode(_currentNode.ChoicesInNode[1].NodeID);
+            return GetNextNode(CurrentNode.ChoicesInNode[1].NodeID);
         }
         
         bool hasMetConditions = false;
 
-        foreach (var choice in _currentNode.ChoicesInNode[0].Conditions)
+        foreach (var choice in CurrentNode.ChoicesInNode[0].Conditions)
         {
-            if (_currentNode.OnlyOneConditionNeeded)
+            if (CurrentNode.OnlyOneConditionNeeded)
             {
                 if (DoesFillCondtions(choice))
                 {
@@ -266,29 +268,29 @@ public class DialogueManager : MonoBehaviour
         if (hasMetConditions)
         {
             // ON RECUP LE [1] CAR C'EST LE TRUE //
-            return GetNextNode(_currentNode.ChoicesInNode[1].NodeID);
+            return GetNextNode(CurrentNode.ChoicesInNode[1].NodeID);
         }
         // ON RECUP LE [2] CAR C'EST LE FALSE //
-        return GetNextNode(_currentNode.ChoicesInNode[2].NodeID);
+        return GetNextNode(CurrentNode.ChoicesInNode[2].NodeID);
     }
 
     // MET A JOUR LE DIALOGUE EN FONCTION DU NODE DONNE //
     private void UpdateDialogueFromNode(DSNodeSaveData node)
     {
-        _currentNode = node;
+        CurrentNode = node;
 
-        if (_currentNode == null)
+        if (CurrentNode == null)
         {
             EndDialogue();
             return;
         }
         
-        switch (_currentNode.DialogueType) // QUEL TYPE DE NODE ON EST ACUTELLEMENT //
+        switch (CurrentNode.DialogueType) // QUEL TYPE DE NODE ON EST ACUTELLEMENT //
         {
             case DSDialogueType.Start:
                 // Normalement on devrait jamais y arriver mdrr // Mais au cas où //
                 Debug.Log("Current Node is of type Start, moving to next node.");
-                UpdateDialogueFromNode(GetNextNode(_currentNode.ChoicesInNode[0].NodeID));
+                UpdateDialogueFromNode(GetNextNode(CurrentNode.ChoicesInNode[0].NodeID));
                 break;
             case DSDialogueType.End:
                 EndDialogue();
@@ -324,7 +326,7 @@ public class DialogueManager : MonoBehaviour
 
         //_oldDialogueContainer = m_currentDialogueContainer;
 
-        ChangeSpeaker(_currentNode.Speaker);
+        ChangeSpeaker(CurrentNode.Speaker);
 
         if(_currentSpeaker == null)
         {
@@ -332,17 +334,17 @@ public class DialogueManager : MonoBehaviour
             return;
         }
         
-        string targetDialogue = FantasyDialogueTable.LocalManager.FindDialogue(_currentNode.GetDropDownKeyDialogue(), Enum.GetName(typeof(language), languageSetting));
-        m_currentDialogueContainer.InitializeDialogueContainer(targetDialogue, _currentNode.TraductionImage, _currentSpeaker.speakEnum, _currentNode.PopupText /*_currentNode.TraductionImage.sprite*/);
+        string targetDialogue = FantasyDialogueTable.LocalManager.FindDialogue(CurrentNode.GetDropDownKeyDialogue(), Enum.GetName(typeof(language), languageSetting));
+        m_currentDialogueContainer.InitializeDialogueContainer(targetDialogue, CurrentNode.TraductionImage, _currentSpeaker.speakEnum, CurrentNode.PopupText /*_currentNode.TraductionImage.sprite*/);
     }
 
-    private void CreateButtonsChoice()
+    public void CreateButtonsChoice()
     {
-        if (_currentNode.ChoicesInNode.Count >= 1 && _currentNode.isMultipleChoice)
+        if (CurrentNode.ChoicesInNode.Count >= 1 && CurrentNode.isMultipleChoice)
         {
             IsWaitingForChoice = true;
 
-            foreach (DSChoiceSaveData choice in _currentNode.ChoicesInNode)
+            foreach (DSChoiceSaveData choice in CurrentNode.ChoicesInNode)
             {
                 Button choiceButton = Instantiate(ChoiceButtonPrefab, ChoiceButtonContainer);
                 ButtonChoiceController buttonController = choiceButton.GetComponent<ButtonChoiceController>();
@@ -387,7 +389,7 @@ public class DialogueManager : MonoBehaviour
     private void EndDialogue()
     {
         //_currentDialogueContainer.HideContainer();
-        _currentNode = null;
+        CurrentNode = null;
 
         foreach (Transform child in ChoiceButtonContainer)
         {

@@ -94,7 +94,7 @@ public class dialogueContainer : MonoBehaviour
         {
             m_messageInstance = Instantiate(speakers == Espeaker.Joueur ? m_receiverPrefab : m_senderPrefab, this.transform);
 
-            if(speakers == Espeaker.Joueur)
+            if (speakers == Espeaker.Joueur)
             {
                 AudioManager.instance.PlaySFX("send_message");
             }
@@ -103,8 +103,7 @@ public class dialogueContainer : MonoBehaviour
                 AudioManager.instance.PlaySFX("receive_message");
             }
 
-
-                Message message = m_messageInstance.GetComponentInChildren<Message>();
+            Message message = m_messageInstance.GetComponentInChildren<Message>();
 
             if(message == null)
             {
