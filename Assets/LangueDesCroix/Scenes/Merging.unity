@@ -2099,6 +2099,7 @@ MonoBehaviour:
   prefabNoteSentence: {fileID: 5570178625780262895, guid: feda0cdb95735164ea138a8c51f0adae, type: 3}
   goNoteContainer: {fileID: 1877661062}
   dialogueManager: {fileID: 1924664964}
+  phoneManager: {fileID: 0}
 --- !u!4 &950561128
 Transform:
   m_ObjectHideFlags: 0
@@ -3892,7 +3893,7 @@ MonoBehaviour:
   m_ChildAlignment: 1
   m_StartCorner: 0
   m_StartAxis: 0
-  m_CellSize: {x: 400, y: 650}
+  m_CellSize: {x: 350, y: 550}
   m_Spacing: {x: 100, y: 50}
   m_Constraint: 0
   m_ConstraintCount: 2
